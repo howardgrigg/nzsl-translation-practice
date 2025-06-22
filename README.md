@@ -132,7 +132,6 @@ Claude 3.5 Haiku evaluates translations based on:
 ├── script.js             # Frontend JavaScript application
 ├── video_examples.json   # Video data (554 examples)
 ├── matched_signs.json    # Sign ID mappings from common words
-├── nzsl.db               # SQLite database with full NZSL dictionary
 ├── words.json           # Top 300 most common NZSL signs
 ├── requirements.txt     # Python dependencies
 ├── Dockerfile          # Docker container configuration
