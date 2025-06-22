@@ -7,6 +7,7 @@ class NZSLPractice {
         this.loadVideoData();
         this.setupEventListeners();
         this.updateStatsDisplay();
+        this.initializeDarkMode();
     }
 
     initializeElements() {
@@ -446,6 +447,27 @@ class NZSLPractice {
             this.updateStatsDisplay();
             this.renderHistoryList();
         }
+    }
+
+    // Dark mode functionality - follows browser/system preference
+    initializeDarkMode() {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Apply theme based on system preference
+        if (prefersDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+
+        // Listen for system theme changes and update automatically
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (e.matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        });
     }
 }
 

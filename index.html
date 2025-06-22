@@ -5,6 +5,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NZSL Interpretation Practice</title>
     <style>
+        :root {
+            /* Light mode colors */
+            --bg-color: #f5f5f5;
+            --text-color: #333;
+            --card-bg: #ffffff;
+            --border-color: #ddd;
+            --input-bg: #ffffff;
+            --input-border: #ddd;
+            --button-primary: #3498db;
+            --button-primary-hover: #2980b9;
+            --button-secondary: #95a5a6;
+            --button-secondary-hover: #7f8c8d;
+            --modal-bg: rgba(0,0,0,0.5);
+            --shadow: rgba(0,0,0,0.1);
+            --info-bg: #f9f9f9;
+            --stats-bg: #e8f4f8;
+            --stats-border: #3498db;
+            --loading-bg: #f8f9fa;
+            --score-bg: #f8f9fa;
+        }
+
+        [data-theme="dark"] {
+            /* Dark mode colors */
+            --bg-color: #1a1a1a;
+            --text-color: #e0e0e0;
+            --card-bg: #2d2d2d;
+            --border-color: #404040;
+            --input-bg: #3a3a3a;
+            --input-border: #555;
+            --button-primary: #4da6d9;
+            --button-primary-hover: #3d8bbd;
+            --button-secondary: #6c757d;
+            --button-secondary-hover: #5a6268;
+            --modal-bg: rgba(0,0,0,0.8);
+            --shadow: rgba(0,0,0,0.3);
+            --info-bg: #333333;
+            --stats-bg: #2a4a5c;
+            --stats-border: #4da6d9;
+            --loading-bg: #333333;
+            --score-bg: #333333;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,9 +55,10 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #f5f5f5;
-            color: #333;
+            background: var(--bg-color);
+            color: var(--text-color);
             line-height: 1.6;
+            transition: background-color 0.3s ease, color 0.3s ease;
         }
 
         .container {
@@ -32,34 +75,36 @@
         .header h1 {
             font-size: 2.5em;
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: var(--text-color);
         }
 
         .header p {
             font-size: 1.1em;
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.8;
         }
 
         .info-section {
             margin-top: 20px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 0;
-            background: #f9f9f9;
+            background: var(--info-bg);
         }
 
         .info-section summary {
             padding: 15px;
             cursor: pointer;
             font-weight: 600;
-            color: #2c3e50;
-            background: #f9f9f9;
+            color: var(--text-color);
+            background: var(--info-bg);
             border-radius: 8px;
             outline: none;
+            transition: background-color 0.3s ease;
         }
 
         .info-section summary:hover {
-            background: #f0f0f0;
+            opacity: 0.8;
         }
 
         .info-section p {
@@ -79,11 +124,12 @@
         }
 
         .video-container {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 30px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px var(--shadow);
             margin-bottom: 20px;
+            transition: background-color 0.3s ease;
         }
 
         .video-wrapper {
@@ -95,9 +141,10 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            background: #f8f9fa;
+            background: var(--loading-bg);
             border-radius: 8px;
             overflow: hidden;
+            transition: background-color 0.3s ease;
         }
 
         video {
@@ -118,9 +165,10 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            background: #f8f9fa;
+            background: var(--loading-bg);
             border-radius: 8px;
             z-index: 10;
+            transition: background-color 0.3s ease;
         }
 
         .video-loading-spinner {
@@ -134,7 +182,8 @@
         }
 
         .video-loading-text {
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.7;
             font-size: 0.9em;
         }
 
@@ -159,7 +208,8 @@
             text-align: center;
             margin-bottom: 20px;
             font-size: 0.9em;
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.7;
         }
 
         .input-section {
@@ -170,24 +220,26 @@
             display: block;
             margin-bottom: 8px;
             font-weight: 600;
-            color: #2c3e50;
+            color: var(--text-color);
         }
 
         textarea {
             width: 100%;
             min-height: 100px;
             padding: 15px;
-            border: 2px solid #ddd;
+            border: 2px solid var(--input-border);
             border-radius: 8px;
             font-size: 16px;
             font-family: inherit;
             resize: vertical;
-            transition: border-color 0.3s;
+            transition: border-color 0.3s, background-color 0.3s;
+            background: var(--input-bg);
+            color: var(--text-color);
         }
 
         textarea:focus {
             outline: none;
-            border-color: #3498db;
+            border-color: var(--button-primary);
         }
 
         .video-controls {
@@ -198,10 +250,10 @@
 
         .btn-speed {
             padding: 8px 16px;
-            border: 2px solid #95a5a6;
+            border: 2px solid var(--button-secondary);
             border-radius: 6px;
-            background: white;
-            color: #95a5a6;
+            background: var(--card-bg);
+            color: var(--button-secondary);
             font-size: 14px;
             font-weight: 600;
             cursor: pointer;
@@ -209,8 +261,8 @@
         }
 
         .btn-speed:hover {
-            background: #95a5a6;
-            color: white;
+            background: var(--button-secondary);
+            color: var(--card-bg);
         }
 
         .btn-speed.slow {
@@ -220,7 +272,7 @@
 
         .btn-speed.slow:hover {
             background: #e67e22;
-            color: white;
+            color: var(--card-bg);
         }
 
         .button-group {
@@ -241,21 +293,21 @@
         }
 
         .btn-primary {
-            background: #3498db;
+            background: var(--button-primary);
             color: white;
         }
 
         .btn-primary:hover {
-            background: #2980b9;
+            background: var(--button-primary-hover);
         }
 
         .btn-secondary {
-            background: #95a5a6;
+            background: var(--button-secondary);
             color: white;
         }
 
         .btn-secondary:hover {
-            background: #7f8c8d;
+            background: var(--button-secondary-hover);
         }
 
         .btn-primary:disabled,
@@ -274,12 +326,13 @@
         }
 
         .results {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px var(--shadow);
             margin-top: 20px;
             animation: slideInUp 0.5s ease-out;
+            transition: background-color 0.3s ease;
         }
 
         @keyframes slideInUp {
@@ -336,8 +389,9 @@
             margin-bottom: 20px;
             padding: 15px;
             border-radius: 8px;
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
+            background: var(--score-bg);
+            border-left: 4px solid var(--button-primary);
+            transition: background-color 0.3s ease;
         }
 
         .translations {
@@ -350,12 +404,14 @@
         .translation-box {
             padding: 15px;
             border-radius: 8px;
-            border: 2px solid #ecf0f1;
+            border: 2px solid var(--border-color);
+            background: var(--info-bg);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .translation-box h4 {
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: var(--text-color);
         }
 
         .word-info {
@@ -421,12 +477,13 @@
 
         /* Stats Display */
         .stats-display {
-            background: #e8f4f8;
-            border: 2px solid #3498db;
+            background: var(--stats-bg);
+            border: 2px solid var(--stats-border);
             border-radius: 12px;
             padding: 15px;
             margin: 20px 0;
             text-align: center;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .stats-summary {
@@ -438,7 +495,7 @@
 
         .stat-item {
             font-size: 0.9em;
-            color: #2c3e50;
+            color: var(--text-color);
         }
 
         .improvement {
@@ -452,7 +509,8 @@
         .improvement.stable { color: #3498db; }
 
         .stats-text {
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.7;
             font-size: 0.9em;
         }
 
@@ -492,29 +550,31 @@
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0,0,0,0.5);
+            background-color: var(--modal-bg);
             justify-content: center;
             align-items: center;
             padding: 20px;
         }
 
         .modal-content {
-            background: white;
+            background: var(--card-bg);
             border-radius: 12px;
             max-width: 800px;
             max-height: 80vh;
             width: 100%;
             overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: background-color 0.3s ease;
         }
 
         .modal-header {
             padding: 20px;
-            border-bottom: 1px solid #ddd;
+            border-bottom: 1px solid var(--border-color);
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background: #f8f9fa;
+            background: var(--info-bg);
+            transition: background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .modal-actions {
@@ -525,7 +585,7 @@
 
         .modal-header h2 {
             margin: 0;
-            color: #2c3e50;
+            color: var(--text-color);
         }
 
         .close-btn {
@@ -533,17 +593,19 @@
             border: none;
             font-size: 24px;
             cursor: pointer;
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.7;
             padding: 0;
             width: 30px;
             height: 30px;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: opacity 0.3s ease;
         }
 
         .close-btn:hover {
-            color: #333;
+            opacity: 1;
         }
 
         .btn-clear {
@@ -570,22 +632,23 @@
 
         .no-history {
             text-align: center;
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.7;
             padding: 40px 20px;
             font-style: italic;
         }
 
         .history-item {
-            border: 1px solid #ddd;
+            border: 1px solid var(--border-color);
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 15px;
-            background: #f9f9f9;
-            transition: box-shadow 0.3s;
+            background: var(--info-bg);
+            transition: box-shadow 0.3s, background-color 0.3s ease, border-color 0.3s ease;
         }
 
         .history-item:hover {
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 8px var(--shadow);
         }
 
         .history-header {
@@ -598,21 +661,23 @@
         .history-word {
             font-weight: bold;
             font-size: 1.1em;
-            color: #2c3e50;
+            color: var(--text-color);
         }
 
         .history-score {
             font-weight: bold;
             padding: 4px 8px;
             border-radius: 4px;
-            background: white;
+            background: var(--card-bg);
+            transition: background-color 0.3s ease;
         }
 
         .history-meta {
             display: flex;
             justify-content: space-between;
             font-size: 0.85em;
-            color: #666;
+            color: var(--text-color);
+            opacity: 0.7;
             margin-bottom: 10px;
         }
 
@@ -638,7 +703,7 @@
         }
 
         .replay-btn {
-            background: #3498db;
+            background: var(--button-primary);
             color: white;
             border: none;
             padding: 8px 16px;
@@ -650,7 +715,7 @@
         }
 
         .replay-btn:hover {
-            background: #2980b9;
+            background: var(--button-primary-hover);
         }
 
         @media (max-width: 600px) {
