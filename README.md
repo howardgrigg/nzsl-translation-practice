@@ -1,12 +1,12 @@
-# NZSL Translation Practice
+# NZSL Interpretation Practice
 
-A web application for practicing New Zealand Sign Language (NZSL) translation skills. Watch signed sentences and test your interpretation against official translations, scored by AI.
+A web application for practicing New Zealand Sign Language (NZSL) interpretation skills. Watch signed sentences and test your interpretation against official translations, scored by AI.
 
 ## Features
 
 - **554+ video examples** from the top 300 most common NZSL signs
 - **AI-powered scoring** (0-10) with personalized feedback using Claude 3.5 Haiku
-- **Practice history tracking** with localStorage - view past attempts and track improvement
+- **Interpretation history tracking** with localStorage - view past attempts and track improvement
 - **Progress statistics** showing average scores and improvement trends
 - **Video speed control** - watch at normal or half speed for better comprehension
 - **Responsive design** optimized for desktop and mobile devices
@@ -91,8 +91,8 @@ A web application for practicing New Zealand Sign Language (NZSL) translation sk
 ### Features in Detail
 
 - **Speed Control**: Toggle between normal and half-speed playback
-- **Practice History**: All attempts are saved locally in your browser
-- **Progress Tracking**: See total translations, average score, and improvement trends
+- **Interpretation History**: All attempts are saved locally in your browser
+- **Progress Tracking**: See total interpretations, average score, and improvement trends
 - **Clear History**: Option to reset your practice history if needed
 
 ## Technical Details
@@ -113,7 +113,7 @@ Each video example includes:
 - Dictionary word ID for reference links
 
 ### AI Scoring Logic
-Claude 3.5 Haiku evaluates translations based on:
+Claude 3.5 Haiku evaluates interpretations based on:
 - **Semantic meaning similarity** - understanding core concepts
 - **Context awareness** - recognizing perspective (I/you/they)
 - **Flexible interpretation** - allowing valid alternative phrasings
@@ -146,12 +146,12 @@ Claude 3.5 Haiku evaluates translations based on:
 The app uses Claude 3.5 Haiku which is very cost-effective:
 - **Input**: $1.00 per 1M tokens
 - **Output**: $5.00 per 1M tokens
-- **Typical translation scoring**: ~$0.001-0.002 per attempt
+- **Typical interpretation scoring**: ~$0.001-0.002 per attempt
 - **Usage tracking**: Built-in cost monitoring in the Flask app
 
 ## Notes
 
-- **Data Privacy**: All practice history is stored locally in your browser (localStorage)
+- **Data Privacy**: All interpretation history is stored locally in your browser (localStorage)
 - **Internet Required**: Videos stream from external hosting, AI scoring requires API access
 - **No Registration**: No user accounts or server-side data storage
 - **Mobile Friendly**: Responsive design works on phones and tablets

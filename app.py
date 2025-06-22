@@ -52,7 +52,7 @@ def get_usage_stats():
 
 @app.route('/score_translation', methods=['POST'])
 def score_translation():
-    """Score user translation against original using Claude"""
+    """Score user interpretation against original using Claude"""
     try:
         if client is None:
             return jsonify({'error': 'Claude client not initialized. Check API key.'}), 500
@@ -63,13 +63,13 @@ def score_translation():
         sign_sequence = data.get('sign_sequence', [])
         
         if not original_translation or not user_translation:
-            return jsonify({'error': 'Missing translation data'}), 400
+            return jsonify({'error': 'Missing interpretation data'}), 400
         
         # Create sign sequence string for context
         signs_text = " → ".join([sign['word'] for sign in sign_sequence])
         
         # Create prompt for Claude
-        prompt = f"""You are scoring NZSL (New Zealand Sign Language) translation accuracy. Be encouraging and supportive.
+        prompt = f"""You are scoring NZSL (New Zealand Sign Language) interpretation accuracy. Be encouraging and supportive.
 
 Original signed sentence signs: {signs_text}
 Official English translation: "{original_translation}"

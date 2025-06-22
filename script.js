@@ -182,7 +182,7 @@ class NZSLPractice {
         const userText = this.userTranslation.value.trim();
         
         if (!userText) {
-            alert('Please enter your translation first.');
+            alert('Please enter your interpretation first.');
             return;
         }
 
@@ -216,8 +216,8 @@ class NZSLPractice {
             this.displayResults(result, userText);
 
         } catch (error) {
-            console.error('Error scoring translation:', error);
-            alert('Error scoring translation. Please try again.');
+            console.error('Error scoring interpretation:', error);
+            alert('Error scoring interpretation. Please try again.');
         } finally {
             this.loading.style.display = 'none';
             this.submitBtn.disabled = false;
@@ -246,7 +246,7 @@ class NZSLPractice {
         // Display feedback
         this.feedbackText.textContent = result.feedback;
 
-        // Display translations
+        // Display interpretations
         this.userTranslationDisplay.textContent = userText;
         this.originalTranslationDisplay.textContent = this.currentVideo.english_translation;
 
@@ -325,12 +325,12 @@ class NZSLPractice {
             return;
         }
 
-        const totalTranslations = this.practiceHistory.length;
-        const averageScore = this.practiceHistory.reduce((sum, session) => sum + session.score, 0) / totalTranslations;
+        const totalInterpretations = this.practiceHistory.length;
+        const averageScore = this.practiceHistory.reduce((sum, session) => sum + session.score, 0) / totalInterpretations;
         
         // Calculate improvement (last 10 vs previous 10)
         let improvementText = '';
-        if (totalTranslations >= 20) {
+        if (totalInterpretations >= 20) {
             const recent = this.practiceHistory.slice(0, 10);
             const previous = this.practiceHistory.slice(10, 20);
             const recentAvg = recent.reduce((sum, s) => sum + s.score, 0) / 10;
@@ -348,7 +348,7 @@ class NZSLPractice {
 
         this.statsDisplay.innerHTML = `
             <div class="stats-summary">
-                <span class="stat-item">Translations: <strong>${totalTranslations}</strong></span>
+                <span class="stat-item">Interpretations: <strong>${totalInterpretations}</strong></span>
                 <span class="stat-item">Average: <strong>${averageScore.toFixed(1)}/10</strong></span>
             </div>
             ${improvementText}
@@ -374,7 +374,7 @@ class NZSLPractice {
         if (!this.historyList) return;
 
         if (this.practiceHistory.length === 0) {
-            this.historyList.innerHTML = '<div class="no-history">No translations yet. Start practicing to build your history!</div>';
+            this.historyList.innerHTML = '<div class="no-history">No interpretations yet. Start practicing to build your history!</div>';
             return;
         }
 
@@ -440,7 +440,7 @@ class NZSLPractice {
     }
 
     clearHistory() {
-        if (confirm('Are you sure you want to clear all practice history? This cannot be undone.')) {
+        if (confirm('Are you sure you want to clear all interpretation history? This cannot be undone.')) {
             this.practiceHistory = [];
             localStorage.removeItem('nzsl_practice_history');
             this.updateStatsDisplay();
