@@ -45,6 +45,11 @@ def video_data():
     """Serve the video examples data"""
     return send_from_directory('.', 'video_examples.json')
 
+@app.route('/assets/<path:filename>')
+def serve_assets(filename):
+    """Serve static assets (favicons, manifest, etc.)"""
+    return send_from_directory('assets', filename)
+
 @app.route('/usage_stats')
 def get_usage_stats():
     """Get current usage statistics"""

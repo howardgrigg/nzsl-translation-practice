@@ -10,8 +10,10 @@ A web application for practicing New Zealand Sign Language (NZSL) interpretation
 - **Progress statistics** showing average scores and improvement trends
 - **Video speed control** - watch at normal or half speed for better comprehension
 - **Responsive design** optimized for desktop and mobile devices
+- **Progressive Web App (PWA)** - installable on mobile devices and desktop
 - **Semantic scoring** - focuses on meaning rather than exact word matching
 - **Replay functionality** - revisit any previous sentence from your history
+- **Automatic dark mode** - follows your system/browser theme preference
 
 ## Setup
 
@@ -138,6 +140,12 @@ Claude 3.5 Haiku evaluates interpretations based on:
 ├── docker-compose.yml  # Docker Compose setup
 ├── .env.example       # Environment variables template
 ├── .gitignore        # Git ignore patterns
+├── assets/            # Static assets directory
+│   └── icons/         # Favicons and web app manifest
+│       ├── favicon.ico
+│       ├── apple-touch-icon.png
+│       ├── android-chrome-*.png
+│       └── site.webmanifest
 └── README.md        # This documentation
 ```
 
@@ -155,6 +163,7 @@ The app uses Claude 3.5 Haiku which is very cost-effective:
 - **Internet Required**: Videos stream from external hosting, AI scoring requires API access
 - **No Registration**: No user accounts or server-side data storage
 - **Mobile Friendly**: Responsive design works on phones and tablets
+- **PWA Support**: Can be installed as an app on mobile devices and desktop
 - **Educational Use**: Designed for personal NZSL learning and practice
 
 ## Contributing
