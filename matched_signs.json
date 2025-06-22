@@ -1,0 +1,2690 @@
+[
+  {
+    "common_word": "GOOD",
+    "sign_id": "3658",
+    "matched_word": "good",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 1
+  },
+  {
+    "common_word": "DEAF",
+    "sign_id": "2121",
+    "matched_word": "Deaf",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 2
+  },
+  {
+    "common_word": "ONE",
+    "sign_id": "5607",
+    "matched_word": "one",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 3
+  },
+  {
+    "common_word": "SAME",
+    "sign_id": "1202",
+    "matched_word": "same",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 4
+  },
+  {
+    "common_word": "SCHOOL",
+    "sign_id": "1298",
+    "matched_word": "school",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 5
+  },
+  {
+    "common_word": "YES",
+    "sign_id": "3725",
+    "matched_word": "yes",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 6
+  },
+  {
+    "common_word": "SIGN",
+    "sign_id": "1983",
+    "matched_word": "sign",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 7
+  },
+  {
+    "common_word": "WHAT",
+    "sign_id": "2266",
+    "matched_word": "what",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 8
+  },
+  {
+    "common_word": "BUT",
+    "sign_id": "2310",
+    "matched_word": "but",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 9
+  },
+  {
+    "common_word": "GO",
+    "sign_id": "1178",
+    "matched_word": "go",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 10
+  },
+  {
+    "common_word": "HAVE",
+    "sign_id": "1376",
+    "matched_word": "have",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 11
+  },
+  {
+    "common_word": "WELL",
+    "sign_id": "1651",
+    "matched_word": "well",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 12
+  },
+  {
+    "common_word": "HEARING",
+    "sign_id": "2117",
+    "matched_word": "hearing",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 13
+  },
+  {
+    "common_word": "NOTHING",
+    "sign_id": "3027",
+    "matched_word": "nothing",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 14
+  },
+  {
+    "common_word": "SAY",
+    "sign_id": "2190",
+    "matched_word": "say",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 15
+  },
+  {
+    "common_word": "TIME",
+    "sign_id": "6270",
+    "matched_word": "time",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 16
+  },
+  {
+    "common_word": "WORK",
+    "sign_id": "3585",
+    "matched_word": "work",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 17
+  },
+  {
+    "common_word": "THINK",
+    "sign_id": "2050",
+    "matched_word": "think",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 18
+  },
+  {
+    "common_word": "FOR",
+    "sign_id": "4727",
+    "matched_word": "for",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 19
+  },
+  {
+    "common_word": "SEE",
+    "sign_id": "2844",
+    "matched_word": "see",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 20
+  },
+  {
+    "common_word": "YEAR",
+    "sign_id": "2509",
+    "matched_word": "year",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 21
+  },
+  {
+    "common_word": "KNOW",
+    "sign_id": "2047",
+    "matched_word": "know",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 22
+  },
+  {
+    "common_word": "NOW",
+    "sign_id": "1050",
+    "matched_word": "now",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 23
+  },
+  {
+    "common_word": "IN",
+    "sign_id": "848",
+    "matched_word": "in",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 24
+  },
+  {
+    "common_word": "DIFFERENT",
+    "sign_id": "2480",
+    "matched_word": "different",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 25
+  },
+  {
+    "common_word": "TO",
+    "sign_id": "4727",
+    "matched_word": "to",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 26
+  },
+  {
+    "common_word": "TWO",
+    "sign_id": "5617",
+    "matched_word": "two",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 27
+  },
+  {
+    "common_word": "WANT",
+    "sign_id": "562",
+    "matched_word": "want",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 28
+  },
+  {
+    "common_word": "CHILDREN",
+    "sign_id": "5389",
+    "matched_word": "children",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 29
+  },
+  {
+    "common_word": "LOOK",
+    "sign_id": "2844",
+    "matched_word": "look",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 30
+  },
+  {
+    "common_word": "FINISH",
+    "sign_id": "1359",
+    "matched_word": "finish",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 31
+  },
+  {
+    "common_word": "NOT",
+    "sign_id": "3127",
+    "matched_word": "not",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 32
+  },
+  {
+    "common_word": "COME",
+    "sign_id": "1031",
+    "matched_word": "come",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 33
+  },
+  {
+    "common_word": "FEEL",
+    "sign_id": "5536",
+    "matched_word": "feel",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 34
+  },
+  {
+    "common_word": "BECAUSE",
+    "sign_id": "1257",
+    "matched_word": "because",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 35
+  },
+  {
+    "common_word": "FIRST",
+    "sign_id": "5663",
+    "matched_word": "first",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 36
+  },
+  {
+    "common_word": "POS-3",
+    "sign_id": "1703",
+    "matched_word": "posh",
+    "confidence": 0.75,
+    "source": "minor",
+    "rank": 37
+  },
+  {
+    "common_word": "WITH",
+    "sign_id": "2879",
+    "matched_word": "with",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 38
+  },
+  {
+    "common_word": "FROM",
+    "sign_id": "1505",
+    "matched_word": "from",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 39
+  },
+  {
+    "common_word": "PAST",
+    "sign_id": "516",
+    "matched_word": "past",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 40
+  },
+  {
+    "common_word": "MOTHER",
+    "sign_id": "2049",
+    "matched_word": "mother",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 41
+  },
+  {
+    "common_word": "THAT",
+    "sign_id": "3885",
+    "matched_word": "that",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 42
+  },
+  {
+    "common_word": "PEOPLE",
+    "sign_id": "2095",
+    "matched_word": "people",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 43
+  },
+  {
+    "common_word": "TEACHER",
+    "sign_id": "2021",
+    "matched_word": "teacher",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 44
+  },
+  {
+    "common_word": "NMS-NEG",
+    "sign_id": "5513",
+    "matched_word": "SMS",
+    "confidence": 0.667,
+    "source": "minor",
+    "rank": 45
+  },
+  {
+    "common_word": "ALL",
+    "sign_id": "5818",
+    "matched_word": "all",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 46
+  },
+  {
+    "common_word": "OTHER",
+    "sign_id": "2404",
+    "matched_word": "other",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 47
+  },
+  {
+    "common_word": "WRITE",
+    "sign_id": "3867",
+    "matched_word": "write",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 48
+  },
+  {
+    "common_word": "MUST",
+    "sign_id": "1885",
+    "matched_word": "must",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 49
+  },
+  {
+    "common_word": "WHEN",
+    "sign_id": "1338",
+    "matched_word": "when",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 50
+  },
+  {
+    "common_word": "THREE",
+    "sign_id": "5619",
+    "matched_word": "three",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 51
+  },
+  {
+    "common_word": "GROUP",
+    "sign_id": "1490",
+    "matched_word": "group",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 52
+  },
+  {
+    "common_word": "WHY",
+    "sign_id": "6215",
+    "matched_word": "why",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 53
+  },
+  {
+    "common_word": "EXPLAIN",
+    "sign_id": "1637",
+    "matched_word": "explain",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 54
+  },
+  {
+    "common_word": "HOUSE",
+    "sign_id": "5995",
+    "matched_word": "house",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 55
+  },
+  {
+    "common_word": "ALRIGHT",
+    "sign_id": "1437",
+    "matched_word": "alright",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 56
+  },
+  {
+    "common_word": "GO-TO",
+    "sign_id": "6287",
+    "matched_word": "go to",
+    "confidence": 0.8,
+    "source": "gloss",
+    "rank": 57
+  },
+  {
+    "common_word": "SOME",
+    "sign_id": "4051",
+    "matched_word": "some",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 58
+  },
+  {
+    "common_word": "NMS-nod",
+    "sign_id": "1464",
+    "matched_word": "no",
+    "confidence": 0.8,
+    "source": "gloss",
+    "rank": 59
+  },
+  {
+    "common_word": "TEACH",
+    "sign_id": "4054",
+    "matched_word": "teach",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 60
+  },
+  {
+    "common_word": "CAN'T",
+    "sign_id": "1224",
+    "matched_word": "can't",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 61
+  },
+  {
+    "common_word": "WALK",
+    "sign_id": "4993",
+    "matched_word": "walk",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 62
+  },
+  {
+    "common_word": "CAN",
+    "sign_id": "2305",
+    "matched_word": "can",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 63
+  },
+  {
+    "common_word": "FRIEND",
+    "sign_id": "1083",
+    "matched_word": "friend",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 64
+  },
+  {
+    "common_word": "ASK",
+    "sign_id": "1071",
+    "matched_word": "ask",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 65
+  },
+  {
+    "common_word": "HARD",
+    "sign_id": "3284",
+    "matched_word": "hard",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 66
+  },
+  {
+    "common_word": "RIGHT",
+    "sign_id": "3739",
+    "matched_word": "right",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 67
+  },
+  {
+    "common_word": "TALK",
+    "sign_id": "2207",
+    "matched_word": "talk",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 68
+  },
+  {
+    "common_word": "MORE",
+    "sign_id": "1105",
+    "matched_word": "more",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 69
+  },
+  {
+    "common_word": "BORN",
+    "sign_id": "362",
+    "matched_word": "boring",
+    "confidence": 0.8,
+    "source": "gloss",
+    "rank": 70
+  },
+  {
+    "common_word": "HOW",
+    "sign_id": "1287",
+    "matched_word": "how",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 71
+  },
+  {
+    "common_word": "OR",
+    "sign_id": "1450",
+    "matched_word": "or",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 72
+  },
+  {
+    "common_word": "AREA",
+    "sign_id": "5738",
+    "matched_word": "area",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 73
+  },
+  {
+    "common_word": "BETTER",
+    "sign_id": "3684",
+    "matched_word": "better",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 74
+  },
+  {
+    "common_word": "IF",
+    "sign_id": "3642",
+    "matched_word": "if",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 75
+  },
+  {
+    "common_word": "SPOUSE",
+    "sign_id": "3050",
+    "matched_word": "spouse",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 76
+  },
+  {
+    "common_word": "GROW-UP",
+    "sign_id": "981",
+    "matched_word": "grown-up",
+    "confidence": 0.933,
+    "source": "minor",
+    "rank": 77
+  },
+  {
+    "common_word": "INTERESTING",
+    "sign_id": "1865",
+    "matched_word": "interesting",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 78
+  },
+  {
+    "common_word": "TELL",
+    "sign_id": "1071",
+    "matched_word": "tell",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 79
+  },
+  {
+    "common_word": "ABOUT",
+    "sign_id": "2543",
+    "matched_word": "about",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 80
+  },
+  {
+    "common_word": "MAN",
+    "sign_id": "2184",
+    "matched_word": "man",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 81
+  },
+  {
+    "common_word": "NEW-ZEALAND",
+    "sign_id": "5239",
+    "matched_word": "New Zealand",
+    "confidence": 0.909,
+    "source": "minor",
+    "rank": 82
+  },
+  {
+    "common_word": "DON'T-KNOW",
+    "sign_id": "307",
+    "matched_word": "don't know",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 83
+  },
+  {
+    "common_word": "FATHER",
+    "sign_id": "2216",
+    "matched_word": "father",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 84
+  },
+  {
+    "common_word": "UNDERSTAND",
+    "sign_id": "5517",
+    "matched_word": "understand",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 85
+  },
+  {
+    "common_word": "LEARN-ABSORB",
+    "sign_id": "1320",
+    "matched_word": "absorb",
+    "confidence": 0.667,
+    "source": "minor",
+    "rank": 86
+  },
+  {
+    "common_word": "WAVE-NO",
+    "sign_id": "1479",
+    "matched_word": "wave",
+    "confidence": 0.727,
+    "source": "gloss",
+    "rank": 87
+  },
+  {
+    "common_word": "REMEMBER",
+    "sign_id": "5197",
+    "matched_word": "remember",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 88
+  },
+  {
+    "common_word": "GIVE",
+    "sign_id": "1220",
+    "matched_word": "give",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 89
+  },
+  {
+    "common_word": "SPEAK",
+    "sign_id": "4293",
+    "matched_word": "speak",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 90
+  },
+  {
+    "common_word": "MEET",
+    "sign_id": "2461",
+    "matched_word": "meet",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 91
+  },
+  {
+    "common_word": "NO",
+    "sign_id": "1464",
+    "matched_word": "no",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 92
+  },
+  {
+    "common_word": "LIKE",
+    "sign_id": "2331",
+    "matched_word": "like",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 93
+  },
+  {
+    "common_word": "LITTLE",
+    "sign_id": "3829",
+    "matched_word": "little",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 94
+  },
+  {
+    "common_word": "START",
+    "sign_id": "5417",
+    "matched_word": "start",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 95
+  },
+  {
+    "common_word": "ENTER",
+    "sign_id": "648",
+    "matched_word": "enter",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 96
+  },
+  {
+    "common_word": "THEN",
+    "sign_id": "3653",
+    "matched_word": "then",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 97
+  },
+  {
+    "common_word": "HEAR",
+    "sign_id": "335",
+    "matched_word": "hear",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 98
+  },
+  {
+    "common_word": "ENGLISH",
+    "sign_id": "2456",
+    "matched_word": "English",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 99
+  },
+  {
+    "common_word": "LEARN",
+    "sign_id": "1513",
+    "matched_word": "learn",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 100
+  },
+  {
+    "common_word": "CAR",
+    "sign_id": "3462",
+    "matched_word": "car",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 101
+  },
+  {
+    "common_word": "AUCKLAND",
+    "sign_id": "2259",
+    "matched_word": "Auckland",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 102
+  },
+  {
+    "common_word": "NAME",
+    "sign_id": "2173",
+    "matched_word": "name",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 103
+  },
+  {
+    "common_word": "HERE",
+    "sign_id": "2579",
+    "matched_word": "here",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 104
+  },
+  {
+    "common_word": "MAKE",
+    "sign_id": "1361",
+    "matched_word": "make",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 105
+  },
+  {
+    "common_word": "EASY",
+    "sign_id": "2215",
+    "matched_word": "easy",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 106
+  },
+  {
+    "common_word": "WHERE",
+    "sign_id": "1544",
+    "matched_word": "where",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 107
+  },
+  {
+    "common_word": "FOUR",
+    "sign_id": "5620",
+    "matched_word": "four",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 108
+  },
+  {
+    "common_word": "ONLY",
+    "sign_id": "8949",
+    "matched_word": "only",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 109
+  },
+  {
+    "common_word": "THERE",
+    "sign_id": "2583",
+    "matched_word": "there",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 110
+  },
+  {
+    "common_word": "JOB",
+    "sign_id": "3585",
+    "matched_word": "job",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 111
+  },
+  {
+    "common_word": "NEVER",
+    "sign_id": "1224",
+    "matched_word": "never",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 112
+  },
+  {
+    "common_word": "THROUGH",
+    "sign_id": "669",
+    "matched_word": "through",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 113
+  },
+  {
+    "common_word": "BAD",
+    "sign_id": "4581",
+    "matched_word": "bad",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 114
+  },
+  {
+    "common_word": "LONG-TIME-AGO",
+    "sign_id": "5093",
+    "matched_word": "long time ago",
+    "confidence": 0.846,
+    "source": "gloss",
+    "rank": 115
+  },
+  {
+    "common_word": "NEW",
+    "sign_id": "1757",
+    "matched_word": "new",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 116
+  },
+  {
+    "common_word": "STILL",
+    "sign_id": "2457",
+    "matched_word": "still",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 117
+  },
+  {
+    "common_word": "OLD",
+    "sign_id": "2697",
+    "matched_word": "old",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 118
+  },
+  {
+    "common_word": "PERSON",
+    "sign_id": "4446",
+    "matched_word": "person",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 119
+  },
+  {
+    "common_word": "FAMILY",
+    "sign_id": "1636",
+    "matched_word": "family",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 120
+  },
+  {
+    "common_word": "LEAVE",
+    "sign_id": "1239",
+    "matched_word": "leave",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 121
+  },
+  {
+    "common_word": "MONTH",
+    "sign_id": "4763",
+    "matched_word": "month",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 122
+  },
+  {
+    "common_word": "EAT",
+    "sign_id": "4022",
+    "matched_word": "eat",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 123
+  },
+  {
+    "common_word": "DRIVE",
+    "sign_id": "3462",
+    "matched_word": "drive",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 124
+  },
+  {
+    "common_word": "REALLY",
+    "sign_id": "1711",
+    "matched_word": "really",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 125
+  },
+  {
+    "common_word": "BABY",
+    "sign_id": "1231",
+    "matched_word": "baby",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 126
+  },
+  {
+    "common_word": "INTERPRETING",
+    "sign_id": "1865",
+    "matched_word": "interesting",
+    "confidence": 0.87,
+    "source": "minor",
+    "rank": 127
+  },
+  {
+    "common_word": "MEAN",
+    "sign_id": "3645",
+    "matched_word": "mean",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 128
+  },
+  {
+    "common_word": "PLAY",
+    "sign_id": "4802",
+    "matched_word": "play",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 129
+  },
+  {
+    "common_word": "BROTHER",
+    "sign_id": "3513",
+    "matched_word": "brother",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 130
+  },
+  {
+    "common_word": "PLUS",
+    "sign_id": "2464",
+    "matched_word": "plus",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 131
+  },
+  {
+    "common_word": "GET",
+    "sign_id": "3890",
+    "matched_word": "get",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 132
+  },
+  {
+    "common_word": "MOVE",
+    "sign_id": "702",
+    "matched_word": "move",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 133
+  },
+  {
+    "common_word": "AND",
+    "sign_id": "2464",
+    "matched_word": "and",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 134
+  },
+  {
+    "common_word": "CHANGE",
+    "sign_id": "3919",
+    "matched_word": "change",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 135
+  },
+  {
+    "common_word": "STAY",
+    "sign_id": "2587",
+    "matched_word": "stay",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 136
+  },
+  {
+    "common_word": "ARRIVE",
+    "sign_id": "1031",
+    "matched_word": "arrive",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 137
+  },
+  {
+    "common_word": "MAYBE",
+    "sign_id": "719",
+    "matched_word": "maybe",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 138
+  },
+  {
+    "common_word": "SIGN-CHAT",
+    "sign_id": "2086",
+    "matched_word": "sight",
+    "confidence": 0.714,
+    "source": "minor",
+    "rank": 139
+  },
+  {
+    "common_word": "BOY",
+    "sign_id": "1217",
+    "matched_word": "boy",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 140
+  },
+  {
+    "common_word": "FULL",
+    "sign_id": "456",
+    "matched_word": "full",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 141
+  },
+  {
+    "common_word": "WAIT",
+    "sign_id": "4213",
+    "matched_word": "wait",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 142
+  },
+  {
+    "common_word": "LANGUAGE",
+    "sign_id": "2789",
+    "matched_word": "language",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 143
+  },
+  {
+    "common_word": "MOTHER-FATHER",
+    "sign_id": "2052",
+    "matched_word": "mother and father",
+    "confidence": 0.8,
+    "source": "minor",
+    "rank": 144
+  },
+  {
+    "common_word": "FIVE",
+    "sign_id": "5621",
+    "matched_word": "five",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 145
+  },
+  {
+    "common_word": "PROBLEM",
+    "sign_id": "3741",
+    "matched_word": "problem",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 146
+  },
+  {
+    "common_word": "SO",
+    "sign_id": "1257",
+    "matched_word": "so",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 147
+  },
+  {
+    "common_word": "TAP-SHOULDER",
+    "sign_id": "962",
+    "matched_word": "shoulder",
+    "confidence": 0.8,
+    "source": "gloss",
+    "rank": 148
+  },
+  {
+    "common_word": "WONDER",
+    "sign_id": "2076",
+    "matched_word": "wonder",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 149
+  },
+  {
+    "common_word": "PROGRESS",
+    "sign_id": "557",
+    "matched_word": "progress",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 150
+  },
+  {
+    "common_word": "WILL",
+    "sign_id": "5833",
+    "matched_word": "will",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 151
+  },
+  {
+    "common_word": "DOCTOR",
+    "sign_id": "4092",
+    "matched_word": "doctor",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 152
+  },
+  {
+    "common_word": "ORAL",
+    "sign_id": "5802",
+    "matched_word": "oral",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 153
+  },
+  {
+    "common_word": "MANY",
+    "sign_id": "2754",
+    "matched_word": "many",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 154
+  },
+  {
+    "common_word": "THAT'S-ALL",
+    "sign_id": "1462",
+    "matched_word": "that's all",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 155
+  },
+  {
+    "common_word": "AGAIN",
+    "sign_id": "2921",
+    "matched_word": "again",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 156
+  },
+  {
+    "common_word": "BIG",
+    "sign_id": "1545",
+    "matched_word": "big",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 157
+  },
+  {
+    "common_word": "CHRISTCHURCH",
+    "sign_id": "4214",
+    "matched_word": "Christchurch",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 158
+  },
+  {
+    "common_word": "HALF",
+    "sign_id": "4968",
+    "matched_word": "half",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 159
+  },
+  {
+    "common_word": "DAY",
+    "sign_id": "3216",
+    "matched_word": "day",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 160
+  },
+  {
+    "common_word": "TRY",
+    "sign_id": "2145",
+    "matched_word": "try",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 161
+  },
+  {
+    "common_word": "FIND",
+    "sign_id": "5450",
+    "matched_word": "find",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 162
+  },
+  {
+    "common_word": "HELP",
+    "sign_id": "1123",
+    "matched_word": "help",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 163
+  },
+  {
+    "common_word": "DO",
+    "sign_id": "2743",
+    "matched_word": "do",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 164
+  },
+  {
+    "common_word": "CLUB",
+    "sign_id": "3912",
+    "matched_word": "club",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 165
+  },
+  {
+    "common_word": "VERY",
+    "sign_id": "579",
+    "matched_word": "very",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 166
+  },
+  {
+    "common_word": "NEXT",
+    "sign_id": "3775",
+    "matched_word": "next",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 167
+  },
+  {
+    "common_word": "WOMAN",
+    "sign_id": "259",
+    "matched_word": "woman",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 168
+  },
+  {
+    "common_word": "SIX",
+    "sign_id": "5622",
+    "matched_word": "six",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 169
+  },
+  {
+    "common_word": "CLASS",
+    "sign_id": "4249",
+    "matched_word": "class",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 170
+  },
+  {
+    "common_word": "HEY",
+    "sign_id": "485",
+    "matched_word": "hey",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 171
+  },
+  {
+    "common_word": "PAY",
+    "sign_id": "1902",
+    "matched_word": "pay",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 172
+  },
+  {
+    "common_word": "HOME",
+    "sign_id": "5995",
+    "matched_word": "home",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 173
+  },
+  {
+    "common_word": "MAORI",
+    "sign_id": "3204",
+    "matched_word": "M\u0101ori",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 174
+  },
+  {
+    "common_word": "WRONG",
+    "sign_id": "4581",
+    "matched_word": "wrong",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 175
+  },
+  {
+    "common_word": "SHIFT",
+    "sign_id": "702",
+    "matched_word": "shift",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 176
+  },
+  {
+    "common_word": "SISTER",
+    "sign_id": "277",
+    "matched_word": "Sister",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 177
+  },
+  {
+    "common_word": "WELLINGTON",
+    "sign_id": "4738",
+    "matched_word": "Wellington",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 178
+  },
+  {
+    "common_word": "NIGHT",
+    "sign_id": "5391",
+    "matched_word": "night",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 179
+  },
+  {
+    "common_word": "BOOK",
+    "sign_id": "3524",
+    "matched_word": "book",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 180
+  },
+  {
+    "common_word": "BED",
+    "sign_id": "3192",
+    "matched_word": "bed",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 181
+  },
+  {
+    "common_word": "TELEPHONE",
+    "sign_id": "4736",
+    "matched_word": "telephone",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 182
+  },
+  {
+    "common_word": "COMMUNICATE",
+    "sign_id": "4261",
+    "matched_word": "communicate",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 183
+  },
+  {
+    "common_word": "FORGET",
+    "sign_id": "1319",
+    "matched_word": "forget",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 184
+  },
+  {
+    "common_word": "BEFORE",
+    "sign_id": "499",
+    "matched_word": "before",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 185
+  },
+  {
+    "common_word": "IX-LIST-3",
+    "sign_id": "1112",
+    "matched_word": "list",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 186
+  },
+  {
+    "common_word": "NEGOTIATE",
+    "sign_id": "1214",
+    "matched_word": "negotiate",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 187
+  },
+  {
+    "common_word": "DELLA",
+    "sign_id": "496",
+    "matched_word": "delay",
+    "confidence": 0.8,
+    "source": "minor",
+    "rank": 188
+  },
+  {
+    "common_word": "INVOLVED",
+    "sign_id": "4316",
+    "matched_word": "involve",
+    "confidence": 0.933,
+    "source": "gloss",
+    "rank": 189
+  },
+  {
+    "common_word": "LIVE",
+    "sign_id": "4808",
+    "matched_word": "live",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 190
+  },
+  {
+    "common_word": "HOSPITAL",
+    "sign_id": "1806",
+    "matched_word": "hospital",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 191
+  },
+  {
+    "common_word": "MORNING",
+    "sign_id": "1188",
+    "matched_word": "morning",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 192
+  },
+  {
+    "common_word": "SMALL-CHID",
+    "sign_id": "954",
+    "matched_word": "small",
+    "confidence": 0.667,
+    "source": "minor",
+    "rank": 193
+  },
+  {
+    "common_word": "AGE",
+    "sign_id": "4655",
+    "matched_word": "age",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 194
+  },
+  {
+    "common_word": "BOTH-OF-US",
+    "sign_id": "2961",
+    "matched_word": "both of us",
+    "confidence": 0.8,
+    "source": "minor",
+    "rank": 195
+  },
+  {
+    "common_word": "LATER-ON",
+    "sign_id": "1073",
+    "matched_word": "later",
+    "confidence": 0.769,
+    "source": "gloss",
+    "rank": 196
+  },
+  {
+    "common_word": "DRINK",
+    "sign_id": "4264",
+    "matched_word": "drink",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 197
+  },
+  {
+    "common_word": "SLEEP",
+    "sign_id": "347",
+    "matched_word": "sleep",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 198
+  },
+  {
+    "common_word": "SECOND",
+    "sign_id": "2416",
+    "matched_word": "second",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 199
+  },
+  {
+    "common_word": "LIFE",
+    "sign_id": "4808",
+    "matched_word": "life",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 200
+  },
+  {
+    "common_word": "HAPPEN",
+    "sign_id": "2403",
+    "matched_word": "happen",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 201
+  },
+  {
+    "common_word": "STORY",
+    "sign_id": "1038",
+    "matched_word": "story",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 202
+  },
+  {
+    "common_word": "AFTER",
+    "sign_id": "1073",
+    "matched_word": "after",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 203
+  },
+  {
+    "common_word": "FOOD",
+    "sign_id": "4022",
+    "matched_word": "food",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 204
+  },
+  {
+    "common_word": "OUT",
+    "sign_id": "3690",
+    "matched_word": "out",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 205
+  },
+  {
+    "common_word": "MONEY",
+    "sign_id": "5397",
+    "matched_word": "money",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 206
+  },
+  {
+    "common_word": "SMALL",
+    "sign_id": "954",
+    "matched_word": "small",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 207
+  },
+  {
+    "common_word": "AMERICA",
+    "sign_id": "1482",
+    "matched_word": "America",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 208
+  },
+  {
+    "common_word": "AUSTRALIA",
+    "sign_id": "4790",
+    "matched_word": "Australia",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 209
+  },
+  {
+    "common_word": "BRING",
+    "sign_id": "3369",
+    "matched_word": "bring",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 210
+  },
+  {
+    "common_word": "NOT-YET",
+    "sign_id": "4809",
+    "matched_word": "not yet",
+    "confidence": 0.857,
+    "source": "gloss",
+    "rank": 211
+  },
+  {
+    "common_word": "ON",
+    "sign_id": "602",
+    "matched_word": "on",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 212
+  },
+  {
+    "common_word": "READ",
+    "sign_id": "2895",
+    "matched_word": "read",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 213
+  },
+  {
+    "common_word": "WAY",
+    "sign_id": "423",
+    "matched_word": "way",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 214
+  },
+  {
+    "common_word": "BOTH",
+    "sign_id": "2855",
+    "matched_word": "both",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 215
+  },
+  {
+    "common_word": "EVERYTHING",
+    "sign_id": "5818",
+    "matched_word": "everything",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 216
+  },
+  {
+    "common_word": "MARRY",
+    "sign_id": "3050",
+    "matched_word": "marry",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 217
+  },
+  {
+    "common_word": "SPORT",
+    "sign_id": "3260",
+    "matched_word": "sport",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 218
+  },
+  {
+    "common_word": "ALWAYS",
+    "sign_id": "1747",
+    "matched_word": "always",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 219
+  },
+  {
+    "common_word": "BACK",
+    "sign_id": "3952",
+    "matched_word": "back",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 220
+  },
+  {
+    "common_word": "GIRL",
+    "sign_id": "2128",
+    "matched_word": "girl",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 221
+  },
+  {
+    "common_word": "HIGH",
+    "sign_id": "964",
+    "matched_word": "high",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 222
+  },
+  {
+    "common_word": "LATER",
+    "sign_id": "1073",
+    "matched_word": "later",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 223
+  },
+  {
+    "common_word": "LOOK-AROUND",
+    "sign_id": "2825",
+    "matched_word": "look around",
+    "confidence": 0.909,
+    "source": "gloss",
+    "rank": 224
+  },
+  {
+    "common_word": "UP",
+    "sign_id": "5767",
+    "matched_word": "up",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 225
+  },
+  {
+    "common_word": "WEEK",
+    "sign_id": "1465",
+    "matched_word": "week",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 226
+  },
+  {
+    "common_word": "PATIENCE",
+    "sign_id": "804",
+    "matched_word": "patience",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 227
+  },
+  {
+    "common_word": "WORLD",
+    "sign_id": "1228",
+    "matched_word": "world",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 228
+  },
+  {
+    "common_word": "TAKE",
+    "sign_id": "1767",
+    "matched_word": "take",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 229
+  },
+  {
+    "common_word": "WATCH",
+    "sign_id": "2844",
+    "matched_word": "watch",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 230
+  },
+  {
+    "common_word": "CHILD",
+    "sign_id": "954",
+    "matched_word": "child",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 231
+  },
+  {
+    "common_word": "EDUCATION",
+    "sign_id": "4054",
+    "matched_word": "education",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 232
+  },
+  {
+    "common_word": "PUT-UP",
+    "sign_id": "3905",
+    "matched_word": "cut up",
+    "confidence": 0.667,
+    "source": "minor",
+    "rank": 233
+  },
+  {
+    "common_word": "THANK",
+    "sign_id": "1015",
+    "matched_word": "thank",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 234
+  },
+  {
+    "common_word": "WOW",
+    "sign_id": "1565",
+    "matched_word": "wow",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 235
+  },
+  {
+    "common_word": "FARM",
+    "sign_id": "3701",
+    "matched_word": "farm",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 236
+  },
+  {
+    "common_word": "FOLLOW",
+    "sign_id": "1514",
+    "matched_word": "follow",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 237
+  },
+  {
+    "common_word": "STOP",
+    "sign_id": "738",
+    "matched_word": "stop",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 238
+  },
+  {
+    "common_word": "STRONG",
+    "sign_id": "3266",
+    "matched_word": "strong",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 239
+  },
+  {
+    "common_word": "BOSS",
+    "sign_id": "3295",
+    "matched_word": "boss",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 240
+  },
+  {
+    "common_word": "EVERY",
+    "sign_id": "5818",
+    "matched_word": "every",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 241
+  },
+  {
+    "common_word": "READY",
+    "sign_id": "1369",
+    "matched_word": "ready",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 242
+  },
+  {
+    "common_word": "KELSTON",
+    "sign_id": "6628",
+    "matched_word": "Kelson",
+    "confidence": 0.923,
+    "source": "gloss",
+    "rank": 243
+  },
+  {
+    "common_word": "PAIN",
+    "sign_id": "1771",
+    "matched_word": "pain",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 244
+  },
+  {
+    "common_word": "SEVEN",
+    "sign_id": "5623",
+    "matched_word": "seven",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 245
+  },
+  {
+    "common_word": "HAPPY",
+    "sign_id": "2705",
+    "matched_word": "happy",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 246
+  },
+  {
+    "common_word": "MOST",
+    "sign_id": "1494",
+    "matched_word": "most",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 247
+  },
+  {
+    "common_word": "OVER",
+    "sign_id": "813",
+    "matched_word": "over",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 248
+  },
+  {
+    "common_word": "PICK-UP",
+    "sign_id": "5905",
+    "matched_word": "pick up",
+    "confidence": 0.857,
+    "source": "minor",
+    "rank": 249
+  },
+  {
+    "common_word": "RELATION",
+    "sign_id": "2960",
+    "matched_word": "relation",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 250
+  },
+  {
+    "common_word": "ROOM",
+    "sign_id": "3398",
+    "matched_word": "room",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 251
+  },
+  {
+    "common_word": "BODY",
+    "sign_id": "1803",
+    "matched_word": "body",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 252
+  },
+  {
+    "common_word": "COME-ON",
+    "sign_id": "5118",
+    "matched_word": "come on!",
+    "confidence": 0.857,
+    "source": "gloss",
+    "rank": 253
+  },
+  {
+    "common_word": "FEW",
+    "sign_id": "3829",
+    "matched_word": "few",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 254
+  },
+  {
+    "common_word": "GO-BACK",
+    "sign_id": "3637",
+    "matched_word": "go back",
+    "confidence": 0.857,
+    "source": "gloss",
+    "rank": 255
+  },
+  {
+    "common_word": "MIX",
+    "sign_id": "3875",
+    "matched_word": "mix",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 256
+  },
+  {
+    "common_word": "SHOCK",
+    "sign_id": "1863",
+    "matched_word": "shock",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 257
+  },
+  {
+    "common_word": "STAFF",
+    "sign_id": "2219",
+    "matched_word": "staff",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 258
+  },
+  {
+    "common_word": "DAUGHTER",
+    "sign_id": "4454",
+    "matched_word": "daughter",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 259
+  },
+  {
+    "common_word": "HELLO",
+    "sign_id": "1301",
+    "matched_word": "hello",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 260
+  },
+  {
+    "common_word": "PLEASE",
+    "sign_id": "385",
+    "matched_word": "please",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 261
+  },
+  {
+    "common_word": "TIME-SPAN",
+    "sign_id": "492",
+    "matched_word": "time span",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 262
+  },
+  {
+    "common_word": "ENOUGH",
+    "sign_id": "1042",
+    "matched_word": "enough",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 263
+  },
+  {
+    "common_word": "FAR",
+    "sign_id": "4907",
+    "matched_word": "far",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 264
+  },
+  {
+    "common_word": "HOLIDAY",
+    "sign_id": "1403",
+    "matched_word": "holiday",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 265
+  },
+  {
+    "common_word": "OH-I-SEE",
+    "sign_id": "1452",
+    "matched_word": "oh I see",
+    "confidence": 0.75,
+    "source": "minor",
+    "rank": 266
+  },
+  {
+    "common_word": "PREGNANT",
+    "sign_id": "1277",
+    "matched_word": "pregnant",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 267
+  },
+  {
+    "common_word": "TEN",
+    "sign_id": "4065",
+    "matched_word": "ten",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 268
+  },
+  {
+    "common_word": "BOARDING",
+    "sign_id": "3193",
+    "matched_word": "boarding",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 269
+  },
+  {
+    "common_word": "BOAT",
+    "sign_id": "859",
+    "matched_word": "boat",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 270
+  },
+  {
+    "common_word": "LADY",
+    "sign_id": "1522",
+    "matched_word": "lady",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 271
+  },
+  {
+    "common_word": "PUT-ASIDE",
+    "sign_id": "512",
+    "matched_word": "put aside",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 272
+  },
+  {
+    "common_word": "SOMETHING",
+    "sign_id": "1952",
+    "matched_word": "something",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 273
+  },
+  {
+    "common_word": "BUS",
+    "sign_id": "3587",
+    "matched_word": "bus",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 274
+  },
+  {
+    "common_word": "DATE",
+    "sign_id": "4938",
+    "matched_word": "date",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 275
+  },
+  {
+    "common_word": "FUNNY",
+    "sign_id": "3639",
+    "matched_word": "funny",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 276
+  },
+  {
+    "common_word": "HOUR",
+    "sign_id": "2569",
+    "matched_word": "hour",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 277
+  },
+  {
+    "common_word": "LAUGH",
+    "sign_id": "2751",
+    "matched_word": "laugh",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 278
+  },
+  {
+    "common_word": "LET-ME-THINK",
+    "sign_id": "8931",
+    "matched_word": "seething",
+    "confidence": 0.6,
+    "source": "gloss",
+    "rank": 279
+  },
+  {
+    "common_word": "PAST-MY-EYES",
+    "sign_id": "634",
+    "matched_word": "paste",
+    "confidence": 0.588,
+    "source": "gloss",
+    "rank": 280
+  },
+  {
+    "common_word": "WORSE",
+    "sign_id": "4614",
+    "matched_word": "worse",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 281
+  },
+  {
+    "common_word": "EIGHT",
+    "sign_id": "5624",
+    "matched_word": "eight",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 282
+  },
+  {
+    "common_word": "EXPERIENCE",
+    "sign_id": "3620",
+    "matched_word": "experience",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 283
+  },
+  {
+    "common_word": "HOLD",
+    "sign_id": "1946",
+    "matched_word": "hold",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 284
+  },
+  {
+    "common_word": "LEAVE-ALONE",
+    "sign_id": "489",
+    "matched_word": "leave alone",
+    "confidence": 0.909,
+    "source": "gloss",
+    "rank": 285
+  },
+  {
+    "common_word": "VISIT",
+    "sign_id": "4794",
+    "matched_word": "visit",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 286
+  },
+  {
+    "common_word": "WHICH",
+    "sign_id": "1529",
+    "matched_word": "which",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 287
+  },
+  {
+    "common_word": "LET-IT-GO",
+    "sign_id": "4780",
+    "matched_word": "let it go",
+    "confidence": 0.778,
+    "source": "gloss",
+    "rank": 288
+  },
+  {
+    "common_word": "MIME-rub-hands",
+    "sign_id": "539",
+    "matched_word": "hands",
+    "confidence": 0.714,
+    "source": "gloss",
+    "rank": 289
+  },
+  {
+    "common_word": "PCL-people-flock",
+    "sign_id": "2095",
+    "matched_word": "people",
+    "confidence": 0.667,
+    "source": "gloss",
+    "rank": 290
+  },
+  {
+    "common_word": "PLENTY",
+    "sign_id": "3721",
+    "matched_word": "plenty (of)",
+    "confidence": 0.8,
+    "source": "gloss",
+    "rank": 291
+  },
+  {
+    "common_word": "TITLE",
+    "sign_id": "4531",
+    "matched_word": "title",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 292
+  },
+  {
+    "common_word": "TRAVEL",
+    "sign_id": "2325",
+    "matched_word": "travel",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 293
+  },
+  {
+    "common_word": "BUY",
+    "sign_id": "3859",
+    "matched_word": "buy",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 294
+  },
+  {
+    "common_word": "COOK",
+    "sign_id": "3875",
+    "matched_word": "cook",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 295
+  },
+  {
+    "common_word": "ENCOURAGE",
+    "sign_id": "1585",
+    "matched_word": "encourage",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 296
+  },
+  {
+    "common_word": "YOUNG",
+    "sign_id": "954",
+    "matched_word": "young",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 297
+  },
+  {
+    "common_word": "PERFECT",
+    "sign_id": "5949",
+    "matched_word": "perfect",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 298
+  },
+  {
+    "common_word": "TEAM",
+    "sign_id": "1490",
+    "matched_word": "team",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 299
+  },
+  {
+    "common_word": "COURSE",
+    "sign_id": "4222",
+    "matched_word": "course",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 300
+  },
+  {
+    "common_word": "FLY",
+    "sign_id": "5852",
+    "matched_word": "fly",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 301
+  },
+  {
+    "common_word": "MEDICAL",
+    "sign_id": "4092",
+    "matched_word": "medical",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 302
+  },
+  {
+    "common_word": "PHOOEY",
+    "sign_id": "2677",
+    "matched_word": "photo",
+    "confidence": 0.727,
+    "source": "gloss",
+    "rank": 303
+  },
+  {
+    "common_word": "PICK",
+    "sign_id": "2774",
+    "matched_word": "pick",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 304
+  },
+  {
+    "common_word": "UNDERSTAND-neg",
+    "sign_id": "5517",
+    "matched_word": "understand",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 305
+  },
+  {
+    "common_word": "BREAK",
+    "sign_id": "3571",
+    "matched_word": "break",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 306
+  },
+  {
+    "common_word": "JOIN",
+    "sign_id": "5340",
+    "matched_word": "join",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 307
+  },
+  {
+    "common_word": "LOOK-AFTER",
+    "sign_id": "2139",
+    "matched_word": "look after",
+    "confidence": 0.9,
+    "source": "gloss",
+    "rank": 308
+  },
+  {
+    "common_word": "SHOW",
+    "sign_id": "4299",
+    "matched_word": "show",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 309
+  },
+  {
+    "common_word": "TEA",
+    "sign_id": "2935",
+    "matched_word": "tea",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 310
+  },
+  {
+    "common_word": "TRUE",
+    "sign_id": "440",
+    "matched_word": "true",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 311
+  },
+  {
+    "common_word": "FIX",
+    "sign_id": "3856",
+    "matched_word": "fix",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 312
+  },
+  {
+    "common_word": "GIVE-me",
+    "sign_id": "1220",
+    "matched_word": "give",
+    "confidence": 0.727,
+    "source": "gloss",
+    "rank": 313
+  },
+  {
+    "common_word": "LOTS",
+    "sign_id": "1494",
+    "matched_word": "lots",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 314
+  },
+  {
+    "common_word": "LOVE",
+    "sign_id": "5240",
+    "matched_word": "love",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 315
+  },
+  {
+    "common_word": "THIS",
+    "sign_id": "3885",
+    "matched_word": "this",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 316
+  },
+  {
+    "common_word": "LAST",
+    "sign_id": "355",
+    "matched_word": "last",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 317
+  },
+  {
+    "common_word": "SIT",
+    "sign_id": "5964",
+    "matched_word": "sit",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 318
+  },
+  {
+    "common_word": "THOUSAND",
+    "sign_id": "2290",
+    "matched_word": "thousand",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 319
+  },
+  {
+    "common_word": "TOP",
+    "sign_id": "407",
+    "matched_word": "top",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 320
+  },
+  {
+    "common_word": "WAKE-UP",
+    "sign_id": "4347",
+    "matched_word": "wake up",
+    "confidence": 0.857,
+    "source": "gloss",
+    "rank": 321
+  },
+  {
+    "common_word": "WORD",
+    "sign_id": "2501",
+    "matched_word": "word",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 322
+  },
+  {
+    "common_word": "ASSOCIATION",
+    "sign_id": "1803",
+    "matched_word": "association",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 323
+  },
+  {
+    "common_word": "BEST",
+    "sign_id": "3682",
+    "matched_word": "best",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 324
+  },
+  {
+    "common_word": "COMPETE",
+    "sign_id": "1485",
+    "matched_word": "compete",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 325
+  },
+  {
+    "common_word": "DOLLAR",
+    "sign_id": "4224",
+    "matched_word": "dollar",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 326
+  },
+  {
+    "common_word": "HAND",
+    "sign_id": "539",
+    "matched_word": "hands",
+    "confidence": 0.889,
+    "source": "gloss",
+    "rank": 327
+  },
+  {
+    "common_word": "HUNDRED",
+    "sign_id": "386",
+    "matched_word": "hundred",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 328
+  },
+  {
+    "common_word": "SWIM",
+    "sign_id": "1075",
+    "matched_word": "swim",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 329
+  },
+  {
+    "common_word": "THAN",
+    "sign_id": "4130",
+    "matched_word": "than",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 330
+  },
+  {
+    "common_word": "USE",
+    "sign_id": "3714",
+    "matched_word": "use",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 331
+  },
+  {
+    "common_word": "WATER",
+    "sign_id": "1760",
+    "matched_word": "water",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 332
+  },
+  {
+    "common_word": "ACCEPT",
+    "sign_id": "4333",
+    "matched_word": "accept",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 333
+  },
+  {
+    "common_word": "OK",
+    "sign_id": "3725",
+    "matched_word": "OK",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 334
+  },
+  {
+    "common_word": "RUN",
+    "sign_id": "3923",
+    "matched_word": "run",
+    "confidence": 1.0,
+    "source": "minor",
+    "rank": 335
+  },
+  {
+    "common_word": "NINE",
+    "sign_id": "5695",
+    "matched_word": "nine",
+    "confidence": 1.0,
+    "source": "gloss",
+    "rank": 336
+  }
+]
