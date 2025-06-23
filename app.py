@@ -5,6 +5,9 @@ from flask_cors import CORS
 import anthropic
 import json
 import os
+import sqlite3
+import random
+import re
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -60,23 +63,18 @@ def get_usage_stats():
     """Get current usage statistics"""
     return jsonify(usage_stats)
 
+def parse_sign_sequence(sentence):
+    """Extract sign IDs from sentence notation"""
+    if not sentence:
+        return []
+    pattern = r'([a-zA-Z\-\^:]+)\[(\d+)\]'
+    matches = re.findall(pattern, sentence)
+    return [{'word': word, 'id': int(sign_id)} for word, sign_id in matches]
+
 @app.route('/random_video')
 def get_random_video():
     """Get a random video with enhanced sign sequence data"""
     try:
-        import sqlite3
-        import json
-        import random
-        import re
-        
-        def parse_sign_sequence(sentence):
-            """Extract sign IDs from sentence notation"""
-            if not sentence:
-                return []
-            pattern = r'([a-zA-Z\-\^:]+)\[(\d+)\]'
-            matches = re.findall(pattern, sentence)
-            return [{'word': word, 'id': int(sign_id)} for word, sign_id in matches]
-        
         # Load matched signs data
         with open('matched_signs.json', 'r') as f:
             matched_signs = json.load(f)
@@ -192,8 +190,11 @@ def get_random_video():
         return jsonify(video_data)
         
     except Exception as e:
+        import traceback
         print(f"Error getting random video: {e}")
-        return jsonify({'error': 'Internal server error'}), 500
+        print("Full traceback:")
+        traceback.print_exc()
+        return jsonify({'error': f'Internal server error: {str(e)}'}), 500
 
 
 @app.route('/score_translation', methods=['POST'])
