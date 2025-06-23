@@ -42,10 +42,7 @@ def script():
     response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
     return response
 
-@app.route('/video_examples.json')
-def video_data():
-    """Serve the video examples data"""
-    return send_from_directory('.', 'video_examples.json')
+# Removed - video data now served via /random_video endpoint
 
 @app.route('/assets/icons/<filename>')
 def serve_icons(filename):
@@ -62,6 +59,141 @@ def favicon():
 def get_usage_stats():
     """Get current usage statistics"""
     return jsonify(usage_stats)
+
+@app.route('/random_video')
+def get_random_video():
+    """Get a random video with enhanced sign sequence data"""
+    try:
+        import sqlite3
+        import json
+        import random
+        import re
+        
+        def parse_sign_sequence(sentence):
+            """Extract sign IDs from sentence notation"""
+            if not sentence:
+                return []
+            pattern = r'([a-zA-Z\-\^:]+)\[(\d+)\]'
+            matches = re.findall(pattern, sentence)
+            return [{'word': word, 'id': int(sign_id)} for word, sign_id in matches]
+        
+        # Load matched signs data
+        with open('matched_signs.json', 'r') as f:
+            matched_signs = json.load(f)
+        
+        # Connect to database
+        conn = sqlite3.connect('nzsl.db')
+        cursor = conn.cursor()
+        
+        # Get a random sign from top 350
+        random_sign = random.choice(matched_signs[:350])
+        sign_id = random_sign['sign_id']
+        
+        # Get actual word definition
+        cursor.execute("""
+            SELECT w.gloss, w.minor, v.url 
+            FROM words w
+            LEFT JOIN videos v ON w.id = v.word_id AND v.video_type = 'main' AND v.url LIKE '%.mp4'
+            WHERE w.id = ?
+            LIMIT 1
+        """, (sign_id,))
+        
+        word_data = cursor.fetchone()
+        if word_data:
+            actual_gloss, minor_meanings, definition_video_url = word_data
+        else:
+            actual_gloss = random_sign['common_word']
+            minor_meanings = ""
+            definition_video_url = None
+        
+        # Get all example videos for this sign
+        cursor.execute("""
+            SELECT word_id, video_type, url, display_order
+            FROM videos 
+            WHERE word_id = ? AND video_type LIKE 'finalexample%'
+            ORDER BY video_type, display_order
+        """, (sign_id,))
+        
+        videos = cursor.fetchall()
+        
+        if not videos:
+            # Try another random sign if no videos found
+            conn.close()
+            return get_random_video()  # Recursive call
+        
+        # Pick a random video from available examples
+        word_id, video_type, video_url, display_order = random.choice(videos)
+        
+        # Get example sentence data
+        cursor.execute("""
+            SELECT sentence, translation 
+            FROM examples 
+            WHERE word_id = ? AND display_order = ?
+        """, (word_id, int(video_type.replace('finalexample', ''))))
+        
+        example_data = cursor.fetchone()
+        
+        if example_data:
+            sentence, translation = example_data
+            sign_sequence = parse_sign_sequence(sentence)
+        else:
+            sentence = ""
+            translation = f"Example for {random_sign['common_word']}"
+            sign_sequence = []
+        
+        # Enhance sign sequence with definition data
+        enhanced_sign_sequence = []
+        for sign in sign_sequence:
+            cursor.execute("""
+                SELECT w.gloss, w.minor, v.url 
+                FROM words w
+                INNER JOIN videos v ON w.id = v.word_id AND v.video_type = 'main' AND v.url LIKE '%.mp4'
+                WHERE w.id = ?
+                LIMIT 1
+            """, (str(sign['id']),))
+            
+            sign_data = cursor.fetchone()
+            if sign_data:
+                enhanced_sign = {
+                    'word': sign['word'],
+                    'id': sign['id'],
+                    'gloss': sign_data[0],
+                    'minor_meanings': sign_data[1] or '',
+                    'definition_video_url': sign_data[2]
+                }
+            else:
+                enhanced_sign = {
+                    'word': sign['word'],
+                    'id': sign['id'],
+                    'gloss': sign['word'],
+                    'minor_meanings': '',
+                    'definition_video_url': None
+                }
+            enhanced_sign_sequence.append(enhanced_sign)
+        
+        # Build response
+        video_data = {
+            'word_id': word_id,
+            'example_number': int(video_type.replace('finalexample', '')),
+            'video_type': video_type,
+            'common_word': random_sign['common_word'],
+            'actual_gloss': actual_gloss,
+            'minor_meanings': minor_meanings,
+            'definition_video_url': definition_video_url,
+            'rank': random_sign['rank'],
+            'confidence': random_sign['confidence'],
+            'video_url': video_url,
+            'english_translation': translation,
+            'sign_sequence': enhanced_sign_sequence,
+            'raw_sentence': sentence
+        }
+        
+        conn.close()
+        return jsonify(video_data)
+        
+    except Exception as e:
+        print(f"Error getting random video: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
 
 
 @app.route('/score_translation', methods=['POST'])

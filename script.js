@@ -2,14 +2,13 @@
 
 class NZSLPractice {
     constructor() {
-        this.videoData = [];
         this.currentVideo = null;
         this.practiceHistory = this.loadPracticeHistory();
         this.initializeElements();
-        this.loadVideoData();
         this.setupEventListeners();
         this.updateStatsDisplay();
         this.initializeDarkMode();
+        this.loadRandomVideo(); // Load first video
     }
 
     initializeElements() {
@@ -43,15 +42,40 @@ class NZSLPractice {
         this.closeDefinition = document.getElementById('closeDefinition');
     }
 
-    async loadVideoData() {
+    async loadRandomVideo() {
         try {
-            const response = await fetch('/video_examples.json');
-            this.videoData = await response.json();
-            console.log(`Loaded ${this.videoData.length} video examples`);
-            this.loadRandomVideo();
+            // Show loading state
+            this.resetUI();
+            this.videoLoading.style.display = 'flex';
+            this.videoInfo.textContent = 'Loading video...';
+            
+            // Fetch random video from server
+            const response = await fetch('/random_video');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            this.currentVideo = await response.json();
+            
+            // Load video
+            this.video.src = this.currentVideo.video_url;
+            this.video.load();
+            
+            // Update sign sequence display
+            this.updateSignSequence();
+            
         } catch (error) {
-            console.error('Error loading video data:', error);
-            this.videoInfo.textContent = 'Error loading video data. Please refresh the page.';
+            console.error('Error loading video:', error);
+            this.videoLoading.style.display = 'none';
+            this.videoInfo.textContent = 'Error loading video. Please refresh the page or try again.';
+            
+            // Show retry button
+            this.videoInfo.innerHTML = `
+                Error loading video. 
+                <button onclick="app.loadRandomVideo()" style="margin-left: 10px; padding: 5px 10px; cursor: pointer;">
+                    Try Again
+                </button>
+            `;
         }
     }
 
@@ -110,23 +134,7 @@ class NZSLPractice {
         });
     }
 
-    loadRandomVideo() {
-        if (this.videoData.length === 0) return;
-        
-        // Select random video
-        const randomIndex = Math.floor(Math.random() * this.videoData.length);
-        this.currentVideo = this.videoData[randomIndex];
-        
-        // Reset UI
-        this.resetUI();
-        
-        // Load video
-        this.video.src = this.currentVideo.video_url;
-        this.video.load();
-        
-        // Update sign sequence display
-        this.updateSignSequence();
-    }
+    // loadRandomVideo method is now defined above
 
     updateSignSequence() {
         if (!this.currentVideo.sign_sequence) {
