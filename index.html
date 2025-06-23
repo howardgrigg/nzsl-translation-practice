@@ -753,6 +753,31 @@
             background: #000;
         }
 
+        /* Prevent fullscreen on definition video */
+        #definitionVideo::-webkit-media-controls-fullscreen-button {
+            display: none !important;
+        }
+
+        #definitionVideo::-webkit-media-controls {
+            overflow: hidden;
+        }
+
+        /* Additional mobile constraints for definition video */
+        @media (max-width: 768px) {
+            #definitionVideo {
+                max-height: 250px;
+                object-fit: contain;
+            }
+            
+            .definition-modal {
+                max-width: 95vw;
+            }
+            
+            .definition-video-wrapper {
+                padding: 15px;
+            }
+        }
+
         .definition-meanings {
             padding: 20px;
             border-top: 1px solid var(--border-color);
@@ -944,7 +969,7 @@
                 <button id="closeDefinition" class="close-btn">&times;</button>
             </div>
             <div class="definition-video-wrapper">
-                <video id="definitionVideo" controls autoplay loop muted>
+                <video id="definitionVideo" controls autoplay loop muted playsinline webkit-playsinline>
                     Your browser does not support the video tag.
                 </video>
             </div>

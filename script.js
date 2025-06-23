@@ -3,6 +3,8 @@
 class NZSLPractice {
     constructor() {
         this.currentVideo = null;
+        this.preloadedVideo = null; // Store preloaded next video
+        this.preloadedVideoElement = null; // Store preloaded video element
         this.practiceHistory = this.loadPracticeHistory();
         this.initializeElements();
         this.setupEventListeners();
@@ -44,7 +46,31 @@ class NZSLPractice {
 
     async loadRandomVideo() {
         try {
-            // Show loading state
+            // Check if we have a preloaded video ready
+            if (this.preloadedVideo && this.preloadedVideoElement) {
+                // Use preloaded video data and element
+                this.currentVideo = this.preloadedVideo;
+                this.preloadedVideo = null;
+                
+                // Show loading state briefly for smooth transition
+                this.resetUI();
+                this.videoLoading.style.display = 'flex';
+                this.videoInfo.textContent = 'Loading video...';
+                
+                // Use the preloaded video element's source (already loaded)
+                this.video.src = this.preloadedVideoElement.src;
+                this.video.load();
+                
+                // Clean up preloaded element
+                this.preloadedVideoElement = null;
+                
+                // Update sign sequence display
+                this.updateSignSequence();
+                
+                return;
+            }
+            
+            // No preloaded video available, fetch normally
             this.resetUI();
             this.videoLoading.style.display = 'flex';
             this.videoInfo.textContent = 'Loading video...';
@@ -76,6 +102,65 @@ class NZSLPractice {
                     Try Again
                 </button>
             `;
+        }
+    }
+
+    async preloadNextVideo() {
+        try {
+            // Don't preload if we already have a preloaded video
+            if (this.preloadedVideo && this.preloadedVideoElement) return;
+            
+            console.log('Preloading next video data...');
+            const response = await fetch('/random_video');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            this.preloadedVideo = await response.json();
+            console.log('Next video data preloaded successfully');
+            
+            // Now preload the actual video file
+            console.log('Preloading video file...');
+            this.preloadedVideoElement = document.createElement('video');
+            this.preloadedVideoElement.preload = 'auto';
+            this.preloadedVideoElement.muted = true;
+            this.preloadedVideoElement.playsInline = true;
+            
+            // Create a promise to track video loading
+            const videoLoadPromise = new Promise((resolve, reject) => {
+                const onCanPlay = () => {
+                    console.log('Video file preloaded successfully');
+                    this.preloadedVideoElement.removeEventListener('canplay', onCanPlay);
+                    this.preloadedVideoElement.removeEventListener('error', onError);
+                    resolve();
+                };
+                
+                const onError = (error) => {
+                    console.error('Error preloading video file:', error);
+                    this.preloadedVideoElement.removeEventListener('canplay', onCanPlay);
+                    this.preloadedVideoElement.removeEventListener('error', onError);
+                    // Don't reject - just continue without preloaded video
+                    this.preloadedVideoElement = null;
+                    resolve();
+                };
+                
+                this.preloadedVideoElement.addEventListener('canplay', onCanPlay);
+                this.preloadedVideoElement.addEventListener('error', onError);
+            });
+            
+            // Start loading the video
+            this.preloadedVideoElement.src = this.preloadedVideo.video_url;
+            this.preloadedVideoElement.load();
+            
+            // Wait for video to be ready (or fail silently)
+            await videoLoadPromise;
+            
+        } catch (error) {
+            console.error('Error preloading next video:', error);
+            // Clean up on error
+            this.preloadedVideo = null;
+            this.preloadedVideoElement = null;
+            // Fail silently - user will just get normal loading experience
         }
     }
 
@@ -259,6 +344,9 @@ class NZSLPractice {
 
             const result = await response.json();
             this.displayResults(result, userText);
+            
+            // Start preloading the next video after successful submission
+            this.preloadNextVideo();
 
         } catch (error) {
             console.error('Error scoring interpretation:', error);
