@@ -257,9 +257,13 @@ class NZSLPractice {
         this.signSequence.style.display = 'block';
 
         // Show word information and dictionary link
+        const actualGloss = this.currentVideo.actual_gloss || this.currentVideo.common_word;
+        const minorMeanings = this.currentVideo.minor_meanings;
+        const displayText = minorMeanings ? `${actualGloss} (${minorMeanings})` : actualGloss;
+        
         this.wordInfo.innerHTML = `
             <div class="word-details">
-                Common word: <strong>${this.currentVideo.common_word}</strong> • 
+                Sign: <strong>${displayText}</strong> • 
                 Rank: <strong>#${this.currentVideo.rank}</strong>
             </div>
             <a href="https://www.nzsl.nz/signs/${this.currentVideo.word_id}" target="_blank" class="dictionary-link">
@@ -297,6 +301,8 @@ class NZSLPractice {
             timestamp: new Date().toISOString(),
             videoId: this.currentVideo.example_id,
             commonWord: this.currentVideo.common_word,
+            actualGloss: this.currentVideo.actual_gloss,
+            minorMeanings: this.currentVideo.minor_meanings,
             rank: this.currentVideo.rank,
             videoUrl: this.currentVideo.video_url,
             englishTranslation: this.currentVideo.english_translation,
@@ -386,10 +392,13 @@ class NZSLPractice {
             const time = new Date(session.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             const scoreClass = this.getScoreClass(session.score);
             
+            // Use actual gloss if available, fallback to commonWord for older sessions
+            const displayWord = session.actualGloss || session.commonWord;
+            
             return `
                 <div class="history-item" data-session-id="${session.id}">
                     <div class="history-header">
-                        <span class="history-word">${session.commonWord}</span>
+                        <span class="history-word">${displayWord}</span>
                         <span class="history-score ${scoreClass}">${session.score}/10</span>
                     </div>
                     <div class="history-meta">
@@ -423,6 +432,8 @@ class NZSLPractice {
         this.currentVideo = {
             example_id: session.videoId,
             common_word: session.commonWord,
+            actual_gloss: session.actualGloss,
+            minor_meanings: session.minorMeanings,
             rank: session.rank,
             video_url: session.videoUrl,
             english_translation: session.englishTranslation,

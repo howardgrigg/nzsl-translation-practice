@@ -31,6 +31,18 @@ def main():
     for item in matched_signs[:350]:  # Top 350 most common
         sign_id = item['sign_id']
         
+        # Get the actual word definition from the words table
+        cursor.execute("""
+            SELECT gloss, minor FROM words WHERE id = ?
+        """, (sign_id,))
+        
+        word_data = cursor.fetchone()
+        if word_data:
+            actual_gloss, minor_meanings = word_data
+        else:
+            actual_gloss = item['common_word']  # fallback
+            minor_meanings = ""
+        
         # Get all example videos for this sign from the videos table
         cursor.execute("""
             SELECT word_id, video_type, url, display_order
@@ -64,7 +76,9 @@ def main():
                 'word_id': word_id,
                 'example_number': int(video_type.replace('finalexample', '')),
                 'video_type': video_type,
-                'common_word': item['common_word'],
+                'common_word': item['common_word'],  # keep for reference
+                'actual_gloss': actual_gloss,
+                'minor_meanings': minor_meanings,
                 'rank': item['rank'],
                 'confidence': item['confidence'],
                 'video_url': video_url,
@@ -74,7 +88,7 @@ def main():
             }
             
             video_data.append(video_entry)
-            print(f"Added: {item['common_word']} (rank {item['rank']}) - {video_type} - {translation}")
+            print(f"Added: {actual_gloss} [{item['common_word']}] (rank {item['rank']}) - {video_type} - {translation}")
     
     # Save to JSON
     with open('video_examples.json', 'w') as f:
