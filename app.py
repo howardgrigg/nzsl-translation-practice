@@ -45,10 +45,16 @@ def video_data():
     """Serve the video examples data"""
     return send_from_directory('.', 'video_examples.json')
 
-@app.route('/assets/<path:filename>')
-def serve_assets(filename):
-    """Serve static assets (favicons, manifest, etc.)"""
-    return send_from_directory('assets', filename)
+@app.route('/assets/icons/<filename>')
+def serve_icons(filename):
+    """Serve favicon and icon files"""
+    return send_from_directory('assets/icons', filename)
+
+# Also serve favicon.ico from root for default browser requests
+@app.route('/favicon.ico')
+def favicon():
+    """Serve favicon from root path"""
+    return send_from_directory('assets/icons', 'favicon.ico')
 
 @app.route('/usage_stats')
 def get_usage_stats():
