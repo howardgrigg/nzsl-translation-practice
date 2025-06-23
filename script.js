@@ -1,3 +1,5 @@
+'use strict';
+
 class NZSLPractice {
     constructor() {
         this.videoData = [];

@@ -38,7 +38,9 @@ def index():
 @app.route('/script.js')
 def script():
     """Serve the JavaScript file"""
-    return send_from_directory('.', 'script.js')
+    response = send_from_directory('.', 'script.js')
+    response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
+    return response
 
 @app.route('/video_examples.json')
 def video_data():
