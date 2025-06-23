@@ -397,8 +397,8 @@ class NZSLPractice {
                         <span class="history-rank">Rank #${session.rank}</span>
                     </div>
                     <div class="history-translations">
-                        <div class="history-user">You: "${session.userTranslation}"</div>
-                        <div class="history-official">Official: "${session.englishTranslation}"</div>
+                        <div class="history-user">You: "${session.userTranslation.replace(/"/g, '&quot;')}"</div>
+                        <div class="history-official">Official: "${session.englishTranslation.replace(/"/g, '&quot;')}"</div>
                     </div>
                     <button class="replay-btn" onclick="app.replaySession('${session.id}')">Replay Video</button>
                 </div>
