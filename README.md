@@ -4,7 +4,7 @@ A web application for practicing New Zealand Sign Language (NZSL) interpretation
 
 ## Features
 
-- **554+ video examples** from the top 300 most common NZSL signs
+- **437 video examples** from the top 350 most common NZSL signs (covering 297 unique signs)
 - **AI-powered scoring** (0-10) with personalized feedback using Claude 3.5 Haiku
 - **Interpretation history tracking** with localStorage - view past attempts and track improvement
 - **Progress statistics** showing average scores and improvement trends
@@ -103,7 +103,7 @@ A web application for practicing New Zealand Sign Language (NZSL) interpretation
 - **Backend**: Flask server (Python) proxies Claude API calls to keep API key secure
 - **Frontend**: Vanilla HTML/CSS/JavaScript with localStorage for history
 - **Videos**: Streamed directly from AWS S3 (NZSL dictionary hosting)
-- **Data**: 554 video examples extracted from SQLite database
+- **Data**: 437 video examples extracted from SQLite database
 - **AI Model**: Claude 3.5 Haiku for semantic scoring and feedback
 
 ### Video Data Structure
@@ -132,9 +132,10 @@ Claude 3.5 Haiku evaluates interpretations based on:
 ├── app.py                 # Flask backend server
 ├── index.html            # Main webpage with embedded CSS
 ├── script.js             # Frontend JavaScript application
-├── video_examples.json   # Video data (554 examples)
+├── video_examples.json   # Video data (437 examples)
 ├── matched_signs.json    # Sign ID mappings from common words
 ├── words.json           # Top 300 most common NZSL signs
+├── matched_signs.json    # Extended to top 350 signs with video mappings
 ├── requirements.txt     # Python dependencies
 ├── Dockerfile          # Docker container configuration
 ├── docker-compose.yml  # Docker Compose setup
