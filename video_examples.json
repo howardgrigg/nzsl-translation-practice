@@ -2,6 +2,7 @@
   {
     "word_id": "3658",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GOOD",
     "rank": 1,
     "confidence": 1.0,
@@ -50,6 +51,7 @@
   {
     "word_id": "2121",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DEAF",
     "rank": 2,
     "confidence": 1.0,
@@ -90,6 +92,7 @@
   {
     "word_id": "5607",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ONE",
     "rank": 3,
     "confidence": 1.0,
@@ -138,6 +141,7 @@
   {
     "word_id": "1202",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SAME",
     "rank": 4,
     "confidence": 1.0,
@@ -170,6 +174,7 @@
   {
     "word_id": "1202",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SAME",
     "rank": 4,
     "confidence": 1.0,
@@ -210,6 +215,7 @@
   {
     "word_id": "1298",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SCHOOL",
     "rank": 5,
     "confidence": 1.0,
@@ -254,6 +260,7 @@
   {
     "word_id": "3725",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "YES",
     "rank": 6,
     "confidence": 1.0,
@@ -274,6 +281,7 @@
   {
     "word_id": "3725",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "YES",
     "rank": 6,
     "confidence": 1.0,
@@ -302,6 +310,7 @@
   {
     "word_id": "1983",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SIGN",
     "rank": 7,
     "confidence": 1.0,
@@ -354,6 +363,7 @@
   {
     "word_id": "2266",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WHAT",
     "rank": 8,
     "confidence": 1.0,
@@ -386,6 +396,7 @@
   {
     "word_id": "2266",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WHAT",
     "rank": 8,
     "confidence": 1.0,
@@ -438,6 +449,7 @@
   {
     "word_id": "2310",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BUT",
     "rank": 9,
     "confidence": 1.0,
@@ -482,6 +494,7 @@
   {
     "word_id": "1178",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GO",
     "rank": 10,
     "confidence": 1.0,
@@ -522,6 +535,7 @@
   {
     "word_id": "1178",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "GO",
     "rank": 10,
     "confidence": 1.0,
@@ -562,6 +576,7 @@
   {
     "word_id": "1376",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HAVE",
     "rank": 11,
     "confidence": 1.0,
@@ -630,6 +645,7 @@
   {
     "word_id": "1651",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WELL",
     "rank": 12,
     "confidence": 1.0,
@@ -670,6 +686,7 @@
   {
     "word_id": "2117",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HEARING",
     "rank": 13,
     "confidence": 1.0,
@@ -714,6 +731,7 @@
   {
     "word_id": "3027",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NOTHING",
     "rank": 14,
     "confidence": 1.0,
@@ -754,6 +772,7 @@
   {
     "word_id": "3027",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "NOTHING",
     "rank": 14,
     "confidence": 1.0,
@@ -790,6 +809,7 @@
   {
     "word_id": "2190",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SAY",
     "rank": 15,
     "confidence": 1.0,
@@ -822,6 +842,7 @@
   {
     "word_id": "6270",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TIME",
     "rank": 16,
     "confidence": 1.0,
@@ -854,6 +875,7 @@
   {
     "word_id": "6270",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "TIME",
     "rank": 16,
     "confidence": 1.0,
@@ -890,6 +912,7 @@
   {
     "word_id": "3585",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WORK",
     "rank": 17,
     "confidence": 1.0,
@@ -954,6 +977,7 @@
   {
     "word_id": "2050",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THINK",
     "rank": 18,
     "confidence": 1.0,
@@ -990,6 +1014,7 @@
   {
     "word_id": "4727",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FOR",
     "rank": 19,
     "confidence": 1.0,
@@ -1034,6 +1059,7 @@
   {
     "word_id": "2844",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SEE",
     "rank": 20,
     "confidence": 1.0,
@@ -1078,6 +1104,7 @@
   {
     "word_id": "2844",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SEE",
     "rank": 20,
     "confidence": 1.0,
@@ -1110,6 +1137,7 @@
   {
     "word_id": "2509",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "YEAR",
     "rank": 21,
     "confidence": 1.0,
@@ -1138,6 +1166,7 @@
   {
     "word_id": "2047",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "KNOW",
     "rank": 22,
     "confidence": 1.0,
@@ -1170,6 +1199,7 @@
   {
     "word_id": "1050",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NOW",
     "rank": 23,
     "confidence": 1.0,
@@ -1202,6 +1232,7 @@
   {
     "word_id": "848",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "IN",
     "rank": 24,
     "confidence": 1.0,
@@ -1238,6 +1269,7 @@
   {
     "word_id": "848",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "IN",
     "rank": 24,
     "confidence": 1.0,
@@ -1298,6 +1330,7 @@
   {
     "word_id": "2480",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DIFFERENT",
     "rank": 25,
     "confidence": 1.0,
@@ -1342,6 +1375,7 @@
   {
     "word_id": "2480",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "DIFFERENT",
     "rank": 25,
     "confidence": 1.0,
@@ -1386,6 +1420,7 @@
   {
     "word_id": "4727",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TO",
     "rank": 26,
     "confidence": 1.0,
@@ -1430,6 +1465,7 @@
   {
     "word_id": "5617",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TWO",
     "rank": 27,
     "confidence": 1.0,
@@ -1466,6 +1502,7 @@
   {
     "word_id": "562",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WANT",
     "rank": 28,
     "confidence": 1.0,
@@ -1506,6 +1543,7 @@
   {
     "word_id": "5389",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CHILDREN",
     "rank": 29,
     "confidence": 1.0,
@@ -1554,6 +1592,7 @@
   {
     "word_id": "2844",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LOOK",
     "rank": 30,
     "confidence": 1.0,
@@ -1598,6 +1637,7 @@
   {
     "word_id": "2844",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "LOOK",
     "rank": 30,
     "confidence": 1.0,
@@ -1630,6 +1670,7 @@
   {
     "word_id": "1359",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FINISH",
     "rank": 31,
     "confidence": 1.0,
@@ -1670,6 +1711,7 @@
   {
     "word_id": "3127",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NOT",
     "rank": 32,
     "confidence": 1.0,
@@ -1710,6 +1752,7 @@
   {
     "word_id": "1031",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "COME",
     "rank": 33,
     "confidence": 1.0,
@@ -1754,6 +1797,7 @@
   {
     "word_id": "5536",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FEEL",
     "rank": 34,
     "confidence": 1.0,
@@ -1786,6 +1830,7 @@
   {
     "word_id": "5536",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "FEEL",
     "rank": 34,
     "confidence": 1.0,
@@ -1830,6 +1875,7 @@
   {
     "word_id": "1257",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BECAUSE",
     "rank": 35,
     "confidence": 1.0,
@@ -1870,6 +1916,7 @@
   {
     "word_id": "1257",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BECAUSE",
     "rank": 35,
     "confidence": 1.0,
@@ -1910,6 +1957,7 @@
   {
     "word_id": "5663",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FIRST",
     "rank": 36,
     "confidence": 1.0,
@@ -1966,6 +2014,7 @@
   {
     "word_id": "1703",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "POS-3",
     "rank": 37,
     "confidence": 0.75,
@@ -2002,6 +2051,7 @@
   {
     "word_id": "2879",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WITH",
     "rank": 38,
     "confidence": 1.0,
@@ -2038,6 +2088,7 @@
   {
     "word_id": "1505",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FROM",
     "rank": 39,
     "confidence": 1.0,
@@ -2074,6 +2125,7 @@
   {
     "word_id": "1505",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "FROM",
     "rank": 39,
     "confidence": 1.0,
@@ -2102,6 +2154,7 @@
   {
     "word_id": "516",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PAST",
     "rank": 40,
     "confidence": 1.0,
@@ -2146,6 +2199,7 @@
   {
     "word_id": "2049",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MOTHER",
     "rank": 41,
     "confidence": 1.0,
@@ -2186,6 +2240,7 @@
   {
     "word_id": "3885",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THAT",
     "rank": 42,
     "confidence": 1.0,
@@ -2234,6 +2289,7 @@
   {
     "word_id": "3885",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "THAT",
     "rank": 42,
     "confidence": 1.0,
@@ -2278,6 +2334,7 @@
   {
     "word_id": "2095",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PEOPLE",
     "rank": 43,
     "confidence": 1.0,
@@ -2326,6 +2383,7 @@
   {
     "word_id": "2021",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TEACHER",
     "rank": 44,
     "confidence": 1.0,
@@ -2374,6 +2432,7 @@
   {
     "word_id": "5513",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NMS-NEG",
     "rank": 45,
     "confidence": 0.667,
@@ -2402,6 +2461,7 @@
   {
     "word_id": "5513",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "NMS-NEG",
     "rank": 45,
     "confidence": 0.667,
@@ -2446,6 +2506,7 @@
   {
     "word_id": "5818",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ALL",
     "rank": 46,
     "confidence": 1.0,
@@ -2474,6 +2535,7 @@
   {
     "word_id": "2404",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "OTHER",
     "rank": 47,
     "confidence": 1.0,
@@ -2514,6 +2576,7 @@
   {
     "word_id": "3867",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WRITE",
     "rank": 48,
     "confidence": 1.0,
@@ -2554,6 +2617,7 @@
   {
     "word_id": "1885",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MUST",
     "rank": 49,
     "confidence": 1.0,
@@ -2594,6 +2658,7 @@
   {
     "word_id": "1338",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WHEN",
     "rank": 50,
     "confidence": 1.0,
@@ -2622,6 +2687,7 @@
   {
     "word_id": "1338",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WHEN",
     "rank": 50,
     "confidence": 1.0,
@@ -2662,6 +2728,7 @@
   {
     "word_id": "5619",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THREE",
     "rank": 51,
     "confidence": 1.0,
@@ -2702,6 +2769,7 @@
   {
     "word_id": "1490",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GROUP",
     "rank": 52,
     "confidence": 1.0,
@@ -2750,6 +2818,7 @@
   {
     "word_id": "1490",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "GROUP",
     "rank": 52,
     "confidence": 1.0,
@@ -2794,6 +2863,7 @@
   {
     "word_id": "6215",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WHY",
     "rank": 53,
     "confidence": 1.0,
@@ -2822,6 +2892,7 @@
   {
     "word_id": "1637",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EXPLAIN",
     "rank": 54,
     "confidence": 1.0,
@@ -2862,6 +2933,7 @@
   {
     "word_id": "5995",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOUSE",
     "rank": 55,
     "confidence": 1.0,
@@ -2894,6 +2966,7 @@
   {
     "word_id": "1437",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ALRIGHT",
     "rank": 56,
     "confidence": 1.0,
@@ -2934,6 +3007,7 @@
   {
     "word_id": "1437",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "ALRIGHT",
     "rank": 56,
     "confidence": 1.0,
@@ -2974,6 +3048,7 @@
   {
     "word_id": "6287",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GO-TO",
     "rank": 57,
     "confidence": 0.8,
@@ -3010,6 +3085,7 @@
   {
     "word_id": "4051",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SOME",
     "rank": 58,
     "confidence": 1.0,
@@ -3058,6 +3134,7 @@
   {
     "word_id": "1464",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NMS-nod",
     "rank": 59,
     "confidence": 0.8,
@@ -3090,6 +3167,7 @@
   {
     "word_id": "4054",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TEACH",
     "rank": 60,
     "confidence": 1.0,
@@ -3134,6 +3212,7 @@
   {
     "word_id": "4054",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "TEACH",
     "rank": 60,
     "confidence": 1.0,
@@ -3178,6 +3257,7 @@
   {
     "word_id": "1224",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CAN'T",
     "rank": 61,
     "confidence": 1.0,
@@ -3222,6 +3302,7 @@
   {
     "word_id": "4993",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WALK",
     "rank": 62,
     "confidence": 1.0,
@@ -3258,6 +3339,7 @@
   {
     "word_id": "2305",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CAN",
     "rank": 63,
     "confidence": 1.0,
@@ -3294,6 +3376,7 @@
   {
     "word_id": "1083",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FRIEND",
     "rank": 64,
     "confidence": 1.0,
@@ -3338,6 +3421,7 @@
   {
     "word_id": "1071",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ASK",
     "rank": 65,
     "confidence": 1.0,
@@ -3378,6 +3462,7 @@
   {
     "word_id": "1071",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "ASK",
     "rank": 65,
     "confidence": 1.0,
@@ -3410,6 +3495,7 @@
   {
     "word_id": "1071",
     "example_number": 3,
+    "video_type": "finalexample3",
     "common_word": "ASK",
     "rank": 65,
     "confidence": 1.0,
@@ -3446,6 +3532,7 @@
   {
     "word_id": "3284",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HARD",
     "rank": 66,
     "confidence": 1.0,
@@ -3482,6 +3569,7 @@
   {
     "word_id": "3739",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "RIGHT",
     "rank": 67,
     "confidence": 1.0,
@@ -3522,6 +3610,7 @@
   {
     "word_id": "2207",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TALK",
     "rank": 68,
     "confidence": 1.0,
@@ -3550,6 +3639,7 @@
   {
     "word_id": "1105",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MORE",
     "rank": 69,
     "confidence": 1.0,
@@ -3590,6 +3680,7 @@
   {
     "word_id": "1105",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "MORE",
     "rank": 69,
     "confidence": 1.0,
@@ -3638,6 +3729,7 @@
   {
     "word_id": "362",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BORN",
     "rank": 70,
     "confidence": 0.8,
@@ -3682,6 +3774,7 @@
   {
     "word_id": "1287",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOW",
     "rank": 71,
     "confidence": 1.0,
@@ -3726,6 +3819,7 @@
   {
     "word_id": "1287",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "HOW",
     "rank": 71,
     "confidence": 1.0,
@@ -3754,6 +3848,7 @@
   {
     "word_id": "1450",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "OR",
     "rank": 72,
     "confidence": 1.0,
@@ -3794,6 +3889,7 @@
   {
     "word_id": "5738",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AREA",
     "rank": 73,
     "confidence": 1.0,
@@ -3830,6 +3926,7 @@
   {
     "word_id": "3684",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BETTER",
     "rank": 74,
     "confidence": 1.0,
@@ -3878,6 +3975,7 @@
   {
     "word_id": "3642",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "IF",
     "rank": 75,
     "confidence": 1.0,
@@ -3918,6 +4016,7 @@
   {
     "word_id": "3050",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SPOUSE",
     "rank": 76,
     "confidence": 1.0,
@@ -3966,6 +4065,7 @@
   {
     "word_id": "3050",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SPOUSE",
     "rank": 76,
     "confidence": 1.0,
@@ -4010,6 +4110,7 @@
   {
     "word_id": "981",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GROW-UP",
     "rank": 77,
     "confidence": 0.933,
@@ -4054,6 +4155,7 @@
   {
     "word_id": "1865",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "INTERESTING",
     "rank": 78,
     "confidence": 1.0,
@@ -4086,6 +4188,7 @@
   {
     "word_id": "1071",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TELL",
     "rank": 79,
     "confidence": 1.0,
@@ -4126,6 +4229,7 @@
   {
     "word_id": "1071",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "TELL",
     "rank": 79,
     "confidence": 1.0,
@@ -4158,6 +4262,7 @@
   {
     "word_id": "1071",
     "example_number": 3,
+    "video_type": "finalexample3",
     "common_word": "TELL",
     "rank": 79,
     "confidence": 1.0,
@@ -4194,6 +4299,7 @@
   {
     "word_id": "2543",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ABOUT",
     "rank": 80,
     "confidence": 1.0,
@@ -4234,6 +4340,7 @@
   {
     "word_id": "2184",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MAN",
     "rank": 81,
     "confidence": 1.0,
@@ -4266,6 +4373,7 @@
   {
     "word_id": "5239",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NEW-ZEALAND",
     "rank": 82,
     "confidence": 0.909,
@@ -4302,6 +4410,7 @@
   {
     "word_id": "307",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DON'T-KNOW",
     "rank": 83,
     "confidence": 0.889,
@@ -4346,6 +4455,7 @@
   {
     "word_id": "2216",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FATHER",
     "rank": 84,
     "confidence": 1.0,
@@ -4378,6 +4488,7 @@
   {
     "word_id": "5517",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "UNDERSTAND",
     "rank": 85,
     "confidence": 1.0,
@@ -4410,6 +4521,7 @@
   {
     "word_id": "1320",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LEARN-ABSORB",
     "rank": 86,
     "confidence": 0.667,
@@ -4454,6 +4566,7 @@
   {
     "word_id": "1479",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WAVE-NO",
     "rank": 87,
     "confidence": 0.727,
@@ -4494,6 +4607,7 @@
   {
     "word_id": "5197",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "REMEMBER",
     "rank": 88,
     "confidence": 1.0,
@@ -4550,6 +4664,7 @@
   {
     "word_id": "1220",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GIVE",
     "rank": 89,
     "confidence": 1.0,
@@ -4598,6 +4713,7 @@
   {
     "word_id": "4293",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SPEAK",
     "rank": 90,
     "confidence": 1.0,
@@ -4630,6 +4746,7 @@
   {
     "word_id": "2461",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MEET",
     "rank": 91,
     "confidence": 1.0,
@@ -4670,6 +4787,7 @@
   {
     "word_id": "1464",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NO",
     "rank": 92,
     "confidence": 1.0,
@@ -4702,6 +4820,7 @@
   {
     "word_id": "2331",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LIKE",
     "rank": 93,
     "confidence": 1.0,
@@ -4746,6 +4865,7 @@
   {
     "word_id": "3829",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LITTLE",
     "rank": 94,
     "confidence": 1.0,
@@ -4790,6 +4910,7 @@
   {
     "word_id": "3829",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "LITTLE",
     "rank": 94,
     "confidence": 1.0,
@@ -4818,6 +4939,7 @@
   {
     "word_id": "5417",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "START",
     "rank": 95,
     "confidence": 1.0,
@@ -4846,6 +4968,7 @@
   {
     "word_id": "648",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ENTER",
     "rank": 96,
     "confidence": 1.0,
@@ -4882,6 +5005,7 @@
   {
     "word_id": "3653",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THEN",
     "rank": 97,
     "confidence": 1.0,
@@ -4914,6 +5038,7 @@
   {
     "word_id": "3653",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "THEN",
     "rank": 97,
     "confidence": 1.0,
@@ -4946,6 +5071,7 @@
   {
     "word_id": "335",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HEAR",
     "rank": 98,
     "confidence": 1.0,
@@ -4986,6 +5112,7 @@
   {
     "word_id": "335",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "HEAR",
     "rank": 98,
     "confidence": 1.0,
@@ -5026,6 +5153,7 @@
   {
     "word_id": "2456",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ENGLISH",
     "rank": 99,
     "confidence": 1.0,
@@ -5074,6 +5202,7 @@
   {
     "word_id": "2456",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "ENGLISH",
     "rank": 99,
     "confidence": 1.0,
@@ -5122,6 +5251,7 @@
   {
     "word_id": "1513",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LEARN",
     "rank": 100,
     "confidence": 1.0,
@@ -5174,6 +5304,7 @@
   {
     "word_id": "3462",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CAR",
     "rank": 101,
     "confidence": 1.0,
@@ -5222,6 +5353,7 @@
   {
     "word_id": "3462",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "CAR",
     "rank": 101,
     "confidence": 1.0,
@@ -5258,6 +5390,7 @@
   {
     "word_id": "2259",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AUCKLAND",
     "rank": 102,
     "confidence": 1.0,
@@ -5290,6 +5423,7 @@
   {
     "word_id": "2173",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NAME",
     "rank": 103,
     "confidence": 1.0,
@@ -5322,6 +5456,7 @@
   {
     "word_id": "2579",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HERE",
     "rank": 104,
     "confidence": 1.0,
@@ -5350,6 +5485,7 @@
   {
     "word_id": "1361",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MAKE",
     "rank": 105,
     "confidence": 1.0,
@@ -5398,6 +5534,7 @@
   {
     "word_id": "2215",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EASY",
     "rank": 106,
     "confidence": 1.0,
@@ -5442,6 +5579,7 @@
   {
     "word_id": "1544",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WHERE",
     "rank": 107,
     "confidence": 1.0,
@@ -5482,6 +5620,7 @@
   {
     "word_id": "5620",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FOUR",
     "rank": 108,
     "confidence": 1.0,
@@ -5522,6 +5661,7 @@
   {
     "word_id": "8949",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ONLY",
     "rank": 109,
     "confidence": 1.0,
@@ -5558,6 +5698,7 @@
   {
     "word_id": "2583",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THERE",
     "rank": 110,
     "confidence": 1.0,
@@ -5606,6 +5747,7 @@
   {
     "word_id": "3585",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "JOB",
     "rank": 111,
     "confidence": 1.0,
@@ -5670,6 +5812,7 @@
   {
     "word_id": "1224",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NEVER",
     "rank": 112,
     "confidence": 1.0,
@@ -5714,6 +5857,7 @@
   {
     "word_id": "669",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THROUGH",
     "rank": 113,
     "confidence": 1.0,
@@ -5750,6 +5894,7 @@
   {
     "word_id": "669",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "THROUGH",
     "rank": 113,
     "confidence": 1.0,
@@ -5786,6 +5931,7 @@
   {
     "word_id": "669",
     "example_number": 3,
+    "video_type": "finalexample3",
     "common_word": "THROUGH",
     "rank": 113,
     "confidence": 1.0,
@@ -5818,6 +5964,7 @@
   {
     "word_id": "669",
     "example_number": 4,
+    "video_type": "finalexample4",
     "common_word": "THROUGH",
     "rank": 113,
     "confidence": 1.0,
@@ -5862,6 +6009,7 @@
   {
     "word_id": "4581",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BAD",
     "rank": 114,
     "confidence": 1.0,
@@ -5894,6 +6042,7 @@
   {
     "word_id": "4581",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BAD",
     "rank": 114,
     "confidence": 1.0,
@@ -5930,6 +6079,7 @@
   {
     "word_id": "5093",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LONG-TIME-AGO",
     "rank": 115,
     "confidence": 0.846,
@@ -5958,6 +6108,7 @@
   {
     "word_id": "1757",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NEW",
     "rank": 116,
     "confidence": 1.0,
@@ -6006,6 +6157,7 @@
   {
     "word_id": "2457",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "STILL",
     "rank": 117,
     "confidence": 1.0,
@@ -6038,6 +6190,7 @@
   {
     "word_id": "2697",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "OLD",
     "rank": 118,
     "confidence": 1.0,
@@ -6078,6 +6231,7 @@
   {
     "word_id": "4446",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PERSON",
     "rank": 119,
     "confidence": 1.0,
@@ -6118,6 +6272,7 @@
   {
     "word_id": "1636",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FAMILY",
     "rank": 120,
     "confidence": 1.0,
@@ -6158,6 +6313,7 @@
   {
     "word_id": "1239",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LEAVE",
     "rank": 121,
     "confidence": 1.0,
@@ -6186,6 +6342,7 @@
   {
     "word_id": "1239",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "LEAVE",
     "rank": 121,
     "confidence": 1.0,
@@ -6226,6 +6383,7 @@
   {
     "word_id": "4763",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MONTH",
     "rank": 122,
     "confidence": 1.0,
@@ -6266,6 +6424,7 @@
   {
     "word_id": "4022",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EAT",
     "rank": 123,
     "confidence": 1.0,
@@ -6306,6 +6465,7 @@
   {
     "word_id": "4022",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "EAT",
     "rank": 123,
     "confidence": 1.0,
@@ -6338,6 +6498,7 @@
   {
     "word_id": "3462",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DRIVE",
     "rank": 124,
     "confidence": 1.0,
@@ -6386,6 +6547,7 @@
   {
     "word_id": "3462",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "DRIVE",
     "rank": 124,
     "confidence": 1.0,
@@ -6422,6 +6584,7 @@
   {
     "word_id": "1711",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "REALLY",
     "rank": 125,
     "confidence": 1.0,
@@ -6462,6 +6625,7 @@
   {
     "word_id": "1711",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "REALLY",
     "rank": 125,
     "confidence": 1.0,
@@ -6518,6 +6682,7 @@
   {
     "word_id": "1231",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BABY",
     "rank": 126,
     "confidence": 1.0,
@@ -6554,6 +6719,7 @@
   {
     "word_id": "1865",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "INTERPRETING",
     "rank": 127,
     "confidence": 0.87,
@@ -6586,6 +6752,7 @@
   {
     "word_id": "3645",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MEAN",
     "rank": 128,
     "confidence": 1.0,
@@ -6622,6 +6789,7 @@
   {
     "word_id": "4802",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PLAY",
     "rank": 129,
     "confidence": 1.0,
@@ -6662,6 +6830,7 @@
   {
     "word_id": "3513",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BROTHER",
     "rank": 130,
     "confidence": 1.0,
@@ -6706,6 +6875,7 @@
   {
     "word_id": "2464",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PLUS",
     "rank": 131,
     "confidence": 1.0,
@@ -6734,6 +6904,7 @@
   {
     "word_id": "2464",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "PLUS",
     "rank": 131,
     "confidence": 1.0,
@@ -6766,6 +6937,7 @@
   {
     "word_id": "3890",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GET",
     "rank": 132,
     "confidence": 1.0,
@@ -6810,6 +6982,7 @@
   {
     "word_id": "702",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MOVE",
     "rank": 133,
     "confidence": 1.0,
@@ -6858,6 +7031,7 @@
   {
     "word_id": "2464",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AND",
     "rank": 134,
     "confidence": 1.0,
@@ -6886,6 +7060,7 @@
   {
     "word_id": "2464",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "AND",
     "rank": 134,
     "confidence": 1.0,
@@ -6918,6 +7093,7 @@
   {
     "word_id": "3919",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CHANGE",
     "rank": 135,
     "confidence": 1.0,
@@ -6954,6 +7130,7 @@
   {
     "word_id": "2587",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "STAY",
     "rank": 136,
     "confidence": 1.0,
@@ -6994,6 +7171,7 @@
   {
     "word_id": "1031",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ARRIVE",
     "rank": 137,
     "confidence": 1.0,
@@ -7038,6 +7216,7 @@
   {
     "word_id": "719",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MAYBE",
     "rank": 138,
     "confidence": 1.0,
@@ -7078,6 +7257,7 @@
   {
     "word_id": "2086",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SIGN-CHAT",
     "rank": 139,
     "confidence": 0.714,
@@ -7110,6 +7290,7 @@
   {
     "word_id": "1217",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOY",
     "rank": 140,
     "confidence": 1.0,
@@ -7150,6 +7331,7 @@
   {
     "word_id": "456",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FULL",
     "rank": 141,
     "confidence": 1.0,
@@ -7190,6 +7372,7 @@
   {
     "word_id": "4213",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WAIT",
     "rank": 142,
     "confidence": 1.0,
@@ -7218,6 +7401,7 @@
   {
     "word_id": "2789",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LANGUAGE",
     "rank": 143,
     "confidence": 1.0,
@@ -7262,6 +7446,7 @@
   {
     "word_id": "2052",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MOTHER-FATHER",
     "rank": 144,
     "confidence": 0.8,
@@ -7302,6 +7487,7 @@
   {
     "word_id": "5621",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FIVE",
     "rank": 145,
     "confidence": 1.0,
@@ -7334,6 +7520,7 @@
   {
     "word_id": "3741",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PROBLEM",
     "rank": 146,
     "confidence": 1.0,
@@ -7366,6 +7553,7 @@
   {
     "word_id": "1257",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SO",
     "rank": 147,
     "confidence": 1.0,
@@ -7406,6 +7594,7 @@
   {
     "word_id": "1257",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SO",
     "rank": 147,
     "confidence": 1.0,
@@ -7446,6 +7635,7 @@
   {
     "word_id": "962",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TAP-SHOULDER",
     "rank": 148,
     "confidence": 0.8,
@@ -7482,6 +7672,7 @@
   {
     "word_id": "2076",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WONDER",
     "rank": 149,
     "confidence": 1.0,
@@ -7518,6 +7709,7 @@
   {
     "word_id": "2076",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WONDER",
     "rank": 149,
     "confidence": 1.0,
@@ -7550,6 +7742,7 @@
   {
     "word_id": "557",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PROGRESS",
     "rank": 150,
     "confidence": 1.0,
@@ -7590,6 +7783,7 @@
   {
     "word_id": "5833",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WILL",
     "rank": 151,
     "confidence": 1.0,
@@ -7630,6 +7824,7 @@
   {
     "word_id": "4092",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DOCTOR",
     "rank": 152,
     "confidence": 1.0,
@@ -7670,6 +7865,7 @@
   {
     "word_id": "5802",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ORAL",
     "rank": 153,
     "confidence": 1.0,
@@ -7710,6 +7906,7 @@
   {
     "word_id": "5802",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "ORAL",
     "rank": 153,
     "confidence": 1.0,
@@ -7746,6 +7943,7 @@
   {
     "word_id": "2754",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MANY",
     "rank": 154,
     "confidence": 1.0,
@@ -7782,6 +7980,7 @@
   {
     "word_id": "1462",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THAT'S-ALL",
     "rank": 155,
     "confidence": 0.889,
@@ -7830,6 +8029,7 @@
   {
     "word_id": "2921",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AGAIN",
     "rank": 156,
     "confidence": 1.0,
@@ -7870,6 +8070,7 @@
   {
     "word_id": "1545",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BIG",
     "rank": 157,
     "confidence": 1.0,
@@ -7906,6 +8107,7 @@
   {
     "word_id": "4214",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CHRISTCHURCH",
     "rank": 158,
     "confidence": 1.0,
@@ -7954,6 +8156,7 @@
   {
     "word_id": "4968",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HALF",
     "rank": 159,
     "confidence": 1.0,
@@ -8006,6 +8209,7 @@
   {
     "word_id": "3216",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DAY",
     "rank": 160,
     "confidence": 1.0,
@@ -8038,6 +8242,7 @@
   {
     "word_id": "3216",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "DAY",
     "rank": 160,
     "confidence": 1.0,
@@ -8070,6 +8275,7 @@
   {
     "word_id": "2145",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TRY",
     "rank": 161,
     "confidence": 1.0,
@@ -8122,6 +8328,7 @@
   {
     "word_id": "2145",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "TRY",
     "rank": 161,
     "confidence": 1.0,
@@ -8154,6 +8361,7 @@
   {
     "word_id": "5450",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FIND",
     "rank": 162,
     "confidence": 1.0,
@@ -8206,6 +8414,7 @@
   {
     "word_id": "1123",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HELP",
     "rank": 163,
     "confidence": 1.0,
@@ -8250,6 +8459,7 @@
   {
     "word_id": "2743",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DO",
     "rank": 164,
     "confidence": 1.0,
@@ -8286,6 +8496,7 @@
   {
     "word_id": "3912",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CLUB",
     "rank": 165,
     "confidence": 1.0,
@@ -8330,6 +8541,7 @@
   {
     "word_id": "579",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "VERY",
     "rank": 166,
     "confidence": 1.0,
@@ -8374,6 +8586,7 @@
   {
     "word_id": "3775",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NEXT",
     "rank": 167,
     "confidence": 1.0,
@@ -8414,6 +8627,7 @@
   {
     "word_id": "259",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WOMAN",
     "rank": 168,
     "confidence": 1.0,
@@ -8450,6 +8664,7 @@
   {
     "word_id": "5622",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SIX",
     "rank": 169,
     "confidence": 1.0,
@@ -8482,6 +8697,7 @@
   {
     "word_id": "4249",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CLASS",
     "rank": 170,
     "confidence": 1.0,
@@ -8526,6 +8742,7 @@
   {
     "word_id": "485",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HEY",
     "rank": 171,
     "confidence": 1.0,
@@ -8554,6 +8771,7 @@
   {
     "word_id": "1902",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PAY",
     "rank": 172,
     "confidence": 1.0,
@@ -8594,6 +8812,7 @@
   {
     "word_id": "1902",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "PAY",
     "rank": 172,
     "confidence": 1.0,
@@ -8642,6 +8861,7 @@
   {
     "word_id": "5995",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOME",
     "rank": 173,
     "confidence": 1.0,
@@ -8674,6 +8894,7 @@
   {
     "word_id": "3204",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MAORI",
     "rank": 174,
     "confidence": 0.889,
@@ -8702,6 +8923,7 @@
   {
     "word_id": "3204",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "MAORI",
     "rank": 174,
     "confidence": 0.889,
@@ -8742,6 +8964,7 @@
   {
     "word_id": "4581",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WRONG",
     "rank": 175,
     "confidence": 1.0,
@@ -8774,6 +8997,7 @@
   {
     "word_id": "4581",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WRONG",
     "rank": 175,
     "confidence": 1.0,
@@ -8810,6 +9034,7 @@
   {
     "word_id": "702",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SHIFT",
     "rank": 176,
     "confidence": 1.0,
@@ -8858,6 +9083,7 @@
   {
     "word_id": "277",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SISTER",
     "rank": 177,
     "confidence": 1.0,
@@ -8894,6 +9120,7 @@
   {
     "word_id": "4738",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WELLINGTON",
     "rank": 178,
     "confidence": 1.0,
@@ -8926,6 +9153,7 @@
   {
     "word_id": "5391",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NIGHT",
     "rank": 179,
     "confidence": 1.0,
@@ -8978,6 +9206,7 @@
   {
     "word_id": "3524",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOOK",
     "rank": 180,
     "confidence": 1.0,
@@ -9010,6 +9239,7 @@
   {
     "word_id": "3524",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BOOK",
     "rank": 180,
     "confidence": 1.0,
@@ -9046,6 +9276,7 @@
   {
     "word_id": "3192",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BED",
     "rank": 181,
     "confidence": 1.0,
@@ -9078,6 +9309,7 @@
   {
     "word_id": "4736",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TELEPHONE",
     "rank": 182,
     "confidence": 1.0,
@@ -9138,6 +9370,7 @@
   {
     "word_id": "4261",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "COMMUNICATE",
     "rank": 183,
     "confidence": 1.0,
@@ -9182,6 +9415,7 @@
   {
     "word_id": "1319",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FORGET",
     "rank": 184,
     "confidence": 1.0,
@@ -9218,6 +9452,7 @@
   {
     "word_id": "499",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BEFORE",
     "rank": 185,
     "confidence": 1.0,
@@ -9266,6 +9501,7 @@
   {
     "word_id": "1112",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "IX-LIST-3",
     "rank": 186,
     "confidence": 0.889,
@@ -9298,6 +9534,7 @@
   {
     "word_id": "1112",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "IX-LIST-3",
     "rank": 186,
     "confidence": 0.889,
@@ -9334,6 +9571,7 @@
   {
     "word_id": "1112",
     "example_number": 3,
+    "video_type": "finalexample3",
     "common_word": "IX-LIST-3",
     "rank": 186,
     "confidence": 0.889,
@@ -9374,6 +9612,7 @@
   {
     "word_id": "1214",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NEGOTIATE",
     "rank": 187,
     "confidence": 1.0,
@@ -9410,6 +9649,7 @@
   {
     "word_id": "496",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DELLA",
     "rank": 188,
     "confidence": 0.8,
@@ -9450,6 +9690,7 @@
   {
     "word_id": "4316",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "INVOLVED",
     "rank": 189,
     "confidence": 0.933,
@@ -9490,6 +9731,7 @@
   {
     "word_id": "4316",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "INVOLVED",
     "rank": 189,
     "confidence": 0.933,
@@ -9534,6 +9776,7 @@
   {
     "word_id": "4808",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LIVE",
     "rank": 190,
     "confidence": 1.0,
@@ -9578,6 +9821,7 @@
   {
     "word_id": "1806",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOSPITAL",
     "rank": 191,
     "confidence": 1.0,
@@ -9610,6 +9854,7 @@
   {
     "word_id": "1188",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MORNING",
     "rank": 192,
     "confidence": 1.0,
@@ -9650,6 +9895,7 @@
   {
     "word_id": "954",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SMALL-CHID",
     "rank": 193,
     "confidence": 0.667,
@@ -9698,6 +9944,7 @@
   {
     "word_id": "4655",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AGE",
     "rank": 194,
     "confidence": 1.0,
@@ -9738,6 +9985,7 @@
   {
     "word_id": "4655",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "AGE",
     "rank": 194,
     "confidence": 1.0,
@@ -9766,6 +10014,7 @@
   {
     "word_id": "2961",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOTH-OF-US",
     "rank": 195,
     "confidence": 0.8,
@@ -9802,6 +10051,7 @@
   {
     "word_id": "1073",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LATER-ON",
     "rank": 196,
     "confidence": 0.769,
@@ -9842,6 +10092,7 @@
   {
     "word_id": "1073",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "LATER-ON",
     "rank": 196,
     "confidence": 0.769,
@@ -9886,6 +10137,7 @@
   {
     "word_id": "4264",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DRINK",
     "rank": 197,
     "confidence": 1.0,
@@ -9930,6 +10182,7 @@
   {
     "word_id": "4264",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "DRINK",
     "rank": 197,
     "confidence": 1.0,
@@ -9982,6 +10235,7 @@
   {
     "word_id": "347",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SLEEP",
     "rank": 198,
     "confidence": 1.0,
@@ -10018,6 +10272,7 @@
   {
     "word_id": "347",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SLEEP",
     "rank": 198,
     "confidence": 1.0,
@@ -10058,6 +10313,7 @@
   {
     "word_id": "2416",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SECOND",
     "rank": 199,
     "confidence": 1.0,
@@ -10110,6 +10366,7 @@
   {
     "word_id": "4808",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LIFE",
     "rank": 200,
     "confidence": 1.0,
@@ -10154,6 +10411,7 @@
   {
     "word_id": "2403",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HAPPEN",
     "rank": 201,
     "confidence": 1.0,
@@ -10198,6 +10456,7 @@
   {
     "word_id": "1038",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "STORY",
     "rank": 202,
     "confidence": 1.0,
@@ -10246,6 +10505,7 @@
   {
     "word_id": "1073",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AFTER",
     "rank": 203,
     "confidence": 1.0,
@@ -10286,6 +10546,7 @@
   {
     "word_id": "1073",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "AFTER",
     "rank": 203,
     "confidence": 1.0,
@@ -10330,6 +10591,7 @@
   {
     "word_id": "4022",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FOOD",
     "rank": 204,
     "confidence": 1.0,
@@ -10370,6 +10632,7 @@
   {
     "word_id": "4022",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "FOOD",
     "rank": 204,
     "confidence": 1.0,
@@ -10402,6 +10665,7 @@
   {
     "word_id": "3690",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "OUT",
     "rank": 205,
     "confidence": 1.0,
@@ -10430,6 +10694,7 @@
   {
     "word_id": "3690",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "OUT",
     "rank": 205,
     "confidence": 1.0,
@@ -10474,6 +10739,7 @@
   {
     "word_id": "5397",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MONEY",
     "rank": 206,
     "confidence": 1.0,
@@ -10518,6 +10784,7 @@
   {
     "word_id": "5397",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "MONEY",
     "rank": 206,
     "confidence": 1.0,
@@ -10554,6 +10821,7 @@
   {
     "word_id": "954",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SMALL",
     "rank": 207,
     "confidence": 1.0,
@@ -10602,6 +10870,7 @@
   {
     "word_id": "1482",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AMERICA",
     "rank": 208,
     "confidence": 1.0,
@@ -10650,6 +10919,7 @@
   {
     "word_id": "4790",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "AUSTRALIA",
     "rank": 209,
     "confidence": 1.0,
@@ -10682,6 +10952,7 @@
   {
     "word_id": "3369",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BRING",
     "rank": 210,
     "confidence": 1.0,
@@ -10714,6 +10985,7 @@
   {
     "word_id": "4809",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "NOT-YET",
     "rank": 211,
     "confidence": 0.857,
@@ -10742,6 +11014,7 @@
   {
     "word_id": "602",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ON",
     "rank": 212,
     "confidence": 1.0,
@@ -10774,6 +11047,7 @@
   {
     "word_id": "602",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "ON",
     "rank": 212,
     "confidence": 1.0,
@@ -10806,6 +11080,7 @@
   {
     "word_id": "2895",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "READ",
     "rank": 213,
     "confidence": 1.0,
@@ -10850,6 +11125,7 @@
   {
     "word_id": "423",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WAY",
     "rank": 214,
     "confidence": 1.0,
@@ -10878,6 +11154,7 @@
   {
     "word_id": "2855",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOTH",
     "rank": 215,
     "confidence": 1.0,
@@ -10906,6 +11183,7 @@
   {
     "word_id": "5818",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EVERYTHING",
     "rank": 216,
     "confidence": 1.0,
@@ -10934,6 +11212,7 @@
   {
     "word_id": "3050",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MARRY",
     "rank": 217,
     "confidence": 1.0,
@@ -10982,6 +11261,7 @@
   {
     "word_id": "3050",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "MARRY",
     "rank": 217,
     "confidence": 1.0,
@@ -11026,6 +11306,7 @@
   {
     "word_id": "3260",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SPORT",
     "rank": 218,
     "confidence": 1.0,
@@ -11074,6 +11355,7 @@
   {
     "word_id": "3260",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SPORT",
     "rank": 218,
     "confidence": 1.0,
@@ -11118,6 +11400,7 @@
   {
     "word_id": "1747",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ALWAYS",
     "rank": 219,
     "confidence": 1.0,
@@ -11154,6 +11437,7 @@
   {
     "word_id": "3952",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BACK",
     "rank": 220,
     "confidence": 1.0,
@@ -11202,6 +11486,7 @@
   {
     "word_id": "2128",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GIRL",
     "rank": 221,
     "confidence": 1.0,
@@ -11234,6 +11519,7 @@
   {
     "word_id": "964",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HIGH",
     "rank": 222,
     "confidence": 1.0,
@@ -11270,6 +11556,7 @@
   {
     "word_id": "964",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "HIGH",
     "rank": 222,
     "confidence": 1.0,
@@ -11322,6 +11609,7 @@
   {
     "word_id": "1073",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LATER",
     "rank": 223,
     "confidence": 1.0,
@@ -11362,6 +11650,7 @@
   {
     "word_id": "1073",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "LATER",
     "rank": 223,
     "confidence": 1.0,
@@ -11406,6 +11695,7 @@
   {
     "word_id": "2825",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LOOK-AROUND",
     "rank": 224,
     "confidence": 0.909,
@@ -11446,6 +11736,7 @@
   {
     "word_id": "5767",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "UP",
     "rank": 225,
     "confidence": 1.0,
@@ -11482,6 +11773,7 @@
   {
     "word_id": "1465",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WEEK",
     "rank": 226,
     "confidence": 1.0,
@@ -11522,6 +11814,7 @@
   {
     "word_id": "804",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PATIENCE",
     "rank": 227,
     "confidence": 1.0,
@@ -11558,6 +11851,7 @@
   {
     "word_id": "1228",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WORLD",
     "rank": 228,
     "confidence": 1.0,
@@ -11602,6 +11896,7 @@
   {
     "word_id": "1228",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WORLD",
     "rank": 228,
     "confidence": 1.0,
@@ -11630,6 +11925,7 @@
   {
     "word_id": "1767",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TAKE",
     "rank": 229,
     "confidence": 1.0,
@@ -11670,6 +11966,7 @@
   {
     "word_id": "1767",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "TAKE",
     "rank": 229,
     "confidence": 1.0,
@@ -11706,6 +12003,7 @@
   {
     "word_id": "2844",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WATCH",
     "rank": 230,
     "confidence": 1.0,
@@ -11750,6 +12048,7 @@
   {
     "word_id": "2844",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WATCH",
     "rank": 230,
     "confidence": 1.0,
@@ -11782,6 +12081,7 @@
   {
     "word_id": "954",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "CHILD",
     "rank": 231,
     "confidence": 1.0,
@@ -11830,6 +12130,7 @@
   {
     "word_id": "4054",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EDUCATION",
     "rank": 232,
     "confidence": 1.0,
@@ -11874,6 +12175,7 @@
   {
     "word_id": "4054",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "EDUCATION",
     "rank": 232,
     "confidence": 1.0,
@@ -11918,6 +12220,7 @@
   {
     "word_id": "3905",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PUT-UP",
     "rank": 233,
     "confidence": 0.667,
@@ -11962,6 +12265,7 @@
   {
     "word_id": "1015",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "THANK",
     "rank": 234,
     "confidence": 1.0,
@@ -11990,6 +12294,7 @@
   {
     "word_id": "1565",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WOW",
     "rank": 235,
     "confidence": 1.0,
@@ -12022,6 +12327,7 @@
   {
     "word_id": "3701",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FARM",
     "rank": 236,
     "confidence": 1.0,
@@ -12074,6 +12380,7 @@
   {
     "word_id": "1514",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FOLLOW",
     "rank": 237,
     "confidence": 1.0,
@@ -12114,6 +12421,7 @@
   {
     "word_id": "738",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "STOP",
     "rank": 238,
     "confidence": 1.0,
@@ -12154,6 +12462,7 @@
   {
     "word_id": "3266",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "STRONG",
     "rank": 239,
     "confidence": 1.0,
@@ -12186,6 +12495,7 @@
   {
     "word_id": "3266",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "STRONG",
     "rank": 239,
     "confidence": 1.0,
@@ -12218,6 +12528,7 @@
   {
     "word_id": "3295",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOSS",
     "rank": 240,
     "confidence": 1.0,
@@ -12278,6 +12589,7 @@
   {
     "word_id": "3295",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BOSS",
     "rank": 240,
     "confidence": 1.0,
@@ -12310,6 +12622,7 @@
   {
     "word_id": "5818",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EVERY",
     "rank": 241,
     "confidence": 1.0,
@@ -12338,6 +12651,7 @@
   {
     "word_id": "1369",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "READY",
     "rank": 242,
     "confidence": 1.0,
@@ -12394,6 +12708,7 @@
   {
     "word_id": "1771",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PAIN",
     "rank": 244,
     "confidence": 1.0,
@@ -12434,6 +12749,7 @@
   {
     "word_id": "5623",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SEVEN",
     "rank": 245,
     "confidence": 1.0,
@@ -12478,6 +12794,7 @@
   {
     "word_id": "2705",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HAPPY",
     "rank": 246,
     "confidence": 1.0,
@@ -12510,6 +12827,7 @@
   {
     "word_id": "1494",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MOST",
     "rank": 247,
     "confidence": 1.0,
@@ -12550,6 +12868,7 @@
   {
     "word_id": "813",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "OVER",
     "rank": 248,
     "confidence": 1.0,
@@ -12586,6 +12905,7 @@
   {
     "word_id": "813",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "OVER",
     "rank": 248,
     "confidence": 1.0,
@@ -12622,6 +12942,7 @@
   {
     "word_id": "5905",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PICK-UP",
     "rank": 249,
     "confidence": 0.857,
@@ -12666,6 +12987,7 @@
   {
     "word_id": "5905",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "PICK-UP",
     "rank": 249,
     "confidence": 0.857,
@@ -12710,6 +13032,7 @@
   {
     "word_id": "2960",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "RELATION",
     "rank": 250,
     "confidence": 1.0,
@@ -12742,6 +13065,7 @@
   {
     "word_id": "2960",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "RELATION",
     "rank": 250,
     "confidence": 1.0,
@@ -12782,6 +13106,7 @@
   {
     "word_id": "3398",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ROOM",
     "rank": 251,
     "confidence": 1.0,
@@ -12818,6 +13143,7 @@
   {
     "word_id": "1803",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BODY",
     "rank": 252,
     "confidence": 1.0,
@@ -12866,6 +13192,7 @@
   {
     "word_id": "5118",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "COME-ON",
     "rank": 253,
     "confidence": 0.857,
@@ -12898,6 +13225,7 @@
   {
     "word_id": "3829",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FEW",
     "rank": 254,
     "confidence": 1.0,
@@ -12942,6 +13270,7 @@
   {
     "word_id": "3829",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "FEW",
     "rank": 254,
     "confidence": 1.0,
@@ -12970,6 +13299,7 @@
   {
     "word_id": "3637",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "GO-BACK",
     "rank": 255,
     "confidence": 0.857,
@@ -13014,6 +13344,7 @@
   {
     "word_id": "3637",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "GO-BACK",
     "rank": 255,
     "confidence": 0.857,
@@ -13058,6 +13389,7 @@
   {
     "word_id": "3875",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MIX",
     "rank": 256,
     "confidence": 1.0,
@@ -13114,6 +13446,7 @@
   {
     "word_id": "1863",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SHOCK",
     "rank": 257,
     "confidence": 1.0,
@@ -13162,6 +13495,7 @@
   {
     "word_id": "2219",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "STAFF",
     "rank": 258,
     "confidence": 1.0,
@@ -13198,6 +13532,7 @@
   {
     "word_id": "4454",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DAUGHTER",
     "rank": 259,
     "confidence": 1.0,
@@ -13258,6 +13593,7 @@
   {
     "word_id": "1301",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HELLO",
     "rank": 260,
     "confidence": 1.0,
@@ -13294,6 +13630,7 @@
   {
     "word_id": "1301",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "HELLO",
     "rank": 260,
     "confidence": 1.0,
@@ -13318,6 +13655,7 @@
   {
     "word_id": "385",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PLEASE",
     "rank": 261,
     "confidence": 1.0,
@@ -13366,6 +13704,7 @@
   {
     "word_id": "492",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TIME-SPAN",
     "rank": 262,
     "confidence": 0.889,
@@ -13406,6 +13745,7 @@
   {
     "word_id": "1042",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ENOUGH",
     "rank": 263,
     "confidence": 1.0,
@@ -13454,6 +13794,7 @@
   {
     "word_id": "4907",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FAR",
     "rank": 264,
     "confidence": 1.0,
@@ -13482,6 +13823,7 @@
   {
     "word_id": "1403",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOLIDAY",
     "rank": 265,
     "confidence": 1.0,
@@ -13530,6 +13872,7 @@
   {
     "word_id": "1452",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "OH-I-SEE",
     "rank": 266,
     "confidence": 0.75,
@@ -13586,6 +13929,7 @@
   {
     "word_id": "1277",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PREGNANT",
     "rank": 267,
     "confidence": 1.0,
@@ -13622,6 +13966,7 @@
   {
     "word_id": "4065",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TEN",
     "rank": 268,
     "confidence": 1.0,
@@ -13654,6 +13999,7 @@
   {
     "word_id": "3193",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOARDING",
     "rank": 269,
     "confidence": 1.0,
@@ -13706,6 +14052,7 @@
   {
     "word_id": "3193",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BOARDING",
     "rank": 269,
     "confidence": 1.0,
@@ -13746,6 +14093,7 @@
   {
     "word_id": "859",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BOAT",
     "rank": 270,
     "confidence": 1.0,
@@ -13790,6 +14138,7 @@
   {
     "word_id": "859",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BOAT",
     "rank": 270,
     "confidence": 1.0,
@@ -13842,6 +14191,7 @@
   {
     "word_id": "1522",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LADY",
     "rank": 271,
     "confidence": 1.0,
@@ -13886,6 +14236,7 @@
   {
     "word_id": "512",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PUT-ASIDE",
     "rank": 272,
     "confidence": 0.889,
@@ -13926,6 +14277,7 @@
   {
     "word_id": "1952",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "SOMETHING",
     "rank": 273,
     "confidence": 1.0,
@@ -13958,6 +14310,7 @@
   {
     "word_id": "1952",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "SOMETHING",
     "rank": 273,
     "confidence": 1.0,
@@ -13986,6 +14339,7 @@
   {
     "word_id": "3587",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BUS",
     "rank": 274,
     "confidence": 1.0,
@@ -14034,6 +14388,7 @@
   {
     "word_id": "3587",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "BUS",
     "rank": 274,
     "confidence": 1.0,
@@ -14074,6 +14429,7 @@
   {
     "word_id": "4938",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "DATE",
     "rank": 275,
     "confidence": 1.0,
@@ -14122,6 +14478,7 @@
   {
     "word_id": "3639",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "FUNNY",
     "rank": 276,
     "confidence": 1.0,
@@ -14158,6 +14515,7 @@
   {
     "word_id": "3639",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "FUNNY",
     "rank": 276,
     "confidence": 1.0,
@@ -14198,6 +14556,7 @@
   {
     "word_id": "2569",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOUR",
     "rank": 277,
     "confidence": 1.0,
@@ -14238,6 +14597,7 @@
   {
     "word_id": "2751",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LAUGH",
     "rank": 278,
     "confidence": 1.0,
@@ -14286,6 +14646,7 @@
   {
     "word_id": "8931",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LET-ME-THINK",
     "rank": 279,
     "confidence": 0.6,
@@ -14322,6 +14683,7 @@
   {
     "word_id": "634",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PAST-MY-EYES",
     "rank": 280,
     "confidence": 0.588,
@@ -14350,6 +14712,7 @@
   {
     "word_id": "634",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "PAST-MY-EYES",
     "rank": 280,
     "confidence": 0.588,
@@ -14374,6 +14737,7 @@
   {
     "word_id": "4614",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WORSE",
     "rank": 281,
     "confidence": 1.0,
@@ -14418,6 +14782,7 @@
   {
     "word_id": "4614",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "WORSE",
     "rank": 281,
     "confidence": 1.0,
@@ -14458,6 +14823,7 @@
   {
     "word_id": "5624",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EIGHT",
     "rank": 282,
     "confidence": 1.0,
@@ -14490,6 +14856,7 @@
   {
     "word_id": "3620",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "EXPERIENCE",
     "rank": 283,
     "confidence": 1.0,
@@ -14526,6 +14893,7 @@
   {
     "word_id": "1946",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "HOLD",
     "rank": 284,
     "confidence": 1.0,
@@ -14566,6 +14934,7 @@
   {
     "word_id": "1946",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "HOLD",
     "rank": 284,
     "confidence": 1.0,
@@ -14614,6 +14983,7 @@
   {
     "word_id": "489",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LEAVE-ALONE",
     "rank": 285,
     "confidence": 0.909,
@@ -14642,6 +15012,7 @@
   {
     "word_id": "4794",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "VISIT",
     "rank": 286,
     "confidence": 1.0,
@@ -14698,6 +15069,7 @@
   {
     "word_id": "4794",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "VISIT",
     "rank": 286,
     "confidence": 1.0,
@@ -14738,6 +15110,7 @@
   {
     "word_id": "1529",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "WHICH",
     "rank": 287,
     "confidence": 1.0,
@@ -14786,6 +15159,7 @@
   {
     "word_id": "4780",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "LET-IT-GO",
     "rank": 288,
     "confidence": 0.778,
@@ -14822,6 +15196,7 @@
   {
     "word_id": "539",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "MIME-rub-hands",
     "rank": 289,
     "confidence": 0.714,
@@ -14862,6 +15237,7 @@
   {
     "word_id": "539",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "MIME-rub-hands",
     "rank": 289,
     "confidence": 0.714,
@@ -14898,6 +15274,7 @@
   {
     "word_id": "2095",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PCL-people-flock",
     "rank": 290,
     "confidence": 0.667,
@@ -14946,6 +15323,7 @@
   {
     "word_id": "3721",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PLENTY",
     "rank": 291,
     "confidence": 0.8,
@@ -14978,6 +15356,7 @@
   {
     "word_id": "4531",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TITLE",
     "rank": 292,
     "confidence": 1.0,
@@ -15018,6 +15397,7 @@
   {
     "word_id": "2325",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TRAVEL",
     "rank": 293,
     "confidence": 1.0,
@@ -15070,6 +15450,7 @@
   {
     "word_id": "3859",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "BUY",
     "rank": 294,
     "confidence": 1.0,
@@ -15110,6 +15491,7 @@
   {
     "word_id": "3875",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "COOK",
     "rank": 295,
     "confidence": 1.0,
@@ -15166,6 +15548,7 @@
   {
     "word_id": "1585",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "ENCOURAGE",
     "rank": 296,
     "confidence": 1.0,
@@ -15202,6 +15585,7 @@
   {
     "word_id": "954",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "YOUNG",
     "rank": 297,
     "confidence": 1.0,
@@ -15250,6 +15634,7 @@
   {
     "word_id": "5949",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "PERFECT",
     "rank": 298,
     "confidence": 1.0,
@@ -15286,6 +15671,7 @@
   {
     "word_id": "1490",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "TEAM",
     "rank": 299,
     "confidence": 1.0,
@@ -15334,6 +15720,7 @@
   {
     "word_id": "1490",
     "example_number": 2,
+    "video_type": "finalexample2",
     "common_word": "TEAM",
     "rank": 299,
     "confidence": 1.0,
@@ -15378,6 +15765,7 @@
   {
     "word_id": "4222",
     "example_number": 1,
+    "video_type": "finalexample1",
     "common_word": "COURSE",
     "rank": 300,
     "confidence": 1.0,
@@ -15418,5 +15806,1978 @@
       }
     ],
     "raw_sentence": "we[2879] move[702] auckland[2623] my[3300] partner[3299] in[1152] interpreter[3063] course[4222]"
+  },
+  {
+    "word_id": "5852",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "FLY",
+    "rank": 301,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5852/bee.5852.finalexample1.sp.r480x360.mp4",
+    "english_translation": "She's crying because a bee stung her.",
+    "sign_sequence": [
+      {
+        "word": "she",
+        "id": 2297
+      },
+      {
+        "word": "cry",
+        "id": 2126
+      },
+      {
+        "word": "bee",
+        "id": 5852
+      },
+      {
+        "word": "finish",
+        "id": 3653
+      },
+      {
+        "word": "insect-bite",
+        "id": 3091
+      }
+    ],
+    "raw_sentence": "she[2297] cry[2126] bee[5852] finish[3653] insect-bite[3091]"
+  },
+  {
+    "word_id": "5852",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "FLY",
+    "rank": 301,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5852/bee.5852.finalexample2.sp.r480x360.mp4",
+    "english_translation": "There were lots of flies in the kitchen so I tried to swat them.",
+    "sign_sequence": [
+      {
+        "word": "many",
+        "id": 1553
+      },
+      {
+        "word": "fly",
+        "id": 5852
+      },
+      {
+        "word": "there",
+        "id": 2583
+      },
+      {
+        "word": "kitchen",
+        "id": 771
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "try",
+        "id": 5785
+      }
+    ],
+    "raw_sentence": "many[1553] fly[5852] there[2583] kitchen[771] me[2556] try[5785] ^cl:swat-fly"
+  },
+  {
+    "word_id": "4092",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "MEDICAL",
+    "rank": 302,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4092/doctor.4092.finalexample1.vs.r480x360.mp4",
+    "english_translation": "If you have medical insurance you can go to a private hospital.",
+    "sign_sequence": [
+      {
+        "word": "have",
+        "id": 1376
+      },
+      {
+        "word": "medical",
+        "id": 4092
+      },
+      {
+        "word": "insurance",
+        "id": 5398
+      },
+      {
+        "word": "can",
+        "id": 4501
+      },
+      {
+        "word": "go",
+        "id": 924
+      },
+      {
+        "word": "private",
+        "id": 5402
+      },
+      {
+        "word": "hospital",
+        "id": 2914
+      }
+    ],
+    "raw_sentence": "have[1376] medical[4092] insurance[5398] can[4501] go[924] private[5402] hospital[2914]"
+  },
+  {
+    "word_id": "2677",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "PHOOEY",
+    "rank": 303,
+    "confidence": 0.727,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2677/camera.2677.finalexample1.mb.r480x360.mp4",
+    "english_translation": "The camera automatically focuses to get a clear image.",
+    "sign_sequence": [
+      {
+        "word": "camera",
+        "id": 2677
+      },
+      {
+        "word": "oneself",
+        "id": 4788
+      },
+      {
+        "word": "automatic",
+        "id": 2477
+      },
+      {
+        "word": "clear",
+        "id": 696
+      }
+    ],
+    "raw_sentence": "camera[2677] oneself[4788] automatic[2477] ^cl:focus clear[696]"
+  },
+  {
+    "word_id": "2677",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "PHOOEY",
+    "rank": 303,
+    "confidence": 0.727,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2677/camera.2677.finalexample2.mb.r480x360.mp4",
+    "english_translation": "I looked at the photo and thought about how young my father was back then, and how old he is now.",
+    "sign_sequence": [
+      {
+        "word": "photo",
+        "id": 2677
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "look",
+        "id": 2844
+      },
+      {
+        "word": "wonder",
+        "id": 2076
+      },
+      {
+        "word": "before",
+        "id": 967
+      },
+      {
+        "word": "father",
+        "id": 4689
+      },
+      {
+        "word": "young",
+        "id": 2645
+      },
+      {
+        "word": "now",
+        "id": 908
+      },
+      {
+        "word": "old",
+        "id": 2841
+      }
+    ],
+    "raw_sentence": "photo[2677] me[2556] look[2844] wonder[2076] before[967] father[4689] young[2645] now[908] old[2841]"
+  },
+  {
+    "word_id": "2677",
+    "example_number": 3,
+    "video_type": "finalexample3",
+    "common_word": "PHOOEY",
+    "rank": 303,
+    "confidence": 0.727,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2677/camera.2677.finalexample3.vs.r480x360.mp4",
+    "english_translation": "Would you mind taking a photo of us as a group?",
+    "sign_sequence": [
+      {
+        "word": "you",
+        "id": 2321
+      },
+      {
+        "word": "not-mind",
+        "id": 308
+      },
+      {
+        "word": "you",
+        "id": 2321
+      },
+      {
+        "word": "take-a-photo",
+        "id": 2677
+      },
+      {
+        "word": "we",
+        "id": 2540
+      },
+      {
+        "word": "group",
+        "id": 1490
+      },
+      {
+        "word": "take-a-photo",
+        "id": 2677
+      }
+    ],
+    "raw_sentence": "you[2321] not-mind[308] you[2321] take-a-photo[2677] we[2540] group[1490] take-a-photo[2677]"
+  },
+  {
+    "word_id": "2774",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "PICK",
+    "rank": 304,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2774/choose.2774.finalexample1.mb.r480x360.mp4",
+    "english_translation": "I chose the wrong tie - the colour doesn't match my suit and it looks funny.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "choose",
+        "id": 2774
+      },
+      {
+        "word": "wrong",
+        "id": 4581
+      },
+      {
+        "word": "colour",
+        "id": 1539
+      },
+      {
+        "word": "tie",
+        "id": 4442
+      },
+      {
+        "word": "match",
+        "id": 5921
+      },
+      {
+        "word": "suit",
+        "id": 1065
+      },
+      {
+        "word": "see",
+        "id": 2091
+      },
+      {
+        "word": "funny",
+        "id": 3639
+      }
+    ],
+    "raw_sentence": "me[2556] choose[2774] wrong[4581] colour[1539] tie[4442] match[5921] suit[1065] see[2091] funny[3639]"
+  },
+  {
+    "word_id": "5517",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "UNDERSTAND-neg",
+    "rank": 305,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5517/idea.5517.finalexample1.mb.r480x360.mp4",
+    "english_translation": "Our group brainstormed ideas and discussed them.",
+    "sign_sequence": [
+      {
+        "word": "we",
+        "id": 2314
+      },
+      {
+        "word": "group",
+        "id": 1490
+      },
+      {
+        "word": "idea",
+        "id": 5517
+      },
+      {
+        "word": "brainstorm",
+        "id": 5274
+      },
+      {
+        "word": "discuss",
+        "id": 1211
+      }
+    ],
+    "raw_sentence": "we[2314] group[1490] idea[5517] brainstorm[5274] discuss[1211]"
+  },
+  {
+    "word_id": "3571",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "BREAK",
+    "rank": 306,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3571/break.3571.finalexample1.mb.r480x360.mp4",
+    "english_translation": "At the river the boy was eager to dive in. He broke his shoulder and an ambulance had to be called.",
+    "sign_sequence": [
+      {
+        "word": "river",
+        "id": 4488
+      },
+      {
+        "word": "there",
+        "id": 2583
+      },
+      {
+        "word": "boy",
+        "id": 2184
+      },
+      {
+        "word": "excited",
+        "id": 1864
+      },
+      {
+        "word": "dive",
+        "id": 2891
+      },
+      {
+        "word": "break",
+        "id": 3571
+      },
+      {
+        "word": "shoulder",
+        "id": 962
+      },
+      {
+        "word": "call",
+        "id": 2339
+      },
+      {
+        "word": "ambulance",
+        "id": 3994
+      },
+      {
+        "word": "come",
+        "id": 2533
+      }
+    ],
+    "raw_sentence": "river[4488] there[2583] boy[2184] excited[1864] dive[2891] break[3571] shoulder[962] call[2339] ambulance[3994] come[2533]"
+  },
+  {
+    "word_id": "5340",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "JOIN",
+    "rank": 307,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5340/join.5340.finalexample1.mb.r480x360.mp4",
+    "english_translation": "I joined the Deaf Club when I was eighteen years old and became involved.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "join",
+        "id": 5340
+      },
+      {
+        "word": "deaf-club",
+        "id": 4657
+      },
+      {
+        "word": "one-year-old",
+        "id": 2099
+      },
+      {
+        "word": "eighteen",
+        "id": 5615
+      },
+      {
+        "word": "involve",
+        "id": 1081
+      }
+    ],
+    "raw_sentence": "me[2556] join[5340] deaf-club[4657] one-year-old[2099] eighteen[5615] involve[1081]"
+  },
+  {
+    "word_id": "2139",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "LOOK-AFTER",
+    "rank": 308,
+    "confidence": 0.9,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2139/look_after.2139.finalexample1.jo.r480x360.mp4",
+    "english_translation": "She looked after my children after school.",
+    "sign_sequence": [
+      {
+        "word": "she",
+        "id": 2297
+      },
+      {
+        "word": "look-after",
+        "id": 2139
+      },
+      {
+        "word": "my",
+        "id": 3300
+      },
+      {
+        "word": "children",
+        "id": 5389
+      },
+      {
+        "word": "after",
+        "id": 1073
+      },
+      {
+        "word": "school",
+        "id": 1298
+      }
+    ],
+    "raw_sentence": "she[2297] look-after[2139] my[3300] children[5389] after[1073] school[1298]"
+  },
+  {
+    "word_id": "4299",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "SHOW",
+    "rank": 309,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4299/leader.4299.finalexample1.vs.r480x360.mp4",
+    "english_translation": "I'm responsible for organising and leading deaf youth camps.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "responsible",
+        "id": 4821
+      },
+      {
+        "word": "organise",
+        "id": 566
+      },
+      {
+        "word": "lead",
+        "id": 4299
+      },
+      {
+        "word": "deaf",
+        "id": 4656
+      },
+      {
+        "word": "young",
+        "id": 2645
+      },
+      {
+        "word": "camp",
+        "id": 5861
+      }
+    ],
+    "raw_sentence": "me[2556] responsible[4821] organise[566] lead[4299] deaf[4656] young[2645] camp[5861]"
+  },
+  {
+    "word_id": "4299",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "SHOW",
+    "rank": 309,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4299/leader.4299.finalexample2.jo.r480x360.mp4",
+    "english_translation": "He's a good leader. He's been involved in the Deaf Club for five years so far.",
+    "sign_sequence": [
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "good",
+        "id": 3658
+      },
+      {
+        "word": "leader",
+        "id": 4299
+      },
+      {
+        "word": "involve",
+        "id": 4316
+      },
+      {
+        "word": "deaf-club",
+        "id": 4657
+      },
+      {
+        "word": "five",
+        "id": 5621
+      },
+      {
+        "word": "year",
+        "id": 2646
+      },
+      {
+        "word": "up-to-now",
+        "id": 1107
+      }
+    ],
+    "raw_sentence": "he[2297] good[3658] leader[4299] involve[4316] deaf-club[4657] five[5621] year[2646] up-to-now[1107]"
+  },
+  {
+    "word_id": "2935",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "TEA",
+    "rank": 310,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2935/dinner.2935.finalexample1.jo.r480x360.mp4",
+    "english_translation": "The family has dinner every day at 6pm.",
+    "sign_sequence": [
+      {
+        "word": "family",
+        "id": 1636
+      },
+      {
+        "word": "dinner",
+        "id": 2935
+      },
+      {
+        "word": "everyday",
+        "id": 5087
+      },
+      {
+        "word": "clock",
+        "id": 5662
+      },
+      {
+        "word": "six",
+        "id": 5622
+      }
+    ],
+    "raw_sentence": "family[1636] dinner[2935] everyday[5087] one-o'clock[5662] six[5622]"
+  },
+  {
+    "word_id": "2935",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "TEA",
+    "rank": 310,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2935/dinner.2935.finalexample2.rp.r480x360.mp4",
+    "english_translation": "I went for it and booked an expensive restaurant just to see what it was like.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "go-for-it",
+        "id": 5126
+      },
+      {
+        "word": "book",
+        "id": 3524
+      },
+      {
+        "word": "expensive",
+        "id": 1558
+      },
+      {
+        "word": "restaurant",
+        "id": 2935
+      },
+      {
+        "word": "have-a-look",
+        "id": 2145
+      }
+    ],
+    "raw_sentence": "me[2556] go-for-it[5126] book[3524] expensive[1558] restaurant[2935] have-a-look[2145]"
+  },
+  {
+    "word_id": "440",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "TRUE",
+    "rank": 311,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/440/faithful.440.finalexample1.vs.r480x360.mp4",
+    "english_translation": "I read a book - it was a true story about the war in France.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "book",
+        "id": 523
+      },
+      {
+        "word": "true",
+        "id": 440
+      },
+      {
+        "word": "story",
+        "id": 1038
+      },
+      {
+        "word": "about",
+        "id": 2543
+      },
+      {
+        "word": "war",
+        "id": 1647
+      },
+      {
+        "word": "there",
+        "id": 2583
+      },
+      {
+        "word": "france",
+        "id": 2994
+      }
+    ],
+    "raw_sentence": "me[2556] ^read book[523] ^cl:point-book true[440] story[1038] about[2543] war[1647] there[2583] france[2994]"
+  },
+  {
+    "word_id": "440",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "TRUE",
+    "rank": 311,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/440/faithful.440.finalexample2.jo.r480x360.mp4",
+    "english_translation": "I trust him. He never lies.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "trust",
+        "id": 440
+      },
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "never",
+        "id": 1069
+      },
+      {
+        "word": "lie",
+        "id": 2213
+      },
+      {
+        "word": "he",
+        "id": 2297
+      }
+    ],
+    "raw_sentence": "me[2556] trust[440] he[2297] he[2297] never[1069] lie[2213] he[2297]"
+  },
+  {
+    "word_id": "440",
+    "example_number": 3,
+    "video_type": "finalexample3",
+    "common_word": "TRUE",
+    "rank": 311,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/440/faithful.440.finalexample3.rp.r480x360.mp4",
+    "english_translation": "My mother though I was joking and that it was rubbish, but it wasn't - I was telling the truth.",
+    "sign_sequence": [
+      {
+        "word": "my",
+        "id": 2556
+      },
+      {
+        "word": "mum",
+        "id": 5794
+      },
+      {
+        "word": "think",
+        "id": 2050
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "joke",
+        "id": 4708
+      },
+      {
+        "word": "rubbish",
+        "id": 1244
+      },
+      {
+        "word": "no",
+        "id": 1464
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "tell",
+        "id": 2190
+      },
+      {
+        "word": "truth",
+        "id": 440
+      }
+    ],
+    "raw_sentence": "my[2556] mum[5794] think[2050] me[2556] joke[4708] rubbish[1244] no[1464] me[2556] tell[2190] truth[440]"
+  },
+  {
+    "word_id": "3856",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "FIX",
+    "rank": 312,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3856/fix.3856.finalexample1.jo.r480x360.mp4",
+    "english_translation": "My car's clutch broke so I sent it to be fixed.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "car",
+        "id": 3462
+      },
+      {
+        "word": "clutch",
+        "id": 471
+      },
+      {
+        "word": "break",
+        "id": 3571
+      },
+      {
+        "word": "send",
+        "id": 3250
+      },
+      {
+        "word": "fix",
+        "id": 3856
+      }
+    ],
+    "raw_sentence": "me[2556] car[3462] clutch[471] break[3571] send[3250] fix[3856]"
+  },
+  {
+    "word_id": "1220",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "GIVE-me",
+    "rank": 313,
+    "confidence": 0.727,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/1220/give.1220.finalexample1.vs.r480x360.mp4",
+    "english_translation": "The church gives free food and clothes to poor people.",
+    "sign_sequence": [
+      {
+        "word": "church",
+        "id": 532
+      },
+      {
+        "word": "it",
+        "id": 2297
+      },
+      {
+        "word": "give",
+        "id": 1220
+      },
+      {
+        "word": "free",
+        "id": 3013
+      },
+      {
+        "word": "food",
+        "id": 4022
+      },
+      {
+        "word": "clothes",
+        "id": 1523
+      },
+      {
+        "word": "to",
+        "id": 2299
+      },
+      {
+        "word": "poor",
+        "id": 1419
+      },
+      {
+        "word": "people",
+        "id": 2095
+      }
+    ],
+    "raw_sentence": "church[532] it[2297] give[1220] free[3013] food[4022] clothes[1523] to[2299] poor[1419] people[2095]"
+  },
+  {
+    "word_id": "1494",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "LOTS",
+    "rank": 314,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/1494/huge.1494.finalexample1.vs.r480x360.mp4",
+    "english_translation": "The man next door has bought a huge car which uses up a lot of petrol.",
+    "sign_sequence": [
+      {
+        "word": "man",
+        "id": 3220
+      },
+      {
+        "word": "neighbour",
+        "id": 3775
+      },
+      {
+        "word": "buy",
+        "id": 5632
+      },
+      {
+        "word": "huge",
+        "id": 1494
+      },
+      {
+        "word": "car",
+        "id": 3462
+      },
+      {
+        "word": "petrol",
+        "id": 2807
+      },
+      {
+        "word": "easy",
+        "id": 2215
+      }
+    ],
+    "raw_sentence": "man[3220] neighbour[3775] buy[5632] huge[1494] car[3462] petrol[2807] ^use-up easy[2215]"
+  },
+  {
+    "word_id": "5240",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "LOVE",
+    "rank": 315,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5240/aroha.5240.finalexample1.mb.r480x360.mp4",
+    "english_translation": "When I was little, my grandmother always showed me lots of aroha. She always hugged me and looked after me.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "small",
+        "id": 954
+      },
+      {
+        "word": "my",
+        "id": 3300
+      },
+      {
+        "word": "grandmother",
+        "id": 3338
+      },
+      {
+        "word": "plenty",
+        "id": 3721
+      },
+      {
+        "word": "aroha",
+        "id": 5240
+      },
+      {
+        "word": "always",
+        "id": 1747
+      },
+      {
+        "word": "hug",
+        "id": 3494
+      },
+      {
+        "word": "look-after",
+        "id": 5523
+      },
+      {
+        "word": "me",
+        "id": 2556
+      }
+    ],
+    "raw_sentence": "me[2556] small[954] my[3300] grandmother[3338] plenty[3721] aroha[5240] always[1747] hug[3494] look-after[5523] me[2556]"
+  },
+  {
+    "word_id": "3885",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "THIS",
+    "rank": 316,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3885/that.3885.finalexample1.vs.r480x360.mp4",
+    "english_translation": "The report was shown to them to find out if they were happy with that report.",
+    "sign_sequence": [
+      {
+        "word": "report",
+        "id": 3823
+      },
+      {
+        "word": "report",
+        "id": 643
+      },
+      {
+        "word": "show",
+        "id": 366
+      },
+      {
+        "word": "them",
+        "id": 2287
+      },
+      {
+        "word": "if",
+        "id": 3642
+      },
+      {
+        "word": "they",
+        "id": 2287
+      },
+      {
+        "word": "happy",
+        "id": 606
+      },
+      {
+        "word": "that",
+        "id": 3885
+      },
+      {
+        "word": "report",
+        "id": 3823
+      }
+    ],
+    "raw_sentence": "report[3823] report[643] show[366] them[2287] if[3642] they[2287] happy[606] that[3885] report[3823]"
+  },
+  {
+    "word_id": "3885",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "THIS",
+    "rank": 316,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3885/that.3885.finalexample2.vs.r480x360.mp4",
+    "english_translation": "This film is about two Deaf people who established a Deaf Club.",
+    "sign_sequence": [
+      {
+        "word": "this",
+        "id": 3885
+      },
+      {
+        "word": "film",
+        "id": 3991
+      },
+      {
+        "word": "about",
+        "id": 2543
+      },
+      {
+        "word": "two",
+        "id": 5617
+      },
+      {
+        "word": "deaf",
+        "id": 4656
+      },
+      {
+        "word": "people",
+        "id": 2095
+      },
+      {
+        "word": "establish",
+        "id": 3736
+      },
+      {
+        "word": "deaf-club",
+        "id": 4657
+      }
+    ],
+    "raw_sentence": "this[3885] film[3991] about[2543] two[5617] deaf[4656] people[2095] establish[3736] deaf-club[4657]"
+  },
+  {
+    "word_id": "355",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "LAST",
+    "rank": 317,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/355/bottom.355.finalexample1.spa.r480x360.mp4",
+    "english_translation": "A group of us played ten pin bowling and I had the bottom score.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "group",
+        "id": 1490
+      },
+      {
+        "word": "play",
+        "id": 1926
+      },
+      {
+        "word": "tenpin-bowling",
+        "id": 1391
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "score",
+        "id": 1303
+      },
+      {
+        "word": "bottom",
+        "id": 355
+      }
+    ],
+    "raw_sentence": "me[2556] group[1490] play[1926] tenpin-bowling[1391] me[2556] score[1303] bottom[355]"
+  },
+  {
+    "word_id": "5964",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "SIT",
+    "rank": 318,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5964/chair.5964.finalexample1.mb.r480x360.mp4",
+    "english_translation": "The cat hid under the chair.",
+    "sign_sequence": [
+      {
+        "word": "cat",
+        "id": 4503
+      },
+      {
+        "word": "it",
+        "id": 2297
+      },
+      {
+        "word": "chair",
+        "id": 5964
+      },
+      {
+        "word": "hide",
+        "id": 5396
+      }
+    ],
+    "raw_sentence": "cat[4503] it[2297] chair[5964] hide[5396]"
+  },
+  {
+    "word_id": "5964",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "SIT",
+    "rank": 318,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5964/chair.5964.finalexample2.mb.r480x360.mp4",
+    "english_translation": "I boarded the plane and sat down.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "enter",
+        "id": 648
+      },
+      {
+        "word": "plane",
+        "id": 4731
+      },
+      {
+        "word": "sit",
+        "id": 5964
+      }
+    ],
+    "raw_sentence": "me[2556] enter[648] plane[4731] sit[5964]"
+  },
+  {
+    "word_id": "2290",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "THOUSAND",
+    "rank": 319,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2290/numbers_thousand.2290.finalexample1.rp.r480x360.mp4",
+    "english_translation": "Twenty thousand people crowded the stadium to watch the rugby.",
+    "sign_sequence": [
+      {
+        "word": "twenty",
+        "id": 5618
+      },
+      {
+        "word": "thousand",
+        "id": 2290
+      },
+      {
+        "word": "people",
+        "id": 2095
+      },
+      {
+        "word": "attend",
+        "id": 1388
+      },
+      {
+        "word": "stadium",
+        "id": 1650
+      },
+      {
+        "word": "watch",
+        "id": 2844
+      },
+      {
+        "word": "rugby",
+        "id": 893
+      }
+    ],
+    "raw_sentence": "twenty[5618] thousand[2290] people[2095] attend[1388] stadium[1650] watch[2844] rugby[893]"
+  },
+  {
+    "word_id": "407",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "TOP",
+    "rank": 320,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/407/top.407.finalexample1.mb.r480x360.mp4",
+    "english_translation": "We walked to the top and wow, the view was just beautiful.",
+    "sign_sequence": [
+      {
+        "word": "there",
+        "id": 2583
+      },
+      {
+        "word": "top",
+        "id": 407
+      },
+      {
+        "word": "beautiful",
+        "id": 4030
+      },
+      {
+        "word": "view",
+        "id": 2838
+      },
+      {
+        "word": "wow",
+        "id": 1565
+      }
+    ],
+    "raw_sentence": "^cl:walk-up there[2583] top[407] beautiful[4030] view[2838] wow[1565]"
+  },
+  {
+    "word_id": "407",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "TOP",
+    "rank": 320,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/407/top.407.finalexample2.mb.r480x360.mp4",
+    "english_translation": "My younger brother is amazing - he's at the top of his English class.",
+    "sign_sequence": [
+      {
+        "word": "my",
+        "id": 3300
+      },
+      {
+        "word": "young",
+        "id": 2645
+      },
+      {
+        "word": "brother",
+        "id": 3513
+      },
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "wow",
+        "id": 1565
+      },
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "top",
+        "id": 407
+      },
+      {
+        "word": "english",
+        "id": 2456
+      },
+      {
+        "word": "class",
+        "id": 4249
+      },
+      {
+        "word": "he",
+        "id": 2297
+      }
+    ],
+    "raw_sentence": "my[3300] young[2645] brother[3513] he[2297] wow[1565] he[2297] top[407] english[2456] class[4249] he[2297]"
+  },
+  {
+    "word_id": "4347",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "WAKE-UP",
+    "rank": 321,
+    "confidence": 0.857,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4347/awake.4347.finalexample1.vs.r480x360.mp4",
+    "english_translation": "The baby woke up crying. She was hungry and wanted to be breastfed.",
+    "sign_sequence": [
+      {
+        "word": "baby",
+        "id": 1231
+      },
+      {
+        "word": "wake-up",
+        "id": 4347
+      },
+      {
+        "word": "cry",
+        "id": 5255
+      },
+      {
+        "word": "hungry",
+        "id": 1681
+      },
+      {
+        "word": "want",
+        "id": 721
+      },
+      {
+        "word": "breastfeed",
+        "id": 528
+      }
+    ],
+    "raw_sentence": "baby[1231] wake-up[4347] cry[5255] hungry[1681] want[721] breastfeed[528]"
+  },
+  {
+    "word_id": "2501",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "WORD",
+    "rank": 322,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/2501/word.2501.finalexample1.vs.r480x360.mp4",
+    "english_translation": "I didn't understand what that M\u0101ori word meant so I looked in the dictionary.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "t-understand",
+        "id": 4370
+      },
+      {
+        "word": "maori",
+        "id": 3204
+      },
+      {
+        "word": "word",
+        "id": 2501
+      },
+      {
+        "word": "mean",
+        "id": 1638
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "look",
+        "id": 2844
+      },
+      {
+        "word": "dictionary",
+        "id": 688
+      },
+      {
+        "word": "^cl:flip-pages",
+        "id": 2096
+      }
+    ],
+    "raw_sentence": "me[2556] can't-understand[4370] maori[3204] word[2501] mean[1638] me[2556] look[2844] dictionary[688] ^cl:flip-pages[2096]"
+  },
+  {
+    "word_id": "1803",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "ASSOCIATION",
+    "rank": 323,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/1803/association.1803.finalexample1.vs.r480x360.mp4",
+    "english_translation": "She used to be on the New Zealand Sign Language Teachers Association executive board.",
+    "sign_sequence": [
+      {
+        "word": "she",
+        "id": 2297
+      },
+      {
+        "word": "involve",
+        "id": 4316
+      },
+      {
+        "word": "nzsl",
+        "id": 3261
+      },
+      {
+        "word": "teacher",
+        "id": 2021
+      },
+      {
+        "word": "association",
+        "id": 1803
+      },
+      {
+        "word": "executive",
+        "id": 4844
+      },
+      {
+        "word": "board",
+        "id": 860
+      },
+      {
+        "word": "before",
+        "id": 1279
+      },
+      {
+        "word": "she",
+        "id": 2297
+      }
+    ],
+    "raw_sentence": "she[2297] involve[4316] nzsl[3261] teacher[2021] association[1803] executive[4844] board[860] before[1279] she[2297]"
+  },
+  {
+    "word_id": "3682",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "BEST",
+    "rank": 324,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3682/best.3682.finalexample1.rp.r480x360.mp4",
+    "english_translation": "He won the best player award in basketball.",
+    "sign_sequence": [
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "win",
+        "id": 3848
+      },
+      {
+        "word": "award",
+        "id": 3589
+      },
+      {
+        "word": "best",
+        "id": 3682
+      },
+      {
+        "word": "play",
+        "id": 1926
+      },
+      {
+        "word": "basketball",
+        "id": 1949
+      }
+    ],
+    "raw_sentence": "he[2297] win[3848] award[3589] best[3682] play[1926] basketball[1949]"
+  },
+  {
+    "word_id": "1485",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "COMPETE",
+    "rank": 325,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/1485/compete.1485.finalexample1.vs.r480x360.mp4",
+    "english_translation": "The Deaf rugby team competed against a hearing team.",
+    "sign_sequence": [
+      {
+        "word": "deaf",
+        "id": 4656
+      },
+      {
+        "word": "rugby",
+        "id": 1250
+      },
+      {
+        "word": "team",
+        "id": 1490
+      },
+      {
+        "word": "hearing",
+        "id": 2117
+      },
+      {
+        "word": "team",
+        "id": 1490
+      },
+      {
+        "word": "compete",
+        "id": 1485
+      }
+    ],
+    "raw_sentence": "deaf[4656] rugby[1250] team[1490] hearing[2117] team[1490] compete[1485]"
+  },
+  {
+    "word_id": "4224",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "DOLLAR",
+    "rank": 326,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4224/dollar.4224.finalexample1.sp.r480x360.mp4",
+    "english_translation": "I asked how much it would be to stay 1 night for four of us, and it was $63. That's cheap!",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "ask",
+        "id": 3009
+      },
+      {
+        "word": "how-much",
+        "id": 4097
+      },
+      {
+        "word": "stay",
+        "id": 5405
+      },
+      {
+        "word": "one",
+        "id": 5607
+      },
+      {
+        "word": "night",
+        "id": 5391
+      },
+      {
+        "word": "three-of-us",
+        "id": 4756
+      },
+      {
+        "word": "four",
+        "id": 5620
+      },
+      {
+        "word": "six",
+        "id": 5622
+      },
+      {
+        "word": "three",
+        "id": 5619
+      },
+      {
+        "word": "dollar",
+        "id": 4224
+      },
+      {
+        "word": "cheap",
+        "id": 4534
+      }
+    ],
+    "raw_sentence": "me[2556] ask[3009] how-much[4097] stay[5405] one[5607] night[5391] three-of-us[4756] four[5620] six[5622] three[5619] dollar[4224] cheap[4534]"
+  },
+  {
+    "word_id": "539",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "HAND",
+    "rank": 327,
+    "confidence": 0.889,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/539/hands.539.finalexample1.rp.r480x360.mp4",
+    "english_translation": "He made the coffee table by hand.",
+    "sign_sequence": [
+      {
+        "word": "coffee",
+        "id": 3381
+      },
+      {
+        "word": "table",
+        "id": 834
+      },
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "make",
+        "id": 3375
+      },
+      {
+        "word": "by-hand",
+        "id": 539
+      },
+      {
+        "word": "build",
+        "id": 3954
+      },
+      {
+        "word": "he",
+        "id": 2297
+      }
+    ],
+    "raw_sentence": "coffee[3381] table[834] he[2297] make[3375] by-hand[539] build[3954] he[2297]"
+  },
+  {
+    "word_id": "539",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "HAND",
+    "rank": 327,
+    "confidence": 0.889,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/539/hands.539.finalexample2.vs.r480x360.mp4",
+    "english_translation": "Her hands are dirty, because she never washes them.",
+    "sign_sequence": [
+      {
+        "word": "she",
+        "id": 2297
+      },
+      {
+        "word": "dirty",
+        "id": 895
+      },
+      {
+        "word": "hands",
+        "id": 539
+      },
+      {
+        "word": "never",
+        "id": 1069
+      },
+      {
+        "word": "wash-hands",
+        "id": 753
+      },
+      {
+        "word": "she",
+        "id": 2297
+      }
+    ],
+    "raw_sentence": "she[2297] dirty[895] hands[539] never[1069] wash-hands[753] she[2297]"
+  },
+  {
+    "word_id": "386",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "HUNDRED",
+    "rank": 328,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/386/numbers_hundred.386.finalexample1.mb.r480x360.mp4",
+    "english_translation": "At the end of the month I have to pay a power bill of two hundred dollars",
+    "sign_sequence": [
+      {
+        "word": "end",
+        "id": 1769
+      },
+      {
+        "word": "month",
+        "id": 4763
+      },
+      {
+        "word": "pay",
+        "id": 3850
+      },
+      {
+        "word": "two",
+        "id": 5617
+      },
+      {
+        "word": "hundred",
+        "id": 386
+      },
+      {
+        "word": "dollar",
+        "id": 4224
+      },
+      {
+        "word": "power",
+        "id": 5803
+      }
+    ],
+    "raw_sentence": "end[1769] month[4763] pay[3850] two[5617] hundred[386] dollar[4224] power[5803]"
+  },
+  {
+    "word_id": "1075",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "SWIM",
+    "rank": 329,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/1075/swim.1075.finalexample1.mb.r480x360.mp4",
+    "english_translation": "He swam thirty lengths of the pool.",
+    "sign_sequence": [
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "swim",
+        "id": 1075
+      },
+      {
+        "word": "thirty",
+        "id": 5706
+      },
+      {
+        "word": "time",
+        "id": 5784
+      },
+      {
+        "word": "commute",
+        "id": 2531
+      }
+    ],
+    "raw_sentence": "he[2297] swim[1075] thirty[5706] time[5784] commute[2531]"
+  },
+  {
+    "word_id": "4130",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "THAN",
+    "rank": 330,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4130/than.4130.finalexample1.mb.r480x360.mp4",
+    "english_translation": "I cook more fish and chicken than red meat.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "cook",
+        "id": 771
+      },
+      {
+        "word": "fish",
+        "id": 751
+      },
+      {
+        "word": "chicken",
+        "id": 4508
+      },
+      {
+        "word": "more",
+        "id": 1897
+      },
+      {
+        "word": "than",
+        "id": 4130
+      },
+      {
+        "word": "red",
+        "id": 2174
+      },
+      {
+        "word": "meat",
+        "id": 2234
+      }
+    ],
+    "raw_sentence": "me[2556] cook[771] fish[751] chicken[4508] more[1897] than[4130] red[2174] meat[2234]"
+  },
+  {
+    "word_id": "3714",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "USE",
+    "rank": 331,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3714/use.3714.finalexample1.mb.r480x360.mp4",
+    "english_translation": "He wanted to use my car. He borrowed it to drive around.",
+    "sign_sequence": [
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "want",
+        "id": 721
+      },
+      {
+        "word": "use",
+        "id": 3714
+      },
+      {
+        "word": "my",
+        "id": 762
+      },
+      {
+        "word": "car",
+        "id": 3462
+      },
+      {
+        "word": "borrow",
+        "id": 4266
+      },
+      {
+        "word": "drive",
+        "id": 3430
+      }
+    ],
+    "raw_sentence": "he[2297] want[721] use[3714] my[762] car[3462] borrow[4266] drive[3430]"
+  },
+  {
+    "word_id": "1760",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "WATER",
+    "rank": 332,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/1760/water.1760.finalexample1.mb.r480x360.mp4",
+    "english_translation": "When you go tramping, bring lots of water.",
+    "sign_sequence": [
+      {
+        "word": "when",
+        "id": 1338
+      },
+      {
+        "word": "tramping",
+        "id": 3654
+      },
+      {
+        "word": "bring",
+        "id": 730
+      },
+      {
+        "word": "plenty",
+        "id": 3721
+      },
+      {
+        "word": "water",
+        "id": 1760
+      }
+    ],
+    "raw_sentence": "when[1338] tramping[3654] bring[730] plenty[3721] water[1760]"
+  },
+  {
+    "word_id": "4333",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "ACCEPT",
+    "rank": 333,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4333/accept.4333.finalexample1.mb.r480x360.mp4",
+    "english_translation": "I was offered a job and accepted it.",
+    "sign_sequence": [
+      {
+        "word": "offer",
+        "id": 1852
+      },
+      {
+        "word": "work",
+        "id": 797
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "accept",
+        "id": 4333
+      }
+    ],
+    "raw_sentence": "offer[1852] work[797] me[2556] accept[4333]"
+  },
+  {
+    "word_id": "4333",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "ACCEPT",
+    "rank": 333,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/4333/accept.4333.finalexample2.vs.r480x360.mp4",
+    "english_translation": "I'm happy that my baby is deaf. I accept it gladly.",
+    "sign_sequence": [
+      {
+        "word": "deaf",
+        "id": 4656
+      },
+      {
+        "word": "baby",
+        "id": 1231
+      },
+      {
+        "word": "he",
+        "id": 2297
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "happy",
+        "id": 606
+      },
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "accept",
+        "id": 4333
+      }
+    ],
+    "raw_sentence": "deaf[4656] baby[1231] he[2297] me[2556] happy[606] me[2556] accept[4333]"
+  },
+  {
+    "word_id": "3725",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "OK",
+    "rank": 334,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3725/alright.3725.finalexample1.rp.r480x360.mp4",
+    "english_translation": "Are you alright?",
+    "sign_sequence": [
+      {
+        "word": "you",
+        "id": 2321
+      },
+      {
+        "word": "alright",
+        "id": 3725
+      }
+    ],
+    "raw_sentence": "you[2321] alright[3725]"
+  },
+  {
+    "word_id": "3725",
+    "example_number": 2,
+    "video_type": "finalexample2",
+    "common_word": "OK",
+    "rank": 334,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3725/alright.3725.finalexample2.mb.r480x360.mp4",
+    "english_translation": "My education was alright.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "past",
+        "id": 1279
+      },
+      {
+        "word": "education",
+        "id": 4054
+      },
+      {
+        "word": "alright",
+        "id": 3725
+      }
+    ],
+    "raw_sentence": "me[2556] past[1279] education[4054] alright[3725]"
+  },
+  {
+    "word_id": "3923",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "RUN",
+    "rank": 335,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/3923/control.3923.finalexample1.mb.r480x360.mp4",
+    "english_translation": "People have criticised the Prime Minister for his poor control of spending.",
+    "sign_sequence": [
+      {
+        "word": "people",
+        "id": 2095
+      },
+      {
+        "word": "people",
+        "id": 1635
+      },
+      {
+        "word": "criticise",
+        "id": 4584
+      },
+      {
+        "word": "prime-minister",
+        "id": 5941
+      },
+      {
+        "word": "bad",
+        "id": 4581
+      },
+      {
+        "word": "control",
+        "id": 3923
+      },
+      {
+        "word": "spend",
+        "id": 4171
+      }
+    ],
+    "raw_sentence": "people[2095] people[1635] criticise[4584] prime-minister[5941] bad[4581] control[3923] spend[4171]"
+  },
+  {
+    "word_id": "5695",
+    "example_number": 1,
+    "video_type": "finalexample1",
+    "common_word": "NINE",
+    "rank": 336,
+    "confidence": 1.0,
+    "video_url": "https://nzsl-signbank-media-production.s3.amazonaws.com/glossvideo/5695/numbers_9.5695.finalexample1.mb.r480x360.mp4",
+    "english_translation": "I'm going to America. I will stay there for nine months.",
+    "sign_sequence": [
+      {
+        "word": "me",
+        "id": 2556
+      },
+      {
+        "word": "go-to",
+        "id": 2410
+      },
+      {
+        "word": "america",
+        "id": 1482
+      },
+      {
+        "word": "stay",
+        "id": 5405
+      },
+      {
+        "word": "nine",
+        "id": 5695
+      },
+      {
+        "word": "month",
+        "id": 4763
+      }
+    ],
+    "raw_sentence": "me[2556] go-to[2410] america[1482] stay[5405] nine[5695] month[4763]"
   }
 ]
