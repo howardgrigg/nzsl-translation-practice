@@ -20,6 +20,7 @@ COPY app.py .
 COPY index.html .
 COPY script.js .
 COPY video_examples.json .
+COPY assets/ ./assets/
 
 # Create non-root user for security
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app
