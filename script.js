@@ -34,6 +34,13 @@ class NZSLPractice {
         this.historyList = document.getElementById('historyList');
         this.closeHistory = document.getElementById('closeHistory');
         this.clearHistoryBtn = document.getElementById('clearHistoryBtn');
+        
+        // Definition modal elements
+        this.definitionModal = document.getElementById('definitionModal');
+        this.definitionVideo = document.getElementById('definitionVideo');
+        this.definitionTitle = document.getElementById('definitionTitle');
+        this.definitionMeanings = document.getElementById('definitionMeanings');
+        this.closeDefinition = document.getElementById('closeDefinition');
     }
 
     async loadVideoData() {
@@ -55,6 +62,14 @@ class NZSLPractice {
         this.historyBtn?.addEventListener('click', () => this.showHistory());
         this.closeHistory?.addEventListener('click', () => this.hideHistory());
         this.clearHistoryBtn?.addEventListener('click', () => this.clearHistory());
+        
+        // Definition modal event listeners
+        this.closeDefinition?.addEventListener('click', () => this.hideDefinitionModal());
+        this.definitionModal?.addEventListener('click', (e) => {
+            if (e.target === this.definitionModal) {
+                this.hideDefinitionModal();
+            }
+        });
         
         // Submit on Enter (but allow Shift+Enter for new lines)
         this.userTranslation.addEventListener('keydown', (e) => {
@@ -119,8 +134,27 @@ class NZSLPractice {
             return;
         }
         
-        const signs = this.currentVideo.sign_sequence.map(sign => sign.word).join(' → ');
-        this.signSequence.textContent = `Signs: ${signs}`;
+        const signsHTML = this.currentVideo.sign_sequence.map(sign => 
+            `<span class="sign-word" data-sign-id="${sign.id}" title="Tap to see definition">${sign.word}</span>`
+        ).join(' → ');
+        
+        this.signSequence.innerHTML = `Signs: ${signsHTML}`;
+        
+        // Add click event listeners to sign words
+        this.signSequence.querySelectorAll('.sign-word').forEach(wordElement => {
+            wordElement.addEventListener('click', (e) => {
+                const signId = e.target.dataset.signId;
+                if (signId) {
+                    // Find the sign data in the current video's sign sequence
+                    const signData = this.currentVideo.sign_sequence.find(sign => sign.id == signId);
+                    if (signData && signData.definition_video_url) {
+                        this.showDefinitionVideo(signData);
+                    } else {
+                        console.log('No definition video available for this sign');
+                    }
+                }
+            });
+        });
     }
 
     updateVideoInfo() {
@@ -460,6 +494,43 @@ class NZSLPractice {
             this.updateStatsDisplay();
             this.renderHistoryList();
         }
+    }
+
+    // Definition modal functionality
+    showDefinitionVideo(signData) {
+        try {
+            // Update modal content directly from embedded data
+            this.definitionTitle.textContent = `Sign: ${signData.gloss}`;
+            this.definitionVideo.src = signData.definition_video_url;
+            
+            // Show meanings if available
+            if (signData.minor_meanings) {
+                this.definitionMeanings.innerHTML = `
+                    <h4>Alternative meanings:</h4>
+                    <p>${signData.minor_meanings}</p>
+                `;
+            } else {
+                this.definitionMeanings.innerHTML = '';
+            }
+
+            // Show modal
+            this.definitionModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+        } catch (error) {
+            console.error('Error loading definition video:', error);
+            this.definitionTitle.textContent = 'Definition not available';
+            this.definitionMeanings.innerHTML = '<p>Sorry, the definition video for this sign could not be loaded.</p>';
+        }
+    }
+
+    hideDefinitionModal() {
+        this.definitionModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Stop the video
+        this.definitionVideo.pause();
+        this.definitionVideo.src = '';
     }
 
     // Dark mode functionality - follows browser/system preference

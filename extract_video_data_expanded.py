@@ -31,17 +31,22 @@ def main():
     for item in matched_signs[:350]:  # Top 350 most common
         sign_id = item['sign_id']
         
-        # Get the actual word definition from the words table
+        # Get the actual word definition and definition video URL from the database
         cursor.execute("""
-            SELECT gloss, minor FROM words WHERE id = ?
+            SELECT w.gloss, w.minor, v.url 
+            FROM words w
+            LEFT JOIN videos v ON w.id = v.word_id AND v.video_type = 'main' AND v.url LIKE '%.mp4'
+            WHERE w.id = ?
+            LIMIT 1
         """, (sign_id,))
         
         word_data = cursor.fetchone()
         if word_data:
-            actual_gloss, minor_meanings = word_data
+            actual_gloss, minor_meanings, definition_video_url = word_data
         else:
             actual_gloss = item['common_word']  # fallback
             minor_meanings = ""
+            definition_video_url = None
         
         # Get all example videos for this sign from the videos table
         cursor.execute("""
@@ -72,6 +77,37 @@ def main():
                 translation = f"Example for {item['common_word']}"
                 sign_sequence = []
             
+            # Enhance sign sequence with definition video URLs
+            enhanced_sign_sequence = []
+            for sign in sign_sequence:
+                # Get definition video URL for each sign in the sequence
+                cursor.execute("""
+                    SELECT w.gloss, w.minor, v.url 
+                    FROM words w
+                    INNER JOIN videos v ON w.id = v.word_id AND v.video_type = 'main' AND v.url LIKE '%.mp4'
+                    WHERE w.id = ?
+                    LIMIT 1
+                """, (str(sign['id']),))
+                
+                sign_data = cursor.fetchone()
+                if sign_data:
+                    enhanced_sign = {
+                        'word': sign['word'],
+                        'id': sign['id'],
+                        'gloss': sign_data[0],
+                        'minor_meanings': sign_data[1] or '',
+                        'definition_video_url': sign_data[2]
+                    }
+                else:
+                    enhanced_sign = {
+                        'word': sign['word'],
+                        'id': sign['id'],
+                        'gloss': sign['word'],
+                        'minor_meanings': '',
+                        'definition_video_url': None
+                    }
+                enhanced_sign_sequence.append(enhanced_sign)
+
             video_entry = {
                 'word_id': word_id,
                 'example_number': int(video_type.replace('finalexample', '')),
@@ -79,11 +115,12 @@ def main():
                 'common_word': item['common_word'],  # keep for reference
                 'actual_gloss': actual_gloss,
                 'minor_meanings': minor_meanings,
+                'definition_video_url': definition_video_url,
                 'rank': item['rank'],
                 'confidence': item['confidence'],
                 'video_url': video_url,
                 'english_translation': translation,
-                'sign_sequence': sign_sequence,
+                'sign_sequence': enhanced_sign_sequence,
                 'raw_sentence': sentence
             }
             

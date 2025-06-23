@@ -733,6 +733,59 @@
             background: var(--button-primary-hover);
         }
 
+        /* Definition Modal Styles */
+        .definition-modal {
+            max-width: 600px;
+        }
+
+        .definition-video-wrapper {
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            background: var(--card-bg);
+        }
+
+        #definitionVideo {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 8px;
+            background: #000;
+        }
+
+        .definition-meanings {
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+            background: var(--info-bg);
+        }
+
+        .definition-meanings h4 {
+            margin: 0 0 10px 0;
+            color: var(--text-color);
+            font-size: 1.1em;
+        }
+
+        .definition-meanings p {
+            margin: 0;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* Sign sequence clickable styling */
+        .sign-word {
+            cursor: pointer;
+            position: relative;
+            transition: color 0.2s ease;
+        }
+
+        .sign-word:hover {
+            color: var(--button-primary);
+        }
+
+        .sign-word:active {
+            transform: scale(0.98);
+        }
+
         @media (max-width: 600px) {
             .container {
                 padding: 15px;
@@ -879,6 +932,24 @@
             </div>
             <div id="historyList" class="history-list">
                 <!-- History items will be populated here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Definition Video Modal -->
+    <div id="definitionModal" class="modal" style="display: none;">
+        <div class="modal-content definition-modal">
+            <div class="modal-header">
+                <h2 id="definitionTitle">Sign Definition</h2>
+                <button id="closeDefinition" class="close-btn">&times;</button>
+            </div>
+            <div class="definition-video-wrapper">
+                <video id="definitionVideo" controls autoplay loop muted>
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div id="definitionMeanings" class="definition-meanings">
+                <!-- Meanings will be populated here -->
             </div>
         </div>
     </div>

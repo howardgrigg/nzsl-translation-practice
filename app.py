@@ -63,6 +63,7 @@ def get_usage_stats():
     """Get current usage statistics"""
     return jsonify(usage_stats)
 
+
 @app.route('/score_translation', methods=['POST'])
 def score_translation():
     """Score user interpretation against original using Claude"""
