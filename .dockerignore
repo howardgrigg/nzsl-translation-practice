@@ -39,12 +39,13 @@ ENV/
 .DS_Store
 Thumbs.db
 
-# Database files (we only need the JSON output)
-nzsl.db
-words.json
-matched_signs.json
+# Build/extraction scripts (not needed in container)
 extract_video_data.py
+extract_video_data_expanded.py
 match_signs.py
+analyze_video_gaps.py
+words.json
+video_examples.json
 
 # Documentation
 README.md

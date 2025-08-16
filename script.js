@@ -1,12 +1,16 @@
+'use strict';
+
 class NZSLPractice {
     constructor() {
-        this.videoData = [];
         this.currentVideo = null;
+        this.preloadedVideo = null; // Store preloaded next video
+        this.preloadedVideoElement = null; // Store preloaded video element
         this.practiceHistory = this.loadPracticeHistory();
         this.initializeElements();
-        this.loadVideoData();
         this.setupEventListeners();
         this.updateStatsDisplay();
+        this.initializeDarkMode();
+        this.loadRandomVideo(); // Load first video
     }
 
     initializeElements() {
@@ -31,17 +35,132 @@ class NZSLPractice {
         this.historyList = document.getElementById('historyList');
         this.closeHistory = document.getElementById('closeHistory');
         this.clearHistoryBtn = document.getElementById('clearHistoryBtn');
+        
+        // Definition modal elements
+        this.definitionModal = document.getElementById('definitionModal');
+        this.definitionVideo = document.getElementById('definitionVideo');
+        this.definitionTitle = document.getElementById('definitionTitle');
+        this.definitionMeanings = document.getElementById('definitionMeanings');
+        this.closeDefinition = document.getElementById('closeDefinition');
     }
 
-    async loadVideoData() {
+    async loadRandomVideo() {
         try {
-            const response = await fetch('/video_examples.json');
-            this.videoData = await response.json();
-            console.log(`Loaded ${this.videoData.length} video examples`);
-            this.loadRandomVideo();
+            // Check if we have a preloaded video ready
+            if (this.preloadedVideo && this.preloadedVideoElement) {
+                // Use preloaded video data and element
+                this.currentVideo = this.preloadedVideo;
+                this.preloadedVideo = null;
+                
+                // Show loading state briefly for smooth transition
+                this.resetUI();
+                this.videoLoading.style.display = 'flex';
+                this.videoInfo.textContent = 'Loading video...';
+                
+                // Use the preloaded video element's source (already loaded)
+                this.video.src = this.preloadedVideoElement.src;
+                this.video.load();
+                
+                // Clean up preloaded element
+                this.preloadedVideoElement = null;
+                
+                // Update sign sequence display
+                this.updateSignSequence();
+                
+                return;
+            }
+            
+            // No preloaded video available, fetch normally
+            this.resetUI();
+            this.videoLoading.style.display = 'flex';
+            this.videoInfo.textContent = 'Loading video...';
+            
+            // Fetch random video from server
+            const response = await fetch('/random_video');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            this.currentVideo = await response.json();
+            
+            // Load video
+            this.video.src = this.currentVideo.video_url;
+            this.video.load();
+            
+            // Update sign sequence display
+            this.updateSignSequence();
+            
         } catch (error) {
-            console.error('Error loading video data:', error);
-            this.videoInfo.textContent = 'Error loading video data. Please refresh the page.';
+            console.error('Error loading video:', error);
+            this.videoLoading.style.display = 'none';
+            this.videoInfo.textContent = 'Error loading video. Please refresh the page or try again.';
+            
+            // Show retry button
+            this.videoInfo.innerHTML = `
+                Error loading video. 
+                <button onclick="app.loadRandomVideo()" style="margin-left: 10px; padding: 5px 10px; cursor: pointer;">
+                    Try Again
+                </button>
+            `;
+        }
+    }
+
+    async preloadNextVideo() {
+        try {
+            // Don't preload if we already have a preloaded video
+            if (this.preloadedVideo && this.preloadedVideoElement) return;
+            
+            console.log('Preloading next video data...');
+            const response = await fetch('/random_video');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            
+            this.preloadedVideo = await response.json();
+            console.log('Next video data preloaded successfully');
+            
+            // Now preload the actual video file
+            console.log('Preloading video file...');
+            this.preloadedVideoElement = document.createElement('video');
+            this.preloadedVideoElement.preload = 'auto';
+            this.preloadedVideoElement.muted = true;
+            this.preloadedVideoElement.playsInline = true;
+            
+            // Create a promise to track video loading
+            const videoLoadPromise = new Promise((resolve, reject) => {
+                const onCanPlay = () => {
+                    console.log('Video file preloaded successfully');
+                    this.preloadedVideoElement.removeEventListener('canplay', onCanPlay);
+                    this.preloadedVideoElement.removeEventListener('error', onError);
+                    resolve();
+                };
+                
+                const onError = (error) => {
+                    console.error('Error preloading video file:', error);
+                    this.preloadedVideoElement.removeEventListener('canplay', onCanPlay);
+                    this.preloadedVideoElement.removeEventListener('error', onError);
+                    // Don't reject - just continue without preloaded video
+                    this.preloadedVideoElement = null;
+                    resolve();
+                };
+                
+                this.preloadedVideoElement.addEventListener('canplay', onCanPlay);
+                this.preloadedVideoElement.addEventListener('error', onError);
+            });
+            
+            // Start loading the video
+            this.preloadedVideoElement.src = this.preloadedVideo.video_url;
+            this.preloadedVideoElement.load();
+            
+            // Wait for video to be ready (or fail silently)
+            await videoLoadPromise;
+            
+        } catch (error) {
+            console.error('Error preloading next video:', error);
+            // Clean up on error
+            this.preloadedVideo = null;
+            this.preloadedVideoElement = null;
+            // Fail silently - user will just get normal loading experience
         }
     }
 
@@ -52,6 +171,14 @@ class NZSLPractice {
         this.historyBtn?.addEventListener('click', () => this.showHistory());
         this.closeHistory?.addEventListener('click', () => this.hideHistory());
         this.clearHistoryBtn?.addEventListener('click', () => this.clearHistory());
+        
+        // Definition modal event listeners
+        this.closeDefinition?.addEventListener('click', () => this.hideDefinitionModal());
+        this.definitionModal?.addEventListener('click', (e) => {
+            if (e.target === this.definitionModal) {
+                this.hideDefinitionModal();
+            }
+        });
         
         // Submit on Enter (but allow Shift+Enter for new lines)
         this.userTranslation.addEventListener('keydown', (e) => {
@@ -92,23 +219,7 @@ class NZSLPractice {
         });
     }
 
-    loadRandomVideo() {
-        if (this.videoData.length === 0) return;
-        
-        // Select random video
-        const randomIndex = Math.floor(Math.random() * this.videoData.length);
-        this.currentVideo = this.videoData[randomIndex];
-        
-        // Reset UI
-        this.resetUI();
-        
-        // Load video
-        this.video.src = this.currentVideo.video_url;
-        this.video.load();
-        
-        // Update sign sequence display
-        this.updateSignSequence();
-    }
+    // loadRandomVideo method is now defined above
 
     updateSignSequence() {
         if (!this.currentVideo.sign_sequence) {
@@ -116,8 +227,27 @@ class NZSLPractice {
             return;
         }
         
-        const signs = this.currentVideo.sign_sequence.map(sign => sign.word).join(' → ');
-        this.signSequence.textContent = `Signs: ${signs}`;
+        const signsHTML = this.currentVideo.sign_sequence.map(sign => 
+            `<span class="sign-word" data-sign-id="${sign.id}" title="Tap to see definition">${sign.word}</span>`
+        ).join(' → ');
+        
+        this.signSequence.innerHTML = `Signs: ${signsHTML}`;
+        
+        // Add click event listeners to sign words
+        this.signSequence.querySelectorAll('.sign-word').forEach(wordElement => {
+            wordElement.addEventListener('click', (e) => {
+                const signId = e.target.dataset.signId;
+                if (signId) {
+                    // Find the sign data in the current video's sign sequence
+                    const signData = this.currentVideo.sign_sequence.find(sign => sign.id == signId);
+                    if (signData && signData.definition_video_url) {
+                        this.showDefinitionVideo(signData);
+                    } else {
+                        console.log('No definition video available for this sign');
+                    }
+                }
+            });
+        });
     }
 
     updateVideoInfo() {
@@ -182,7 +312,7 @@ class NZSLPractice {
         const userText = this.userTranslation.value.trim();
         
         if (!userText) {
-            alert('Please enter your translation first.');
+            alert('Please enter your interpretation first.');
             return;
         }
 
@@ -214,10 +344,13 @@ class NZSLPractice {
 
             const result = await response.json();
             this.displayResults(result, userText);
+            
+            // Start preloading the next video after successful submission
+            this.preloadNextVideo();
 
         } catch (error) {
-            console.error('Error scoring translation:', error);
-            alert('Error scoring translation. Please try again.');
+            console.error('Error scoring interpretation:', error);
+            alert('Error scoring interpretation. Please try again.');
         } finally {
             this.loading.style.display = 'none';
             this.submitBtn.disabled = false;
@@ -246,7 +379,7 @@ class NZSLPractice {
         // Display feedback
         this.feedbackText.textContent = result.feedback;
 
-        // Display translations
+        // Display interpretations
         this.userTranslationDisplay.textContent = userText;
         this.originalTranslationDisplay.textContent = this.currentVideo.english_translation;
 
@@ -254,9 +387,13 @@ class NZSLPractice {
         this.signSequence.style.display = 'block';
 
         // Show word information and dictionary link
+        const actualGloss = this.currentVideo.actual_gloss || this.currentVideo.common_word;
+        const minorMeanings = this.currentVideo.minor_meanings;
+        const displayText = minorMeanings ? `${actualGloss} (${minorMeanings})` : actualGloss;
+        
         this.wordInfo.innerHTML = `
             <div class="word-details">
-                Common word: <strong>${this.currentVideo.common_word}</strong> • 
+                Sign: <strong>${displayText}</strong> • 
                 Rank: <strong>#${this.currentVideo.rank}</strong>
             </div>
             <a href="https://www.nzsl.nz/signs/${this.currentVideo.word_id}" target="_blank" class="dictionary-link">
@@ -294,6 +431,8 @@ class NZSLPractice {
             timestamp: new Date().toISOString(),
             videoId: this.currentVideo.example_id,
             commonWord: this.currentVideo.common_word,
+            actualGloss: this.currentVideo.actual_gloss,
+            minorMeanings: this.currentVideo.minor_meanings,
             rank: this.currentVideo.rank,
             videoUrl: this.currentVideo.video_url,
             englishTranslation: this.currentVideo.english_translation,
@@ -325,12 +464,12 @@ class NZSLPractice {
             return;
         }
 
-        const totalTranslations = this.practiceHistory.length;
-        const averageScore = this.practiceHistory.reduce((sum, session) => sum + session.score, 0) / totalTranslations;
+        const totalInterpretations = this.practiceHistory.length;
+        const averageScore = this.practiceHistory.reduce((sum, session) => sum + session.score, 0) / totalInterpretations;
         
         // Calculate improvement (last 10 vs previous 10)
         let improvementText = '';
-        if (totalTranslations >= 20) {
+        if (totalInterpretations >= 20) {
             const recent = this.practiceHistory.slice(0, 10);
             const previous = this.practiceHistory.slice(10, 20);
             const recentAvg = recent.reduce((sum, s) => sum + s.score, 0) / 10;
@@ -348,7 +487,7 @@ class NZSLPractice {
 
         this.statsDisplay.innerHTML = `
             <div class="stats-summary">
-                <span class="stat-item">Translations: <strong>${totalTranslations}</strong></span>
+                <span class="stat-item">Interpretations: <strong>${totalInterpretations}</strong></span>
                 <span class="stat-item">Average: <strong>${averageScore.toFixed(1)}/10</strong></span>
             </div>
             ${improvementText}
@@ -374,7 +513,7 @@ class NZSLPractice {
         if (!this.historyList) return;
 
         if (this.practiceHistory.length === 0) {
-            this.historyList.innerHTML = '<div class="no-history">No translations yet. Start practicing to build your history!</div>';
+            this.historyList.innerHTML = '<div class="no-history">No interpretations yet. Start practicing to build your history!</div>';
             return;
         }
 
@@ -383,10 +522,13 @@ class NZSLPractice {
             const time = new Date(session.timestamp).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
             const scoreClass = this.getScoreClass(session.score);
             
+            // Use actual gloss if available, fallback to commonWord for older sessions
+            const displayWord = session.actualGloss || session.commonWord;
+            
             return `
                 <div class="history-item" data-session-id="${session.id}">
                     <div class="history-header">
-                        <span class="history-word">${session.commonWord}</span>
+                        <span class="history-word">${displayWord}</span>
                         <span class="history-score ${scoreClass}">${session.score}/10</span>
                     </div>
                     <div class="history-meta">
@@ -394,8 +536,8 @@ class NZSLPractice {
                         <span class="history-rank">Rank #${session.rank}</span>
                     </div>
                     <div class="history-translations">
-                        <div class="history-user">You: "${session.userTranslation}"</div>
-                        <div class="history-official">Official: "${session.englishTranslation}"</div>
+                        <div class="history-user">You: "${session.userTranslation.replace(/"/g, '&quot;')}"</div>
+                        <div class="history-official">Official: "${session.englishTranslation.replace(/"/g, '&quot;')}"</div>
                     </div>
                     <button class="replay-btn" onclick="app.replaySession('${session.id}')">Replay Video</button>
                 </div>
@@ -420,6 +562,8 @@ class NZSLPractice {
         this.currentVideo = {
             example_id: session.videoId,
             common_word: session.commonWord,
+            actual_gloss: session.actualGloss,
+            minor_meanings: session.minorMeanings,
             rank: session.rank,
             video_url: session.videoUrl,
             english_translation: session.englishTranslation,
@@ -440,12 +584,70 @@ class NZSLPractice {
     }
 
     clearHistory() {
-        if (confirm('Are you sure you want to clear all practice history? This cannot be undone.')) {
+        if (confirm('Are you sure you want to clear all interpretation history? This cannot be undone.')) {
             this.practiceHistory = [];
             localStorage.removeItem('nzsl_practice_history');
             this.updateStatsDisplay();
             this.renderHistoryList();
         }
+    }
+
+    // Definition modal functionality
+    showDefinitionVideo(signData) {
+        try {
+            // Update modal content directly from embedded data
+            this.definitionTitle.textContent = `Sign: ${signData.gloss}`;
+            this.definitionVideo.src = signData.definition_video_url;
+            
+            // Show meanings if available
+            if (signData.minor_meanings) {
+                this.definitionMeanings.innerHTML = `
+                    <h4>Alternative meanings:</h4>
+                    <p>${signData.minor_meanings}</p>
+                `;
+            } else {
+                this.definitionMeanings.innerHTML = '';
+            }
+
+            // Show modal
+            this.definitionModal.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+
+        } catch (error) {
+            console.error('Error loading definition video:', error);
+            this.definitionTitle.textContent = 'Definition not available';
+            this.definitionMeanings.innerHTML = '<p>Sorry, the definition video for this sign could not be loaded.</p>';
+        }
+    }
+
+    hideDefinitionModal() {
+        this.definitionModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+        
+        // Stop the video
+        this.definitionVideo.pause();
+        this.definitionVideo.src = '';
+    }
+
+    // Dark mode functionality - follows browser/system preference
+    initializeDarkMode() {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        
+        // Apply theme based on system preference
+        if (prefersDark) {
+            document.documentElement.setAttribute('data-theme', 'dark');
+        } else {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+
+        // Listen for system theme changes and update automatically
+        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+            if (e.matches) {
+                document.documentElement.setAttribute('data-theme', 'dark');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+            }
+        });
     }
 }
 
