@@ -277,6 +277,14 @@
             justify-content: center;
             min-height: 40px;
             line-height: 1.2;
+            
+            /* Prevent mobile touch selection and magnification */
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -webkit-tap-highlight-color: transparent;
+            touch-action: manipulation;
         }
 
         .word-token:hover {

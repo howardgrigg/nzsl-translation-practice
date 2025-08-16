@@ -723,6 +723,7 @@ class NZSLGrammarGame {
         this.touchStartX = 0;
         this.touchStartY = 0;
         this.isDragging = false;
+        this.potentialDrag = false;
         this.draggedElement = null;
         
         this.initializeElements();
@@ -988,6 +989,8 @@ class NZSLGrammarGame {
     // Touch event handlers for mobile drag and drop
     handleTouchStart(e) {
         e.preventDefault();
+        e.stopPropagation();
+        
         this.touchStartTime = Date.now();
         this.isDragging = false;
         this.draggedElement = e.target;
@@ -997,30 +1000,31 @@ class NZSLGrammarGame {
         this.touchStartX = touch.clientX;
         this.touchStartY = touch.clientY;
         
-        // Create visual feedback
-        setTimeout(() => {
-            if (!this.isDragging && this.draggedElement) {
-                this.draggedElement.classList.add('dragging');
-                this.isDragging = true;
-            }
-        }, 150); // Small delay to distinguish between tap and drag
+        // Immediate visual feedback - no delay
+        this.draggedElement.classList.add('dragging');
+        
+        // Mark as potentially dragging after minimal movement check
+        this.potentialDrag = true;
     }
 
     handleTouchMove(e) {
-        if (!this.draggedElement || !this.isDragging) return;
+        if (!this.draggedElement || !this.potentialDrag) return;
         
         e.preventDefault();
+        e.stopPropagation();
+        
         const touch = e.touches[0];
         
         // Check if touch has moved enough to be considered a drag
         const deltaX = Math.abs(touch.clientX - this.touchStartX);
         const deltaY = Math.abs(touch.clientY - this.touchStartY);
         
-        if (deltaX > 10 || deltaY > 10) {
+        if (deltaX > 5 || deltaY > 5) {
             this.isDragging = true;
             
             // Show drop indicator in answer zone
-            if (this.answerZone.contains(document.elementFromPoint(touch.clientX, touch.clientY))) {
+            const elementUnder = document.elementFromPoint(touch.clientX, touch.clientY);
+            if (this.answerZone.contains(elementUnder) || elementUnder === this.answerZone) {
                 this.showDropIndicatorFromTouch(touch);
             } else {
                 // Remove drop indicators when not over answer zone
@@ -1034,6 +1038,9 @@ class NZSLGrammarGame {
     handleTouchEnd(e) {
         if (!this.draggedElement) return;
         
+        e.preventDefault();
+        e.stopPropagation();
+        
         const touchDuration = Date.now() - this.touchStartTime;
         const touch = e.changedTouches[0];
         
@@ -1044,10 +1051,9 @@ class NZSLGrammarGame {
         });
         
         // If it was a quick tap (not a drag), treat as click
-        if (touchDuration < 200 && !this.isDragging) {
+        if (touchDuration < 300 && !this.isDragging) {
             this.handleTokenClick({ target: this.draggedElement });
-            this.draggedElement = null;
-            this.isDragging = false;
+            this.resetTouchState();
             return;
         }
         
@@ -1074,8 +1080,16 @@ class NZSLGrammarGame {
             }
         }
         
+        this.resetTouchState();
+    }
+
+    resetTouchState() {
         this.draggedElement = null;
         this.isDragging = false;
+        this.potentialDrag = false;
+        this.touchStartTime = 0;
+        this.touchStartX = 0;
+        this.touchStartY = 0;
     }
 
     showDropIndicatorFromTouch(touch) {
