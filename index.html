@@ -445,6 +445,15 @@
             margin-bottom: 15px;
         }
 
+        /* Prevent fullscreen on hint video (same as definition video) */
+        #hint-video::-webkit-media-controls-fullscreen-button {
+            display: none !important;
+        }
+
+        #hint-video::-webkit-media-controls {
+            overflow: hidden;
+        }
+
         .video-feedback-container {
             padding-top: 15px;
             border-top: 1px solid var(--border-color);
@@ -1426,7 +1435,7 @@
 
                     <div id="video-hint" class="video-hint" style="display: none;">
                         <h3>Video Hint:</h3>
-                        <video id="hint-video" width="480" height="360" loop autoplay muted playsinline webkit-playsinline controls>
+                        <video id="hint-video" width="480" height="360" autoplay loop muted playsinline webkit-playsinline>
                             <source type="video/mp4">
                             Your browser does not support the video tag.
                         </video>

@@ -718,6 +718,13 @@ class NZSLGrammarGame {
         this.hintUsed = false;
         this.dropZoneSetup = false;
         
+        // Touch drag properties
+        this.touchStartTime = 0;
+        this.touchStartX = 0;
+        this.touchStartY = 0;
+        this.isDragging = false;
+        this.draggedElement = null;
+        
         this.initializeElements();
         this.setupEventListeners();
         this.startGame();
@@ -834,6 +841,11 @@ class NZSLGrammarGame {
             token.addEventListener('dragstart', (e) => this.handleDragStart(e));
             token.addEventListener('dragend', (e) => this.handleDragEnd(e));
             token.addEventListener('click', (e) => this.handleTokenClick(e));
+            
+            // Add touch event listeners for mobile
+            token.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
+            token.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
+            token.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: false });
             
             this.availableWords.appendChild(token);
         });
@@ -973,6 +985,152 @@ class NZSLGrammarGame {
         }
     }
 
+    // Touch event handlers for mobile drag and drop
+    handleTouchStart(e) {
+        e.preventDefault();
+        this.touchStartTime = Date.now();
+        this.isDragging = false;
+        this.draggedElement = e.target;
+        
+        // Store initial touch position
+        const touch = e.touches[0];
+        this.touchStartX = touch.clientX;
+        this.touchStartY = touch.clientY;
+        
+        // Create visual feedback
+        setTimeout(() => {
+            if (!this.isDragging && this.draggedElement) {
+                this.draggedElement.classList.add('dragging');
+                this.isDragging = true;
+            }
+        }, 150); // Small delay to distinguish between tap and drag
+    }
+
+    handleTouchMove(e) {
+        if (!this.draggedElement || !this.isDragging) return;
+        
+        e.preventDefault();
+        const touch = e.touches[0];
+        
+        // Check if touch has moved enough to be considered a drag
+        const deltaX = Math.abs(touch.clientX - this.touchStartX);
+        const deltaY = Math.abs(touch.clientY - this.touchStartY);
+        
+        if (deltaX > 10 || deltaY > 10) {
+            this.isDragging = true;
+            
+            // Show drop indicator in answer zone
+            if (this.answerZone.contains(document.elementFromPoint(touch.clientX, touch.clientY))) {
+                this.showDropIndicatorFromTouch(touch);
+            } else {
+                // Remove drop indicators when not over answer zone
+                document.querySelectorAll('.drop-indicator').forEach(indicator => {
+                    indicator.remove();
+                });
+            }
+        }
+    }
+
+    handleTouchEnd(e) {
+        if (!this.draggedElement) return;
+        
+        const touchDuration = Date.now() - this.touchStartTime;
+        const touch = e.changedTouches[0];
+        
+        // Clean up visual feedback
+        this.draggedElement.classList.remove('dragging');
+        document.querySelectorAll('.drop-indicator').forEach(indicator => {
+            indicator.remove();
+        });
+        
+        // If it was a quick tap (not a drag), treat as click
+        if (touchDuration < 200 && !this.isDragging) {
+            this.handleTokenClick({ target: this.draggedElement });
+            this.draggedElement = null;
+            this.isDragging = false;
+            return;
+        }
+        
+        // Handle drag drop
+        if (this.isDragging) {
+            const elementUnderTouch = document.elementFromPoint(touch.clientX, touch.clientY);
+            
+            if (this.answerZone.contains(elementUnderTouch) || elementUnderTouch === this.answerZone) {
+                // Calculate drop position
+                const insertIndex = this.calculateTouchDropPosition(touch);
+                
+                const word = this.draggedElement.dataset.word;
+                const source = this.draggedElement.parentElement.id;
+                const sourceIndex = this.draggedElement.dataset.answerIndex;
+                
+                if (source === 'available-words') {
+                    // Moving from available words to answer
+                    const uniqueId = 'touch_' + Date.now() + '_' + Math.random();
+                    this.addWordToAnswerAtPosition(word, insertIndex, uniqueId);
+                } else if (source === 'answer-zone') {
+                    // Reordering within answer zone
+                    this.reorderWordInAnswer(parseInt(sourceIndex), insertIndex);
+                }
+            }
+        }
+        
+        this.draggedElement = null;
+        this.isDragging = false;
+    }
+
+    showDropIndicatorFromTouch(touch) {
+        // Remove existing indicators
+        document.querySelectorAll('.drop-indicator').forEach(indicator => {
+            indicator.remove();
+        });
+
+        const tokens = Array.from(this.answerZone.children);
+        let insertIndex = tokens.length;
+
+        // Find the closest position to insert
+        for (let i = 0; i < tokens.length; i++) {
+            const token = tokens[i];
+            const rect = token.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            
+            if (touch.clientX < centerX) {
+                insertIndex = i;
+                break;
+            }
+        }
+
+        // Create drop indicator
+        const indicator = document.createElement('div');
+        indicator.className = 'drop-indicator';
+        indicator.innerHTML = '|';
+
+        if (insertIndex === tokens.length) {
+            // Insert at the end
+            this.answerZone.appendChild(indicator);
+        } else {
+            // Insert before the token at insertIndex
+            this.answerZone.insertBefore(indicator, tokens[insertIndex]);
+        }
+    }
+
+    calculateTouchDropPosition(touch) {
+        const tokens = Array.from(this.answerZone.children);
+        let insertIndex = tokens.length;
+
+        for (let i = 0; i < tokens.length; i++) {
+            const token = tokens[i];
+            const rect = token.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            
+            if (touch.clientX < centerX) {
+                insertIndex = i;
+                break;
+            }
+        }
+
+        return insertIndex;
+    }
+
     addWordToAnswer(word) {
         this.addWordToAnswerAtPosition(word, this.currentAnswer.length);
     }
@@ -1035,6 +1193,11 @@ class NZSLGrammarGame {
             token.addEventListener('dragstart', (e) => this.handleDragStart(e));
             token.addEventListener('dragend', (e) => this.handleDragEnd(e));
             token.addEventListener('click', () => this.removeWordFromAnswer(index));
+            
+            // Add touch event listeners for mobile reordering
+            token.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
+            token.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
+            token.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: false });
             
             this.answerZone.appendChild(token);
         });
