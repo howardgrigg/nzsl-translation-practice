@@ -1249,6 +1249,16 @@ class NZSLGrammarGame {
             this.hintVideo.src = question.video;
             this.videoHint.style.display = 'block';
             
+            // Ensure video stays in container and autoplays
+            this.hintVideo.setAttribute('playsinline', 'true');
+            this.hintVideo.setAttribute('webkit-playsinline', 'true');
+            this.hintVideo.load(); // Reload the video element
+            
+            // Explicitly trigger autoplay
+            this.hintVideo.play().catch(error => {
+                console.log('Video autoplay prevented by browser:', error);
+            });
+            
             // Update the video hint title to reflect it's now showing the answer
             const videoTitle = this.videoHint.querySelector('h3');
             if (!this.hintUsed && videoTitle) {
