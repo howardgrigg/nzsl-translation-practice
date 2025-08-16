@@ -241,4 +241,17 @@ This project was created for personal learning but contributions are welcome. Fe
 
 ## License
 
-This project uses video content from the NZSL dictionary under appropriate attribution. See the About section in the app for full data source credits.
+This project is licensed under the **Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0)** to be compatible with the NZSL Dictionary content used.
+
+### Key Points:
+- ✅ **Free to use** for educational and non-commercial purposes
+- ✅ **Can modify and redistribute** with proper attribution
+- ✅ **Must share adaptations** under the same license
+- ❌ **No commercial use** without permission
+
+### Attribution Requirements:
+This application uses content from the [NZSL Dictionary](https://nzsl.nz) (© Victoria University of Wellington) which is licensed under CC BY-NC-SA 3.0. Our application code is compatible under CC BY-NC-SA 4.0.
+
+**For commercial use**: Contact howard@gri.gg for licensing options.
+
+See the [LICENSE](LICENSE) file for complete terms.
