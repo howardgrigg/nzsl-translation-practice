@@ -22,6 +22,7 @@ COPY script.js .
 COPY matched_signs.json .
 COPY nzsl.db .
 COPY assets/ ./assets/
+COPY NZSLGrammar/ ./NZSLGrammar/
 
 # Create non-root user for security
 RUN useradd -m -u 1000 appuser && chown -R appuser:appuser /app

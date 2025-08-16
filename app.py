@@ -45,6 +45,24 @@ def script():
     response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
     return response
 
+@app.route('/NZSLGrammar/<filename>')
+def nzsl_grammar_files(filename):
+    """Serve NZSLGrammar files"""
+    if filename.endswith('.js'):
+        response = send_from_directory('NZSLGrammar', filename)
+        response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
+        return response
+    elif filename.endswith('.css'):
+        response = send_from_directory('NZSLGrammar', filename)
+        response.headers['Content-Type'] = 'text/css; charset=utf-8'
+        return response
+    elif filename.endswith('.html'):
+        response = send_from_directory('NZSLGrammar', filename)
+        response.headers['Content-Type'] = 'text/html; charset=utf-8'
+        return response
+    else:
+        return send_from_directory('NZSLGrammar', filename)
+
 # Removed - video data now served via /random_video endpoint
 
 @app.route('/assets/icons/<filename>')
@@ -326,6 +344,46 @@ Respond with ONLY a JSON object in this format:
             
     except Exception as e:
         print(f"Error in score_translation: {e}")
+        return jsonify({'error': 'Internal server error'}), 500
+
+@app.route('/get_sign_definition', methods=['POST'])
+def get_sign_definition():
+    """Get sign definition data for the grammar game glosses"""
+    try:
+        data = request.get_json()
+        sign_id = data.get('sign_id')
+        
+        if not sign_id:
+            return jsonify({'error': 'Missing sign_id'}), 400
+        
+        # Connect to database
+        conn = sqlite3.connect('nzsl.db')
+        cursor = conn.cursor()
+        
+        # Get sign definition
+        cursor.execute("""
+            SELECT w.gloss, w.minor, v.url 
+            FROM words w
+            LEFT JOIN videos v ON w.id = v.word_id AND v.video_type = 'main' AND v.url LIKE '%.mp4'
+            WHERE w.id = ?
+            LIMIT 1
+        """, (sign_id,))
+        
+        result = cursor.fetchone()
+        conn.close()
+        
+        if result:
+            gloss, minor_meanings, definition_video_url = result
+            return jsonify({
+                'gloss': gloss,
+                'minor_meanings': minor_meanings or '',
+                'definition_video_url': definition_video_url
+            })
+        else:
+            return jsonify({'error': 'Sign not found'}), 404
+            
+    except Exception as e:
+        print(f"Error in get_sign_definition: {e}")
         return jsonify({'error': 'Internal server error'}), 500
 
 if __name__ == '__main__':

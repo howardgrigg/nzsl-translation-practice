@@ -1,5 +1,30 @@
 'use strict';
 
+// Tab functionality
+function initializeTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and content
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            document.getElementById(`${targetTab}-tab`).classList.add('active');
+        });
+    });
+}
+
+// Initialize tabs when page loads
+document.addEventListener('DOMContentLoaded', () => {
+    initializeTabs();
+});
+
 class NZSLPractice {
     constructor() {
         this.currentVideo = null;
@@ -651,8 +676,883 @@ class NZSLPractice {
     }
 }
 
+// Shared utility function for creating clickable glosses
+function createClickableGlosses(signSequence, clickHandler) {
+    if (!signSequence || signSequence.length === 0) {
+        return 'No sign sequence available';
+    }
+    
+    const signsHTML = signSequence.map(sign => 
+        `<span class="sign-word" data-sign-id="${sign.id}" title="Tap to see definition">${sign.word}</span>`
+    ).join(' → ');
+    
+    return `${signsHTML}`;
+}
+
+// Function to parse NZSL sequence string into sign objects
+function parseNZSLSequence(nzslString) {
+    if (!nzslString) return [];
+    
+    const pattern = /([a-zA-Z\-\^:]+)\[(\d+)\]/g;
+    const signs = [];
+    let match;
+    
+    while ((match = pattern.exec(nzslString)) !== null) {
+        signs.push({
+            word: match[1],
+            id: parseInt(match[2])
+        });
+    }
+    
+    return signs;
+}
+
+class NZSLGrammarGame {
+    constructor() {
+        this.currentQuestion = 0;
+        this.score = 0;
+        this.totalQuestions = Math.min(10, gameData.length);
+        this.gameQuestions = [];
+        this.currentAnswer = [];
+        this.correctAnswer = [];
+        this.hintUsed = false;
+        this.dropZoneSetup = false;
+        
+        this.initializeElements();
+        this.setupEventListeners();
+        this.startGame();
+    }
+
+    initializeElements() {
+        this.englishText = document.getElementById('english-text');
+        this.availableWords = document.getElementById('available-words');
+        this.answerZone = document.getElementById('answer-zone');
+        this.hintBtn = document.getElementById('hint-btn');
+        this.dictionaryBtn = document.getElementById('dictionary-btn');
+        this.clearBtn = document.getElementById('clear-btn');
+        this.submitBtn = document.getElementById('submit-btn-grammar');
+        this.nextBtn = document.getElementById('next-btn-grammar');
+        this.scoreElement = document.getElementById('grammar-score');
+        this.currentQuestionElement = document.getElementById('current-question');
+        this.totalQuestionsElement = document.getElementById('total-questions');
+        this.videoHint = document.getElementById('video-hint');
+        this.hintVideo = document.getElementById('hint-video');
+    }
+
+    setupEventListeners() {
+        this.hintBtn.addEventListener('click', () => this.showHint());
+        this.dictionaryBtn.addEventListener('click', () => this.openDictionary());
+        this.clearBtn.addEventListener('click', () => this.clearAnswer());
+        this.submitBtn.addEventListener('click', () => this.submitAnswer());
+        this.nextBtn.addEventListener('click', () => this.nextQuestion());
+    }
+
+    startGame() {
+        // Shuffle the game data and select questions
+        this.gameQuestions = this.shuffleArray([...gameData]).slice(0, this.totalQuestions);
+        this.totalQuestionsElement.textContent = this.totalQuestions;
+        this.loadQuestion();
+    }
+
+    shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    parseNZSLGloss(nzslString) {
+        // Extract words from the NZSL gloss, removing the [id] parts
+        return nzslString.split(' ').map(word => {
+            // Handle special cases like ^fs:bnz and ^cl:point-armpit
+            if (word.startsWith('^')) {
+                return word;
+            }
+            // Remove the [id] part
+            return word.replace(/\[\d+\]/, '');
+        });
+    }
+
+    loadQuestion() {
+        if (this.currentQuestion >= this.totalQuestions) {
+            this.endGame();
+            return;
+        }
+
+        const question = this.gameQuestions[this.currentQuestion];
+        this.englishText.textContent = question.english;
+        
+        // Parse the correct NZSL answer
+        this.correctAnswer = this.parseNZSLGloss(question.nzsl);
+        
+        // Parse the sign sequence for clickable glosses
+        this.currentSignSequence = parseNZSLSequence(question.nzsl);
+        
+        // Create shuffled word tokens
+        const shuffledWords = this.shuffleArray([...this.correctAnswer]);
+        this.createWordTokens(shuffledWords);
+        
+        // Reset game state
+        this.currentAnswer = [];
+        this.answerZone.innerHTML = '';
+        this.hintUsed = false;
+        this.videoHint.style.display = 'none';
+        this.dictionaryBtn.style.display = 'none';
+        
+        // Hide video feedback container
+        const feedbackContainer = document.getElementById('video-feedback-container');
+        if (feedbackContainer) {
+            feedbackContainer.style.display = 'none';
+        }
+        
+        // Show elements that might have been hidden after previous submission
+        const wordBank = document.querySelector('.word-bank');
+        if (wordBank) {
+            wordBank.style.display = 'block';
+        }
+        this.hintBtn.style.display = 'inline-block';
+        this.hintBtn.disabled = false;
+        this.hintBtn.textContent = '💡 Hint (-2 points)';
+        this.clearBtn.style.display = 'inline-block';
+        
+        this.updateUI();
+    }
+
+    createWordTokens(words) {
+        this.availableWords.innerHTML = '';
+        
+        words.forEach((word, index) => {
+            const token = document.createElement('div');
+            token.className = 'word-token';
+            token.textContent = word;
+            token.draggable = true;
+            token.dataset.word = word;
+            token.dataset.originalIndex = index;
+            
+            // Add drag event listeners
+            token.addEventListener('dragstart', (e) => this.handleDragStart(e));
+            token.addEventListener('dragend', (e) => this.handleDragEnd(e));
+            token.addEventListener('click', (e) => this.handleTokenClick(e));
+            
+            this.availableWords.appendChild(token);
+        });
+        
+        // Setup drop zone only once
+        if (!this.dropZoneSetup) {
+            this.setupDropZone();
+            this.dropZoneSetup = true;
+        }
+    }
+
+    setupDropZone() {
+        this.answerZone.addEventListener('dragover', (e) => this.handleDragOver(e));
+        this.answerZone.addEventListener('drop', (e) => this.handleDrop(e));
+        this.answerZone.addEventListener('dragleave', (e) => this.handleDragLeave(e));
+    }
+
+    handleDragStart(e) {
+        e.dataTransfer.setData('text/plain', e.target.dataset.word);
+        e.dataTransfer.setData('source', e.target.parentElement.id);
+        e.dataTransfer.setData('sourceIndex', e.target.dataset.answerIndex || '');
+        
+        // Create a unique identifier for this specific token
+        const uniqueId = 'token_' + Date.now() + '_' + Math.random();
+        e.target.dataset.uniqueId = uniqueId;
+        e.dataTransfer.setData('uniqueId', uniqueId);
+        
+        e.target.classList.add('dragging');
+        this.draggedElement = e.target;
+    }
+
+    handleDragEnd(e) {
+        e.target.classList.remove('dragging');
+        this.draggedElement = null;
+        // Remove all drop indicators
+        document.querySelectorAll('.drop-indicator').forEach(indicator => {
+            indicator.remove();
+        });
+        this.answerZone.classList.remove('drag-over');
+    }
+
+    handleDragOver(e) {
+        e.preventDefault();
+        this.answerZone.classList.add('drag-over');
+        
+        // Show drop position indicator
+        this.showDropIndicator(e);
+    }
+
+    handleDragLeave(e) {
+        // Only remove drag-over if we're actually leaving the answer zone
+        if (!this.answerZone.contains(e.relatedTarget)) {
+            this.answerZone.classList.remove('drag-over');
+            document.querySelectorAll('.drop-indicator').forEach(indicator => {
+                indicator.remove();
+            });
+        }
+    }
+
+    showDropIndicator(e) {
+        // Remove existing indicators
+        document.querySelectorAll('.drop-indicator').forEach(indicator => {
+            indicator.remove();
+        });
+
+        const tokens = Array.from(this.answerZone.children);
+        let insertIndex = tokens.length;
+
+        // Find the closest position to insert
+        for (let i = 0; i < tokens.length; i++) {
+            const token = tokens[i];
+            const rect = token.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            
+            if (e.clientX < centerX) {
+                insertIndex = i;
+                break;
+            }
+        }
+
+        // Create drop indicator
+        const indicator = document.createElement('div');
+        indicator.className = 'drop-indicator';
+        indicator.innerHTML = '|';
+
+        if (insertIndex === tokens.length) {
+            // Insert at the end
+            this.answerZone.appendChild(indicator);
+        } else {
+            // Insert before the token at insertIndex
+            this.answerZone.insertBefore(indicator, tokens[insertIndex]);
+        }
+    }
+
+    handleDrop(e) {
+        e.preventDefault();
+        this.answerZone.classList.remove('drag-over');
+        
+        // Remove drop indicators
+        document.querySelectorAll('.drop-indicator').forEach(indicator => {
+            indicator.remove();
+        });
+
+        const word = e.dataTransfer.getData('text/plain');
+        const source = e.dataTransfer.getData('source');
+        const sourceIndex = e.dataTransfer.getData('sourceIndex');
+
+        // Calculate drop position
+        const tokens = Array.from(this.answerZone.children);
+        let insertIndex = tokens.length;
+
+        for (let i = 0; i < tokens.length; i++) {
+            const token = tokens[i];
+            const rect = token.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            
+            if (e.clientX < centerX) {
+                insertIndex = i;
+                break;
+            }
+        }
+
+        if (source === 'available-words') {
+            // Moving from available words to answer
+            const uniqueId = e.dataTransfer.getData('uniqueId');
+            this.addWordToAnswerAtPosition(word, insertIndex, uniqueId);
+        } else if (source === 'answer-zone') {
+            // Reordering within answer zone
+            this.reorderWordInAnswer(parseInt(sourceIndex), insertIndex);
+        }
+    }
+
+    handleTokenClick(e) {
+        const word = e.target.dataset.word;
+        if (e.target.parentElement.id === 'available-words') {
+            this.addWordToAnswer(word);
+        }
+    }
+
+    addWordToAnswer(word) {
+        this.addWordToAnswerAtPosition(word, this.currentAnswer.length);
+    }
+
+    addWordToAnswerAtPosition(word, insertIndex, uniqueId = null) {
+        let availableToken;
+        
+        if (uniqueId) {
+            // Find the specific token by unique ID (for drag and drop)
+            availableToken = Array.from(this.availableWords.children).find(
+                token => token.dataset.uniqueId === uniqueId
+            );
+        } else {
+            // Find any unused token with this word (for click handling)
+            availableToken = Array.from(this.availableWords.children).find(
+                token => token.dataset.word === word && !token.classList.contains('used')
+            );
+        }
+        
+        if (availableToken) {
+            availableToken.classList.add('used');
+            availableToken.style.display = 'none';
+            
+            // Insert into answer at specific position
+            this.currentAnswer.splice(insertIndex, 0, word);
+            this.updateAnswerDisplay();
+            this.updateUI();
+        }
+    }
+
+    reorderWordInAnswer(fromIndex, toIndex) {
+        if (fromIndex === toIndex) return;
+        
+        // Adjust toIndex if moving from earlier to later position
+        if (fromIndex < toIndex) {
+            toIndex--;
+        }
+        
+        // Move the word in the array
+        const word = this.currentAnswer.splice(fromIndex, 1)[0];
+        this.currentAnswer.splice(toIndex, 0, word);
+        
+        this.updateAnswerDisplay();
+        this.updateUI();
+    }
+
+    updateAnswerDisplay() {
+        // Clear everything including emojis
+        this.answerZone.innerHTML = '';
+        
+        this.currentAnswer.forEach((word, index) => {
+            const token = document.createElement('div');
+            token.className = 'word-token in-answer';
+            token.textContent = word;
+            token.dataset.word = word;
+            token.dataset.answerIndex = index;
+            token.draggable = true;
+            
+            // Add drag event listeners for reordering
+            token.addEventListener('dragstart', (e) => this.handleDragStart(e));
+            token.addEventListener('dragend', (e) => this.handleDragEnd(e));
+            token.addEventListener('click', () => this.removeWordFromAnswer(index));
+            
+            this.answerZone.appendChild(token);
+        });
+    }
+
+    removeWordFromAnswer(index) {
+        const word = this.currentAnswer[index];
+        this.currentAnswer.splice(index, 1);
+        
+        // Show the word back in available words
+        const availableToken = Array.from(this.availableWords.children).find(
+            token => token.dataset.word === word && token.classList.contains('used')
+        );
+        
+        if (availableToken) {
+            availableToken.classList.remove('used');
+            availableToken.style.display = 'flex';
+        }
+        
+        this.updateAnswerDisplay();
+        this.updateUI();
+    }
+
+    clearAnswer() {
+        this.currentAnswer = [];
+        
+        // Show all available words again
+        Array.from(this.availableWords.children).forEach(token => {
+            token.classList.remove('used');
+            token.style.display = 'flex';
+        });
+        
+        this.updateAnswerDisplay();
+        this.updateUI();
+    }
+
+    submitAnswer() {
+        if (this.currentAnswer.length === 0) return;
+
+        const scoreResult = this.calculatePartialScore();
+        
+        // Apply hint penalty to the score
+        let finalPoints = scoreResult.points;
+        if (this.hintUsed) {
+            finalPoints = Math.max(0, finalPoints - 2);
+        }
+        
+        this.score += finalPoints;
+        
+        // Highlight the answer tokens first
+        if (scoreResult.isExact) {
+            this.highlightAnswerTokens('correct');
+        } else if (scoreResult.points > 0) {
+            this.highlightPartialTokens(scoreResult.wordScores);
+        } else {
+            this.highlightAnswerTokens('incorrect');
+        }
+
+        // Show feedback in video container
+        this.showVideoFeedback(scoreResult, finalPoints);
+
+        this.prepareNextQuestion();
+    }
+
+    calculatePartialScore() {
+        // Handle empty or wrong length answers
+        if (this.currentAnswer.length === 0) {
+            return { points: 0, isExact: false, feedback: '', wordScores: [] };
+        }
+
+        const maxPoints = 10;
+        const correctLength = this.correctAnswer.length;
+        const userLength = this.currentAnswer.length;
+        
+        // Check for exact match first
+        if (this.checkAnswer()) {
+            return { 
+                points: maxPoints, 
+                isExact: true, 
+                feedback: '', 
+                wordScores: this.currentAnswer.map(() => 'correct')
+            };
+        }
+
+        // Only score based on consecutive sequences
+        const sequenceResult = this.calculateConsecutiveSequences();
+        const totalScore = Math.min(sequenceResult.points, maxPoints);
+        
+        return {
+            points: totalScore,
+            isExact: false,
+            feedback: sequenceResult.feedback,
+            wordScores: sequenceResult.wordScores
+        };
+    }
+
+    checkAnswer() {
+        if (this.currentAnswer.length !== this.correctAnswer.length) {
+            return false;
+        }
+        
+        return this.currentAnswer.every((word, index) => word === this.correctAnswer[index]);
+    }
+
+    calculateConsecutiveSequences() {
+        const userLength = this.currentAnswer.length;
+        const correctLength = this.correctAnswer.length;
+        
+        // Handle length mismatch
+        if (userLength !== correctLength) {
+            return {
+                points: 0,
+                feedback: `Wrong number of words (got ${userLength}, expected ${correctLength})`,
+                wordScores: new Array(userLength).fill('incorrect')
+            };
+        }
+        
+        let wordScores = new Array(userLength).fill('incorrect');
+        let correctJoins = 0;
+        let totalJoins = userLength - 1; // Number of joins = number of words - 1
+        
+        // Check each adjacent pair (join) in user's answer
+        for (let i = 0; i < userLength - 1; i++) {
+            const userPair = [this.currentAnswer[i], this.currentAnswer[i + 1]];
+            
+            // Check if this pair appears consecutively anywhere in the correct answer
+            let pairFound = false;
+            for (let j = 0; j < correctLength - 1; j++) {
+                const correctPair = [this.correctAnswer[j], this.correctAnswer[j + 1]];
+                if (userPair[0] === correctPair[0] && userPair[1] === correctPair[1]) {
+                    pairFound = true;
+                    break;
+                }
+            }
+            
+            if (pairFound) {
+                correctJoins++;
+                // Mark both words in the correct join as correct
+                wordScores[i] = 'correct';
+                wordScores[i + 1] = 'correct';
+            }
+        }
+        
+        // Calculate score: (correct joins / total joins) * 10, rounded
+        const percentage = totalJoins > 0 ? correctJoins / totalJoins : 0;
+        const points = Math.round(percentage * 10);
+        
+        // Generate visual feedback showing joins
+        let joinVisualization = [];
+        for (let i = 0; i < userLength; i++) {
+            joinVisualization.push(this.currentAnswer[i]);
+            
+            if (i < userLength - 1) {
+                // Check if this join is correct
+                const userPair = [this.currentAnswer[i], this.currentAnswer[i + 1]];
+                let isCorrectJoin = false;
+                for (let j = 0; j < correctLength - 1; j++) {
+                    const correctPair = [this.correctAnswer[j], this.correctAnswer[j + 1]];
+                    if (userPair[0] === correctPair[0] && userPair[1] === correctPair[1]) {
+                        isCorrectJoin = true;
+                        break;
+                    }
+                }
+                joinVisualization.push(isCorrectJoin ? ' ✅ ' : ' ❌ ');
+            }
+        }
+        
+        const feedback = `${correctJoins}/${totalJoins} correct joins: ${joinVisualization.join('')}`;
+        
+        return {
+            points: points,
+            feedback: feedback,
+            wordScores: wordScores
+        };
+    }
+
+    highlightPartialTokens(wordScores) {
+        const tokens = this.answerZone.querySelectorAll('.word-token');
+        tokens.forEach((token, index) => {
+            if (index < wordScores.length) {
+                token.classList.add(wordScores[index]);
+            }
+        });
+    }
+
+    highlightAnswerTokens(type) {
+        Array.from(this.answerZone.children).forEach(token => {
+            token.classList.add(type);
+        });
+    }
+
+
+    prepareNextQuestion() {
+        this.submitBtn.style.display = 'none';
+        this.nextBtn.style.display = 'inline-block';
+        this.dictionaryBtn.style.display = 'inline-block';
+        
+        // Hide available glosses box and hint/clear buttons after submission
+        const wordBank = document.querySelector('.word-bank');
+        if (wordBank) {
+            wordBank.style.display = 'none';
+        }
+        this.hintBtn.style.display = 'none';
+        this.clearBtn.style.display = 'none';
+        
+        this.updateUI();
+    }
+
+    showVideoAfterSubmission() {
+        const question = this.gameQuestions[this.currentQuestion];
+        if (question.video) {
+            this.hintVideo.src = question.video;
+            this.videoHint.style.display = 'block';
+            
+            // Update the video hint title to reflect it's now showing the answer
+            const videoTitle = this.videoHint.querySelector('h3');
+            if (!this.hintUsed && videoTitle) {
+                videoTitle.textContent = 'Correct Signing:';
+            }
+        }
+    }
+
+    showVideoFeedback(scoreResult, finalPoints) {
+        // Show the video first
+        this.showVideoAfterSubmission();
+        
+        // Insert emojis between answer tokens to show join correctness
+        this.insertJoinEmojis(scoreResult);
+        
+        // Show feedback container with score only
+        const feedbackContainer = document.getElementById('video-feedback-container');
+        if (feedbackContainer) {
+            feedbackContainer.style.display = 'block';
+            
+            // Clear previous content
+            feedbackContainer.innerHTML = '';
+            
+            // Add clean score display 
+            const scoreDiv = document.createElement('div');
+            scoreDiv.className = 'video-feedback-score';
+            
+            const scoreDisplay = document.createElement('div');
+            scoreDisplay.className = 'score-display';
+            scoreDisplay.textContent = finalPoints;
+            
+            // Color the score based on value
+            if (finalPoints >= 9) {
+                scoreDisplay.style.background = '#27ae60';
+            } else if (finalPoints >= 7) {
+                scoreDisplay.style.background = '#f1c40f';
+            } else if (finalPoints >= 4) {
+                scoreDisplay.style.background = '#f39c12';
+            } else {
+                scoreDisplay.style.background = '#e74c3c';
+            }
+            
+            const scoreLabel = document.createElement('div');
+            scoreLabel.className = 'score-label';
+            scoreLabel.textContent = `out of 10 points${this.hintUsed ? ' (hint penalty applied)' : ''}`;
+            
+            scoreDiv.appendChild(scoreDisplay);
+            scoreDiv.appendChild(scoreLabel);
+            feedbackContainer.appendChild(scoreDiv);
+            
+            // Show correct answer if not perfect
+            if (!scoreResult.isExact) {
+                const correctDiv = document.createElement('div');
+                correctDiv.className = 'video-correct-answer';
+                const glossesHTML = createClickableGlosses(this.currentSignSequence);
+                correctDiv.innerHTML = `<strong>Correct NZSL order:</strong> ${glossesHTML}`;
+                feedbackContainer.appendChild(correctDiv);
+                
+                // Add click event listeners to the glosses
+                this.addGlossClickListeners(correctDiv);
+            }
+        }
+    }
+
+    addGlossClickListeners(container) {
+        container.querySelectorAll('.sign-word').forEach(wordElement => {
+            wordElement.addEventListener('click', async (e) => {
+                const signId = e.target.dataset.signId;
+                if (signId) {
+                    await this.showSignDefinition(signId);
+                }
+            });
+        });
+    }
+
+    async showSignDefinition(signId) {
+        try {
+            // Get sign data from the server (reuse the existing database query logic)
+            const response = await fetch('/get_sign_definition', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ sign_id: signId })
+            });
+            
+            if (response.ok) {
+                const signData = await response.json();
+                
+                // Use the interpretation game's modal elements
+                const definitionModal = document.getElementById('definitionModal');
+                const definitionTitle = document.getElementById('definitionTitle');
+                const definitionVideo = document.getElementById('definitionVideo');
+                const definitionMeanings = document.getElementById('definitionMeanings');
+                
+                if (definitionModal && definitionTitle && definitionVideo) {
+                    definitionTitle.textContent = `Sign: ${signData.gloss}`;
+                    definitionVideo.src = signData.definition_video_url;
+                    
+                    if (signData.minor_meanings) {
+                        definitionMeanings.innerHTML = `
+                            <h4>Alternative meanings:</h4>
+                            <p>${signData.minor_meanings}</p>
+                        `;
+                    } else {
+                        definitionMeanings.innerHTML = '';
+                    }
+                    
+                    definitionModal.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+            }
+        } catch (error) {
+            console.error('Error fetching sign definition:', error);
+        }
+    }
+
+    insertJoinEmojis(scoreResult) {
+        if (scoreResult.isExact) {
+            // For perfect answers, show all green checkmarks
+            this.insertEmojisInAnswerZone(this.currentAnswer.map(() => '✅'));
+        } else if (scoreResult.points > 0) {
+            // Calculate which joins are correct for emoji display
+            const joinEmojis = [];
+            const userLength = this.currentAnswer.length;
+            const correctLength = this.correctAnswer.length;
+            
+            if (userLength === correctLength) {
+                // Check each adjacent pair (join) in user's answer
+                for (let i = 0; i < userLength - 1; i++) {
+                    const userPair = [this.currentAnswer[i], this.currentAnswer[i + 1]];
+                    
+                    // Check if this pair appears consecutively anywhere in the correct answer
+                    let pairFound = false;
+                    for (let j = 0; j < correctLength - 1; j++) {
+                        const correctPair = [this.correctAnswer[j], this.correctAnswer[j + 1]];
+                        if (userPair[0] === correctPair[0] && userPair[1] === correctPair[1]) {
+                            pairFound = true;
+                            break;
+                        }
+                    }
+                    
+                    joinEmojis.push(pairFound ? '✅' : '❌');
+                }
+            } else {
+                // Wrong length - all joins are incorrect
+                for (let i = 0; i < userLength - 1; i++) {
+                    joinEmojis.push('❌');
+                }
+            }
+            
+            this.insertEmojisInAnswerZone(joinEmojis);
+        } else {
+            // All incorrect
+            const joinEmojis = [];
+            for (let i = 0; i < this.currentAnswer.length - 1; i++) {
+                joinEmojis.push('❌');
+            }
+            this.insertEmojisInAnswerZone(joinEmojis);
+        }
+    }
+
+    insertEmojisInAnswerZone(joinEmojis) {
+        const tokens = Array.from(this.answerZone.children);
+        
+        // Insert emojis between tokens (but not after the last token)
+        for (let i = joinEmojis.length - 1; i >= 0; i--) {
+            const emoji = document.createElement('span');
+            emoji.className = 'join-emoji';
+            emoji.textContent = joinEmojis[i];
+            
+            // Insert after the token at index i
+            if (i + 1 < tokens.length) {
+                this.answerZone.insertBefore(emoji, tokens[i + 1]);
+            }
+        }
+    }
+
+    nextQuestion() {
+        this.currentQuestion++;
+        this.nextBtn.style.display = 'none';
+        this.submitBtn.style.display = 'inline-block';
+        this.dictionaryBtn.style.display = 'none';
+        this.loadQuestion();
+    }
+
+    showHint() {
+        if (this.hintUsed) return;
+        
+        this.hintUsed = true;
+        const question = this.gameQuestions[this.currentQuestion];
+        
+        if (question.video) {
+            this.hintVideo.src = question.video;
+            this.videoHint.style.display = 'block';
+        }
+        
+        this.hintBtn.disabled = true;
+        this.hintBtn.textContent = '💡 Hint Used (-2 points)';
+    }
+
+    openDictionary() {
+        const question = this.gameQuestions[this.currentQuestion];
+        if (question.word_id) {
+            window.open(`https://www.nzsl.nz/signs/${question.word_id}`, '_blank');
+        }
+    }
+
+
+    updateUI() {
+        this.scoreElement.textContent = this.score;
+        this.currentQuestionElement.textContent = this.currentQuestion + 1;
+        this.submitBtn.disabled = this.currentAnswer.length === 0;
+    }
+
+    endGame() {
+        // Show game complete message in video container
+        const feedbackContainer = document.getElementById('video-feedback-container');
+        if (feedbackContainer) {
+            feedbackContainer.style.display = 'block';
+            feedbackContainer.innerHTML = `
+                <div class="video-feedback-score">
+                    <div class="score-display" style="background: #27ae60;">${this.score}</div>
+                    <div class="score-label">out of ${this.totalQuestions * 10} total points</div>
+                </div>
+                <div class="video-feedback-message correct">
+                    🎉 Game Complete! Final Score: ${this.score}/${this.totalQuestions * 10}
+                </div>
+            `;
+        }
+        
+        this.submitBtn.style.display = 'none';
+        this.nextBtn.style.display = 'none';
+        this.clearBtn.style.display = 'none';
+        this.hintBtn.style.display = 'none';
+        this.dictionaryBtn.style.display = 'none';
+        
+        // Hide the word bank at game end
+        const wordBank = document.querySelector('.word-bank');
+        if (wordBank) {
+            wordBank.style.display = 'none';
+        }
+    }
+}
+
 // Initialize the application when the page loads
 let app;
+let grammarGame;
 document.addEventListener('DOMContentLoaded', () => {
     app = new NZSLPractice();
 });
+
+// Initialize grammar game when grammar tab is activated
+function initializeGrammarGame() {
+    if (typeof gameData !== 'undefined' && !grammarGame) {
+        grammarGame = new NZSLGrammarGame();
+    }
+}
+
+// Update tab initialization to include grammar game
+function initializeTabs() {
+    const tabButtons = document.querySelectorAll('.tab-button');
+    const tabContents = document.querySelectorAll('.tab-content');
+
+    function showTab(targetTab) {
+        // Remove active class from all buttons and content
+        tabButtons.forEach(btn => btn.classList.remove('active'));
+        tabContents.forEach(content => content.classList.remove('active'));
+        
+        // Add active class to corresponding button and content
+        const targetButton = document.querySelector(`[data-tab="${targetTab}"]`);
+        if (targetButton) {
+            targetButton.classList.add('active');
+            document.getElementById(`${targetTab}-tab`).classList.add('active');
+            
+            // Update URL hash
+            window.location.hash = targetTab;
+            
+            // Initialize grammar game when grammar tab is activated
+            if (targetTab === 'grammar') {
+                setTimeout(() => initializeGrammarGame(), 100);
+            }
+        }
+    }
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            showTab(targetTab);
+        });
+    });
+
+    // Handle URL hash on page load and hash changes
+    function handleHashChange() {
+        const hash = window.location.hash.substring(1); // Remove the #
+        if (hash && (hash === 'interpretation' || hash === 'grammar')) {
+            showTab(hash);
+        } else {
+            // Default to interpretation tab if no valid hash
+            showTab('interpretation');
+        }
+    }
+
+    // Listen for hash changes
+    window.addEventListener('hashchange', handleHashChange);
+    
+    // Handle initial load
+    handleHashChange();
+}

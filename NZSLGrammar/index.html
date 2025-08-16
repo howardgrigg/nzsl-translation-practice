@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NZSL Grammar Practice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>NZSL Grammar Practice</h1>
+            <p>Drag the NZSL glosses into the correct order to match the English sentence</p>
+            <div class="score-board">
+                <span>Score: <span id="score">0</span></span>
+                <span>Question: <span id="current-question">1</span> / <span id="total-questions">20</span></span>
+            </div>
+        </header>
+
+        <main>
+            <div class="english-sentence">
+                <h2>English Sentence:</h2>
+                <p id="english-text"></p>
+            </div>
+
+            <div id="video-hint" class="video-hint" style="display: none;">
+                <h3>Video Hint:</h3>
+                <video id="hint-video" width="480" height="360" loop autoplay muted>
+                    <source type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+
+            <div class="game-area">
+                <div class="word-bank">
+                    <h3>Available Glosses:</h3>
+                    <div id="available-words" class="word-container"></div>
+                </div>
+
+                <div class="answer-area">
+                    <h3>Your NZSL Order:</h3>
+                    <div id="answer-zone" class="drop-zone"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button id="hint-btn">💡 Hint (-2 points)</button>
+                <button id="dictionary-btn">📖 View in Dictionary</button>
+                <button id="clear-btn">Clear</button>
+                <button id="submit-btn" disabled>Submit Answer</button>
+                <button id="next-btn" style="display: none;">Next Question</button>
+            </div>
+
+            <div id="feedback" class="feedback"></div>
+        </main>
+    </div>
+
+    <script src="game_data.js"></script>
+    <script src="game.js"></script>
+</body>
+</html>
