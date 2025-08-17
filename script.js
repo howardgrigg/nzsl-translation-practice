@@ -1241,7 +1241,7 @@ class NZSLGrammarGame {
         
         if (availableToken) {
             availableToken.classList.remove('used');
-            availableToken.style.display = 'flex';
+            availableToken.style.display = 'inline-block';
         }
         
         this.updateAnswerDisplay();
@@ -1254,7 +1254,7 @@ class NZSLGrammarGame {
         // Show all available words again
         Array.from(this.availableWords.children).forEach(token => {
             token.classList.remove('used');
-            token.style.display = 'flex';
+            token.style.display = 'inline-block';
         });
         
         this.updateAnswerDisplay();
