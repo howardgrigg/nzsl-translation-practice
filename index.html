@@ -73,6 +73,9 @@
             background: var(--bg-color);
             color: var(--text-color);
             line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            padding-top: 60px; /* Space for fixed header */
             transition: background-color 0.3s ease, color 0.3s ease;
         }
 
@@ -83,20 +86,151 @@
         }
 
         .header {
-            text-align: center;
-            margin-bottom: 30px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            z-index: 100;
+            background: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 20px;
+            max-width: 100%;
+            margin: 0;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
         .header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
+            font-size: 1.5em;
+            margin: 0;
+            color: var(--text-color);
+            font-weight: 600;
+        }
+
+        .header-subtitle {
+            font-size: 0.9em;
+            color: var(--text-color);
+            opacity: 0.7;
+            margin: 0;
+            font-weight: normal;
+        }
+
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .about-btn {
+            background: none;
+            border: 2px solid var(--border-color);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            color: var(--text-color);
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .about-btn:hover {
+            background: var(--button-primary);
+            color: white;
+            border-color: var(--button-primary);
+        }
+
+        /* About Modal */
+        .about-modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(2px);
+        }
+
+        .about-modal-content {
+            background-color: var(--card-bg);
+            margin: 5% auto;
+            padding: 20px;
+            border-radius: 12px;
+            width: 90%;
+            max-width: 600px;
+            max-height: 80vh;
+            overflow-y: auto;
+            position: relative;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .about-modal-header h2 {
+            margin: 0;
+            color: var(--text-color);
+            font-size: 1.4em;
+        }
+
+        .about-close {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--text-color);
+            padding: 0;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            transition: background-color 0.2s ease;
+        }
+
+        .about-close:hover {
+            background-color: var(--hover-bg);
+        }
+
+        .about-modal p {
+            margin-bottom: 15px;
+            line-height: 1.6;
             color: var(--text-color);
         }
 
-        .header p {
-            font-size: 1.1em;
-            color: var(--text-color);
-            opacity: 0.8;
+        .about-modal a {
+            color: var(--button-primary);
+            text-decoration: none;
+        }
+
+        .about-modal a:hover {
+            text-decoration: underline;
         }
 
         /* Tab Styles */
@@ -223,9 +357,7 @@
         }
 
         .word-container, .drop-zone {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            position: relative;
             min-height: 120px;
             padding: 15px;
             border: 2px dashed var(--border-color);
@@ -268,15 +400,14 @@
             border-radius: 20px;
             cursor: grab;
             user-select: none;
-            transition: all 0.2s ease;
             font-weight: 500;
             border: 2px solid transparent;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            display: inline-block;
+            margin: 5px;
             min-height: 40px;
             line-height: 1.2;
+            vertical-align: top;
+            will-change: transform;
             
             /* Prevent mobile touch selection and magnification */
             -webkit-touch-callout: none;
@@ -296,6 +427,32 @@
         .word-token:active {
             cursor: grabbing;
             transform: scale(0.95);
+        }
+
+        .word-token.is-idle {
+            transition: transform 0.2s ease;
+            cursor: grab;
+            position: relative;
+        }
+
+        .word-token.is-draggable {
+            cursor: grabbing;
+            z-index: 1000;
+            transform-origin: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            opacity: 0.9;
+            transition: none;
+            position: relative;
+        }
+
+        .word-token.dragging {
+            opacity: 0.5;
+        }
+
+        .word-container.drag-over,
+        .drop-zone.drag-over {
+            background-color: rgba(52, 152, 219, 0.1) !important;
+            border-color: #3498db !important;
         }
 
         .word-token.dragging {
@@ -548,6 +705,26 @@
         }
 
         @media (max-width: 768px) {
+            body {
+                padding-top: 50px; /* Smaller header on mobile */
+            }
+
+            .header-inner {
+                padding: 8px 15px;
+            }
+
+            .header h1 {
+                font-size: 1.2em;
+            }
+
+            .header-subtitle {
+                display: none;
+            }
+
+            .header-content {
+                gap: 10px;
+            }
+
             .score-board {
                 flex-direction: column;
                 gap: 8px;
@@ -1327,20 +1504,35 @@
     </style>
 </head>
 <body>
+    <!-- Fixed Header -->
+    <div class="header">
+        <div class="header-inner">
+            <div class="header-content">
+                <h1>NZSL Practice Hub</h1>
+                <p class="header-subtitle">Interactive NZSL learning games</p>
+            </div>
+            <div class="header-actions">
+                <button class="about-btn" id="aboutBtn" title="About this application">?</button>
+            </div>
+        </div>
+    </div>
+
     <div class="container">
-        <div class="header">
-            <h1>NZSL Practice Hub</h1>
-            <p>Two interactive games to help you learn New Zealand Sign Language</p>
-            
-            <details class="info-section">
-                <summary>About this application</summary>
+
+        <!-- About Modal -->
+        <div id="aboutModal" class="about-modal">
+            <div class="about-modal-content">
+                <div class="about-modal-header">
+                    <h2>About NZSL Practice Hub</h2>
+                    <button class="about-close" id="aboutClose">&times;</button>
+                </div>
                 <p>This webapp contains two NZSL learning games:</p>
                 <p><strong>Interpretation Practice:</strong> Uses video examples from the top 300 most common signs in New Zealand Sign Language (NZSL). Video examples are sourced from the <a href="https://nzsl.nz" target="_blank">NZSL.nz dictionary</a>, developed by the Deaf Studies Research Unit, Victoria University of Wellington.</p>
                 <p><strong>Grammar Practice:</strong> A drag-and-drop game where you arrange NZSL glosses in the correct grammatical order to match English sentences. The 5,347+ sentence examples and their NZSL gloss structures are also sourced from the <a href="https://nzsl.nz" target="_blank">NZSL.nz dictionary</a>.</p>
                 <p>The list of most common signs is based on frequency analysis from: McKee, D., & Kennedy, G. D. (2006). The distribution of signs in New Zealand sign language. <em>Sign Language Studies</em>, <em>6</em>(4), 372-390.</p>
                 <p>This tool was created by me, Howard Grigg, I'm based in Wellington and learning NZSL through evening classes. I built this primarily for my own practice but decided to publish it in case anyone else would find value from it. If you use this tool, I'd love to hear your feedback or even just a note to say you used it - email me at <a href="mailto:howard@gri.gg">howard@gri.gg</a>.</p>
                 <p>This project is open source and available on <a href="https://github.com/howardgrigg/nzsl-translation-practice" target="_blank">GitHub</a> under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License (CC BY-NC-SA 4.0), compatible with the NZSL Dictionary's licensing. Feel free to contribute, report issues, or use it for your own learning!</p>
-            </details>
+            </div>
         </div>
 
         <div class="tab-container">
@@ -1518,6 +1710,7 @@
     </div>
 
     <script src="/NZSLGrammar/game_data.js"></script>
+    <script src="DragDropTouch.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

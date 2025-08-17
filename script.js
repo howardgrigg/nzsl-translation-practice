@@ -69,6 +69,17 @@ class NZSLPractice {
         this.closeDefinition = document.getElementById('closeDefinition');
     }
 
+    async loadNextVideoWithScroll() {
+        // Scroll to video container
+        const videoContainer = document.querySelector('.video-container');
+        if (videoContainer) {
+            videoContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        // Load next video normally
+        this.loadRandomVideo();
+    }
+
     async loadRandomVideo() {
         try {
             // Check if we have a preloaded video ready
@@ -191,7 +202,7 @@ class NZSLPractice {
 
     setupEventListeners() {
         this.submitBtn.addEventListener('click', () => this.submitTranslation());
-        this.nextBtn.addEventListener('click', () => this.loadRandomVideo());
+        this.nextBtn.addEventListener('click', () => this.loadNextVideoWithScroll());
         this.speedBtn.addEventListener('click', () => this.toggleSpeed());
         this.historyBtn?.addEventListener('click', () => this.showHistory());
         this.closeHistory?.addEventListener('click', () => this.hideHistory());
@@ -709,6 +720,7 @@ function parseNZSLSequence(nzslString) {
 
 class NZSLGrammarGame {
     constructor() {
+        console.log('NZSLGrammarGame constructor called');
         this.currentQuestion = 0;
         this.score = 0;
         this.totalQuestions = Math.min(10, gameData.length);
@@ -718,13 +730,17 @@ class NZSLGrammarGame {
         this.hintUsed = false;
         this.dropZoneSetup = false;
         
-        // Touch drag properties
-        this.touchStartTime = 0;
-        this.touchStartX = 0;
-        this.touchStartY = 0;
-        this.isDragging = false;
-        this.potentialDrag = false;
-        this.draggedElement = null;
+        // Unified drag properties
+        this.draggableItem = null;
+        this.isDragIntent = false;
+        this.dragStartTime = 0;
+        this.pointerStartX = 0;
+        this.pointerStartY = 0;
+        this.originalParent = null;
+        this.originalIndex = null;
+        this.insertIndex = null;
+        this.targetZone = null;
+        this.dragSystemSetup = false;
         
         this.initializeElements();
         this.setupEventListeners();
@@ -832,152 +848,300 @@ class NZSLGrammarGame {
         
         words.forEach((word, index) => {
             const token = document.createElement('div');
-            token.className = 'word-token';
+            token.className = 'word-token is-idle js-available-token';
             token.textContent = word;
-            token.draggable = true;
             token.dataset.word = word;
             token.dataset.originalIndex = index;
             
-            // Add drag event listeners
-            token.addEventListener('dragstart', (e) => this.handleDragStart(e));
-            token.addEventListener('dragend', (e) => this.handleDragEnd(e));
+            // Add click listener for simple tap-to-add
             token.addEventListener('click', (e) => this.handleTokenClick(e));
             
-            // Add touch event listeners for mobile
-            token.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
-            token.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
-            token.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: false });
+            // Setup drag/drop for this token
+            this.setupWordToken(token);
             
             this.availableWords.appendChild(token);
         });
         
-        // Setup drop zone only once
-        if (!this.dropZoneSetup) {
-            this.setupDropZone();
-            this.dropZoneSetup = true;
-        }
+        // Setup HTML5 drag/drop system
+        this.setupHTML5DragDrop();
     }
 
-    setupDropZone() {
-        this.answerZone.addEventListener('dragover', (e) => this.handleDragOver(e));
-        this.answerZone.addEventListener('drop', (e) => this.handleDrop(e));
-        this.answerZone.addEventListener('dragleave', (e) => this.handleDragLeave(e));
+    setupHTML5DragDrop() {
+        console.log('Setting up HTML5 drag/drop with touch support');
+        if (this.dragSystemSetup) return;
+        this.dragSystemSetup = true;
+
+        // Set up drop zones
+        this.setupDropZone(this.answerZone);
+        this.setupDropZone(this.availableWords);
+
+        console.log('HTML5 drag/drop ready');
     }
 
-    handleDragStart(e) {
-        e.dataTransfer.setData('text/plain', e.target.dataset.word);
-        e.dataTransfer.setData('source', e.target.parentElement.id);
-        e.dataTransfer.setData('sourceIndex', e.target.dataset.answerIndex || '');
-        
-        // Create a unique identifier for this specific token
-        const uniqueId = 'token_' + Date.now() + '_' + Math.random();
-        e.target.dataset.uniqueId = uniqueId;
-        e.dataTransfer.setData('uniqueId', uniqueId);
-        
-        e.target.classList.add('dragging');
-        this.draggedElement = e.target;
-    }
-
-    handleDragEnd(e) {
-        e.target.classList.remove('dragging');
-        this.draggedElement = null;
-        // Remove all drop indicators
-        document.querySelectorAll('.drop-indicator').forEach(indicator => {
-            indicator.remove();
-        });
-        this.answerZone.classList.remove('drag-over');
-    }
-
-    handleDragOver(e) {
-        e.preventDefault();
-        this.answerZone.classList.add('drag-over');
-        
-        // Show drop position indicator
-        this.showDropIndicator(e);
-    }
-
-    handleDragLeave(e) {
-        // Only remove drag-over if we're actually leaving the answer zone
-        if (!this.answerZone.contains(e.relatedTarget)) {
-            this.answerZone.classList.remove('drag-over');
-            document.querySelectorAll('.drop-indicator').forEach(indicator => {
-                indicator.remove();
-            });
-        }
-    }
-
-    showDropIndicator(e) {
-        // Remove existing indicators
-        document.querySelectorAll('.drop-indicator').forEach(indicator => {
-            indicator.remove();
-        });
-
-        const tokens = Array.from(this.answerZone.children);
-        let insertIndex = tokens.length;
-
-        // Find the closest position to insert
-        for (let i = 0; i < tokens.length; i++) {
-            const token = tokens[i];
-            const rect = token.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
+    setupDropZone(element) {
+        element.addEventListener('dragover', (e) => {
+            e.preventDefault(); // Allow drop
+            e.dataTransfer.dropEffect = 'move';
+            element.classList.add('drag-over');
             
-            if (e.clientX < centerX) {
-                insertIndex = i;
-                break;
+            // Show insertion point for answer zone
+            if (element === this.answerZone) {
+                this.showInsertionPoint(e.clientX, e.clientY);
             }
-        }
+        });
 
-        // Create drop indicator
-        const indicator = document.createElement('div');
-        indicator.className = 'drop-indicator';
-        indicator.innerHTML = '|';
+        element.addEventListener('dragleave', (e) => {
+            element.classList.remove('drag-over');
+            this.clearInsertionPoint();
+        });
 
-        if (insertIndex === tokens.length) {
-            // Insert at the end
-            this.answerZone.appendChild(indicator);
+        element.addEventListener('drop', (e) => {
+            e.preventDefault();
+            element.classList.remove('drag-over');
+            this.clearInsertionPoint();
+            
+            const word = e.dataTransfer.getData('text/plain');
+            const sourceContainer = e.dataTransfer.getData('application/source');
+            
+            // Calculate insertion position for answer zone
+            let insertIndex = null;
+            if (element === this.answerZone) {
+                if (sourceContainer === 'answer-zone') {
+                    // Reordering within answer zone - use special method
+                    insertIndex = this.getInsertionIndexForReorder(e.clientX, e.clientY, word);
+                } else {
+                    // Adding from available words - use normal method
+                    insertIndex = this.getInsertionIndex(e.clientX, e.clientY);
+                }
+            }
+            
+            this.handleDrop(word, sourceContainer, element, insertIndex);
+        });
+    }
+
+    showInsertionPoint(clientX, clientY) {
+        this.clearInsertionPoint(); // Remove any existing insertion point
+        
+        const answerTokens = Array.from(this.answerZone.children)
+            .filter(el => el.classList.contains('word-token') && !el.classList.contains('dragging'));
+        
+        const answerZoneRect = this.answerZone.getBoundingClientRect();
+        let insertPosition = answerZoneRect.left; // Default to start of answer zone
+        
+        // Find insertion position
+        if (answerTokens.length === 0) {
+            // Empty answer zone - position at the start
+            insertPosition = answerZoneRect.left + 10;
         } else {
-            // Insert before the token at insertIndex
-            this.answerZone.insertBefore(indicator, tokens[insertIndex]);
-        }
-    }
-
-    handleDrop(e) {
-        e.preventDefault();
-        this.answerZone.classList.remove('drag-over');
-        
-        // Remove drop indicators
-        document.querySelectorAll('.drop-indicator').forEach(indicator => {
-            indicator.remove();
-        });
-
-        const word = e.dataTransfer.getData('text/plain');
-        const source = e.dataTransfer.getData('source');
-        const sourceIndex = e.dataTransfer.getData('sourceIndex');
-
-        // Calculate drop position
-        const tokens = Array.from(this.answerZone.children);
-        let insertIndex = tokens.length;
-
-        for (let i = 0; i < tokens.length; i++) {
-            const token = tokens[i];
-            const rect = token.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
+            let insertIndex = answerTokens.length; // Default to end
             
-            if (e.clientX < centerX) {
-                insertIndex = i;
-                break;
+            for (let i = 0; i < answerTokens.length; i++) {
+                const token = answerTokens[i];
+                const rect = token.getBoundingClientRect();
+                const tokenCenterX = rect.left + rect.width / 2;
+                
+                if (clientX < tokenCenterX) {
+                    insertIndex = i;
+                    // Position slightly before the token (accounting for margins/padding)
+                    insertPosition = rect.left - 5; // Move 5px left
+                    break;
+                }
+            }
+            
+            // If inserting at the end, position after the last token
+            if (insertIndex === answerTokens.length && answerTokens.length > 0) {
+                const lastToken = answerTokens[answerTokens.length - 1];
+                const lastRect = lastToken.getBoundingClientRect();
+                insertPosition = lastRect.right - 1; // Move 5px left
             }
         }
+        
+        // Create insertion indicator as an overlay
+        const indicator = document.createElement('div');
+        indicator.className = 'insertion-indicator';
+        indicator.style.cssText = `
+            position: absolute;
+            left: ${insertPosition - answerZoneRect.left}px;
+            top: calc(50% - 17px);
+            transform: translateY(-50%);
+            width: 3px;
+            height: 40px;
+            background: #3498db;
+            border-radius: 2px;
+            animation: pulse 0.8s infinite;
+            pointer-events: none;
+            z-index: 1000;
+        `;
+        
+        // Add CSS animation if not already added
+        if (!document.getElementById('insertion-indicator-style')) {
+            const style = document.createElement('style');
+            style.id = 'insertion-indicator-style';
+            style.textContent = `
+                @keyframes pulse {
+                    0%, 100% { opacity: 0.6; transform: translateY(-50%) scaleX(1); }
+                    50% { opacity: 1; transform: translateY(-50%) scaleX(1.5); }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Make sure answer zone has relative positioning for the overlay
+        const originalPosition = this.answerZone.style.position;
+        if (!originalPosition || originalPosition === 'static') {
+            this.answerZone.style.position = 'relative';
+        }
+        
+        // Add the indicator as an overlay
+        this.answerZone.appendChild(indicator);
+    }
+    
+    clearInsertionPoint() {
+        const indicators = this.answerZone.querySelectorAll('.insertion-indicator');
+        indicators.forEach(indicator => indicator.remove());
+    }
 
-        if (source === 'available-words') {
-            // Moving from available words to answer
-            const uniqueId = e.dataTransfer.getData('uniqueId');
-            this.addWordToAnswerAtPosition(word, insertIndex, uniqueId);
-        } else if (source === 'answer-zone') {
+    getInsertionIndex(clientX, clientY) {
+        const answerTokens = Array.from(this.answerZone.children)
+            .filter(el => el.classList.contains('word-token') && !el.classList.contains('dragging') && !el.classList.contains('insertion-indicator'));
+        
+        // If no tokens, insert at beginning
+        if (answerTokens.length === 0) return 0;
+        
+        for (let i = 0; i < answerTokens.length; i++) {
+            const token = answerTokens[i];
+            const rect = token.getBoundingClientRect();
+            const tokenCenterX = rect.left + rect.width / 2;
+            
+            // If cursor is to the left of this token's center, insert before it
+            if (clientX < tokenCenterX) {
+                return i;
+            }
+        }
+        
+        // If we get here, insert at the end
+        return answerTokens.length;
+    }
+
+    // New method to get insertion index that accounts for items being dragged FROM the answer zone
+    getInsertionIndexForReorder(clientX, clientY, draggedWord) {
+        // For reordering, we need to consider the ORIGINAL positions including the dragged item
+        const originalIndex = this.currentAnswer.indexOf(draggedWord);
+        
+        const answerTokens = Array.from(this.answerZone.children)
+            .filter(el => el.classList.contains('word-token') && !el.classList.contains('dragging') && !el.classList.contains('insertion-indicator'));
+        
+        // If no visible tokens (only the dragged one), return 0
+        if (answerTokens.length === 0) return 0;
+        
+        let insertIndex = 0;
+        
+        for (let i = 0; i < answerTokens.length; i++) {
+            const token = answerTokens[i];
+            const rect = token.getBoundingClientRect();
+            const tokenCenterX = rect.left + rect.width / 2;
+            
+            if (clientX < tokenCenterX) {
+                insertIndex = i;
+                break;
+            } else {
+                insertIndex = i + 1;
+            }
+        }
+        
+        // Now we need to adjust this index to account for the missing dragged item
+        // If the original item was before the insertion point, we need to add 1
+        if (originalIndex < insertIndex) {
+            insertIndex++;
+        }
+        
+        return insertIndex;
+    }
+
+    setupWordToken(token) {
+        token.draggable = true;
+        
+        token.addEventListener('dragstart', (e) => {
+            const word = token.dataset.word;
+            const sourceContainer = token.parentElement.id;
+            
+            e.dataTransfer.setData('text/plain', word);
+            e.dataTransfer.setData('application/source', sourceContainer);
+            e.dataTransfer.effectAllowed = 'move';
+            
+            token.classList.add('dragging');
+            console.log('Drag started:', word, 'from', sourceContainer);
+        });
+
+        token.addEventListener('dragend', (e) => {
+            token.classList.remove('dragging');
+            // Clear all drag-over states
+            this.answerZone.classList.remove('drag-over');
+            this.availableWords.classList.remove('drag-over');
+            // Clear insertion point
+            this.clearInsertionPoint();
+        });
+    }
+
+    handleDrop(word, sourceContainer, targetContainer, insertIndex = null) {
+        console.log('Drop:', word, 'from', sourceContainer, 'to', targetContainer.id, 'insertIndex:', insertIndex);
+        
+        if (sourceContainer === 'available-words' && targetContainer === this.answerZone) {
+            // Available → Answer
+            if (insertIndex !== null) {
+                this.addWordToAnswerAtPosition(word, insertIndex);
+            } else {
+                this.addWordToAnswer(word);
+            }
+        } else if (sourceContainer === 'answer-zone' && targetContainer === this.availableWords) {
+            // Answer → Available
+            const answerIndex = this.currentAnswer.indexOf(word);
+            if (answerIndex !== -1) {
+                this.removeWordFromAnswer(answerIndex);
+            }
+        } else if (sourceContainer === 'answer-zone' && targetContainer === this.answerZone && insertIndex !== null) {
             // Reordering within answer zone
-            this.reorderWordInAnswer(parseInt(sourceIndex), insertIndex);
+            const fromIndex = this.currentAnswer.indexOf(word);
+            if (fromIndex !== -1) {
+                // Don't check for fromIndex !== insertIndex because we need to handle 
+                // the case where we're moving to the actual end position
+                this.reorderWordInAnswer(fromIndex, insertIndex);
+            }
         }
     }
+
+
+
+
+
+
+    cleanup() {
+        // Clear visual feedback
+        this.clearAllVisualFeedback();
+
+        // Reset draggable item
+        if (this.draggableItem) {
+            this.draggableItem.classList.remove('is-draggable');
+            this.draggableItem.classList.add('is-idle');
+            this.draggableItem.style.transform = '';
+            this.draggableItem.style.zIndex = '';
+        }
+
+        // Re-enable page interactions
+        document.body.style.overflow = '';
+        document.body.style.touchAction = '';
+        document.body.style.userSelect = '';
+
+        // Remove drag listeners
+        document.removeEventListener('mousemove', (e) => this.drag(e));
+        document.removeEventListener('touchmove', (e) => this.drag(e));
+
+        // Reset state
+        this.draggableItem = null;
+        this.dragScenario = null;
+        this.sourceContainer = null;
+    }
+
 
     handleTokenClick(e) {
         const word = e.target.dataset.word;
@@ -986,164 +1150,6 @@ class NZSLGrammarGame {
         }
     }
 
-    // Touch event handlers for mobile drag and drop
-    handleTouchStart(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        
-        this.touchStartTime = Date.now();
-        this.isDragging = false;
-        this.draggedElement = e.target;
-        
-        // Store initial touch position
-        const touch = e.touches[0];
-        this.touchStartX = touch.clientX;
-        this.touchStartY = touch.clientY;
-        
-        // Immediate visual feedback - no delay
-        this.draggedElement.classList.add('dragging');
-        
-        // Mark as potentially dragging after minimal movement check
-        this.potentialDrag = true;
-    }
-
-    handleTouchMove(e) {
-        if (!this.draggedElement || !this.potentialDrag) return;
-        
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const touch = e.touches[0];
-        
-        // Check if touch has moved enough to be considered a drag
-        const deltaX = Math.abs(touch.clientX - this.touchStartX);
-        const deltaY = Math.abs(touch.clientY - this.touchStartY);
-        
-        if (deltaX > 5 || deltaY > 5) {
-            this.isDragging = true;
-            
-            // Show drop indicator in answer zone
-            const elementUnder = document.elementFromPoint(touch.clientX, touch.clientY);
-            if (this.answerZone.contains(elementUnder) || elementUnder === this.answerZone) {
-                this.showDropIndicatorFromTouch(touch);
-            } else {
-                // Remove drop indicators when not over answer zone
-                document.querySelectorAll('.drop-indicator').forEach(indicator => {
-                    indicator.remove();
-                });
-            }
-        }
-    }
-
-    handleTouchEnd(e) {
-        if (!this.draggedElement) return;
-        
-        e.preventDefault();
-        e.stopPropagation();
-        
-        const touchDuration = Date.now() - this.touchStartTime;
-        const touch = e.changedTouches[0];
-        
-        // Clean up visual feedback
-        this.draggedElement.classList.remove('dragging');
-        document.querySelectorAll('.drop-indicator').forEach(indicator => {
-            indicator.remove();
-        });
-        
-        // If it was a quick tap (not a drag), treat as click
-        if (touchDuration < 300 && !this.isDragging) {
-            this.handleTokenClick({ target: this.draggedElement });
-            this.resetTouchState();
-            return;
-        }
-        
-        // Handle drag drop
-        if (this.isDragging) {
-            const elementUnderTouch = document.elementFromPoint(touch.clientX, touch.clientY);
-            
-            if (this.answerZone.contains(elementUnderTouch) || elementUnderTouch === this.answerZone) {
-                // Calculate drop position
-                const insertIndex = this.calculateTouchDropPosition(touch);
-                
-                const word = this.draggedElement.dataset.word;
-                const source = this.draggedElement.parentElement.id;
-                const sourceIndex = this.draggedElement.dataset.answerIndex;
-                
-                if (source === 'available-words') {
-                    // Moving from available words to answer
-                    const uniqueId = 'touch_' + Date.now() + '_' + Math.random();
-                    this.addWordToAnswerAtPosition(word, insertIndex, uniqueId);
-                } else if (source === 'answer-zone') {
-                    // Reordering within answer zone
-                    this.reorderWordInAnswer(parseInt(sourceIndex), insertIndex);
-                }
-            }
-        }
-        
-        this.resetTouchState();
-    }
-
-    resetTouchState() {
-        this.draggedElement = null;
-        this.isDragging = false;
-        this.potentialDrag = false;
-        this.touchStartTime = 0;
-        this.touchStartX = 0;
-        this.touchStartY = 0;
-    }
-
-    showDropIndicatorFromTouch(touch) {
-        // Remove existing indicators
-        document.querySelectorAll('.drop-indicator').forEach(indicator => {
-            indicator.remove();
-        });
-
-        const tokens = Array.from(this.answerZone.children);
-        let insertIndex = tokens.length;
-
-        // Find the closest position to insert
-        for (let i = 0; i < tokens.length; i++) {
-            const token = tokens[i];
-            const rect = token.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            
-            if (touch.clientX < centerX) {
-                insertIndex = i;
-                break;
-            }
-        }
-
-        // Create drop indicator
-        const indicator = document.createElement('div');
-        indicator.className = 'drop-indicator';
-        indicator.innerHTML = '|';
-
-        if (insertIndex === tokens.length) {
-            // Insert at the end
-            this.answerZone.appendChild(indicator);
-        } else {
-            // Insert before the token at insertIndex
-            this.answerZone.insertBefore(indicator, tokens[insertIndex]);
-        }
-    }
-
-    calculateTouchDropPosition(touch) {
-        const tokens = Array.from(this.answerZone.children);
-        let insertIndex = tokens.length;
-
-        for (let i = 0; i < tokens.length; i++) {
-            const token = tokens[i];
-            const rect = token.getBoundingClientRect();
-            const centerX = rect.left + rect.width / 2;
-            
-            if (touch.clientX < centerX) {
-                insertIndex = i;
-                break;
-            }
-        }
-
-        return insertIndex;
-    }
 
     addWordToAnswer(word) {
         this.addWordToAnswerAtPosition(word, this.currentAnswer.length);
@@ -1178,14 +1184,23 @@ class NZSLGrammarGame {
     reorderWordInAnswer(fromIndex, toIndex) {
         if (fromIndex === toIndex) return;
         
-        // Adjust toIndex if moving from earlier to later position
-        if (fromIndex < toIndex) {
-            toIndex--;
-        }
+        console.log('Reordering from', fromIndex, 'to', toIndex, 'array length:', this.currentAnswer.length);
         
         // Move the word in the array
         const word = this.currentAnswer.splice(fromIndex, 1)[0];
-        this.currentAnswer.splice(toIndex, 0, word);
+        
+        // Since we're now calculating the correct insertion index that accounts for the missing item,
+        // we need to adjust for the fact that we removed an item
+        let adjustedToIndex = toIndex;
+        if (fromIndex < toIndex) {
+            // When moving right, the toIndex was calculated including the original position,
+            // so we need to decrease by 1 since we removed the item
+            adjustedToIndex = toIndex - 1;
+        }
+        
+        this.currentAnswer.splice(adjustedToIndex, 0, word);
+        
+        console.log('Result array:', this.currentAnswer);
         
         this.updateAnswerDisplay();
         this.updateUI();
@@ -1197,24 +1212,22 @@ class NZSLGrammarGame {
         
         this.currentAnswer.forEach((word, index) => {
             const token = document.createElement('div');
-            token.className = 'word-token in-answer';
+            token.className = 'word-token in-answer is-idle js-answer-token';
             token.textContent = word;
             token.dataset.word = word;
             token.dataset.answerIndex = index;
-            token.draggable = true;
             
-            // Add drag event listeners for reordering
-            token.addEventListener('dragstart', (e) => this.handleDragStart(e));
-            token.addEventListener('dragend', (e) => this.handleDragEnd(e));
+            // Click to remove from answer
             token.addEventListener('click', () => this.removeWordFromAnswer(index));
             
-            // Add touch event listeners for mobile reordering
-            token.addEventListener('touchstart', (e) => this.handleTouchStart(e), { passive: false });
-            token.addEventListener('touchmove', (e) => this.handleTouchMove(e), { passive: false });
-            token.addEventListener('touchend', (e) => this.handleTouchEnd(e), { passive: false });
+            // Setup drag/drop for this token
+            this.setupWordToken(token);
             
             this.answerZone.appendChild(token);
         });
+        
+        // Ensure drag system is set up for new tokens
+        this.setupHTML5DragDrop();
     }
 
     removeWordFromAnswer(index) {
@@ -1692,8 +1705,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Initialize grammar game when grammar tab is activated
 function initializeGrammarGame() {
+    console.log('initializeGrammarGame called, gameData defined:', typeof gameData !== 'undefined', 'grammarGame exists:', !!grammarGame);
     if (typeof gameData !== 'undefined' && !grammarGame) {
+        console.log('Creating new NZSLGrammarGame...');
         grammarGame = new NZSLGrammarGame();
+        console.log('Grammar game created:', grammarGame);
+    } else {
+        console.log('Not creating grammar game - gameData defined:', typeof gameData !== 'undefined', 'grammarGame already exists:', !!grammarGame);
     }
 }
 
@@ -1718,6 +1736,7 @@ function initializeTabs() {
             
             // Initialize grammar game when grammar tab is activated
             if (targetTab === 'grammar') {
+                console.log('Grammar tab activated, initializing game...');
                 setTimeout(() => initializeGrammarGame(), 100);
             }
         }
@@ -1747,3 +1766,38 @@ function initializeTabs() {
     // Handle initial load
     handleHashChange();
 }
+
+// About modal functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const aboutBtn = document.getElementById('aboutBtn');
+    const aboutModal = document.getElementById('aboutModal');
+    const aboutClose = document.getElementById('aboutClose');
+
+    // Open about modal
+    aboutBtn?.addEventListener('click', () => {
+        aboutModal.style.display = 'block';
+        document.body.style.overflow = 'hidden';
+    });
+
+    // Close about modal
+    function closeAboutModal() {
+        aboutModal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    }
+
+    aboutClose?.addEventListener('click', closeAboutModal);
+
+    // Click outside modal to close
+    aboutModal?.addEventListener('click', (e) => {
+        if (e.target === aboutModal) {
+            closeAboutModal();
+        }
+    });
+
+    // Escape key to close
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && aboutModal.style.display === 'block') {
+            closeAboutModal();
+        }
+    });
+});
