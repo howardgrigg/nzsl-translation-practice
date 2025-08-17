@@ -19,6 +19,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app.py .
 COPY index.html .
 COPY script.js .
+COPY DragDropTouch.js .
 COPY matched_signs.json .
 COPY nzsl.db .
 COPY assets/ ./assets/

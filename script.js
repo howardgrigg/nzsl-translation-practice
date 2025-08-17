@@ -1635,6 +1635,17 @@ class NZSLGrammarGame {
         this.submitBtn.style.display = 'inline-block';
         this.dictionaryBtn.style.display = 'none';
         this.loadQuestion();
+        
+        // Scroll to grammar main section after loading the question
+        setTimeout(() => {
+            const grammarMain = document.querySelector('.grammar-main');
+            if (grammarMain) {
+                console.log('Scrolling to grammar main:', grammarMain);
+                grammarMain.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                console.log('Grammar main element not found');
+            }
+        }, 100);
     }
 
     showHint() {

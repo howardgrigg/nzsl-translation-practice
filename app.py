@@ -45,6 +45,15 @@ def script():
     response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
     return response
 
+@app.route('/<path:filename>')
+def static_files(filename):
+    """Serve static files from root directory"""
+    if filename.endswith('.js'):
+        response = send_from_directory('.', filename)
+        response.headers['Content-Type'] = 'application/javascript; charset=utf-8'
+        return response
+    return send_from_directory('.', filename)
+
 @app.route('/NZSLGrammar/<filename>')
 def nzsl_grammar_files(filename):
     """Serve NZSLGrammar files"""
